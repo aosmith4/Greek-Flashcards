@@ -1,0 +1,11 @@
+[
+  { "id": 1, "en": "Hello (informal)", "el_lower": "γειά σου", "el_upper": "ΓΕΙΑ ΣΟΥ", "rom": "yá sou" },
+  { "id": 2, "en": "Hello (formal/plural)", "el_lower": "γειά σας", "el_upper": "ΓΕΙΑ ΣΑΣ", "rom": "yá sas" },
+  { "id": 3, "en": "Good morning", "el_lower": "καλημέρα", "el_upper": "ΚΑΛΗΜΕΡΑ", "rom": "kaliméra" },
+  { "id": 4, "en": "Good evening", "el_lower": "καλησπέρα", "el_upper": "ΚΑΛΗΣΠΕΡΑ", "rom": "kalispéra" },
+  { "id": 5, "en": "Good night", "el_lower": "καληνύχτα", "el_upper": "ΚΑΛΗΝΥΧΤΑ", "rom": "kaliníhta" },
+  { "id": 6, "en": "Thank you", "el_lower": "ευχαριστώ", "el_upper": "ΕΥΧΑΡΙΣΤΩ", "rom": "efharistó" },
+  { "id": 7, "en": "Please / You’re welcome", "el_lower": "παρακαλώ", "el_upper": "ΠΑΡΑΚΑΛΩ", "rom": "parakaló" },
+  { "id": 8, "en": "Excuse me / Sorry", "el_lower": "συγγνώμη", "el_upper": "ΣΥΓΓΝΩΜΗ", "rom": "signómi" },
+  { "id": 9, "en": "Do you speak English?", "el_lower": "μιλάτε αγγλικά;", "el_upper": "ΜΙΛΑΤΕ ΑΓΓΛΙΚΑ;", "rom": "miláte angliká?" }
+]

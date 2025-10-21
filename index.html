@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arthur and Callie Learn Greek</title>
+<style>
+  html, body { height:100%; margin:0; background:#f8fafc; color:#222; font-family:sans-serif; }
+  .app { max-width:390px; margin:28px auto 8px auto; padding:16px; }
+  header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  h1 { font-size:1.22rem; font-weight:600; margin:0; }
+  .icon-btn, .icon-btn.close {
+    background:#e0e7ef; border-radius:14px; min-width:44px; min-height:44px; display:inline-flex;
+    align-items:center; justify-content:center; border:1px solid #cbd5e1;
+    font-size:1.65rem; color:#2563eb; transition:background 0.15s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .icon-btn.close { font-size:1.32rem; color:#888; position:absolute; right:18px; top:16px; }
+  .icon-btn:hover, .icon-btn.close:hover { background:#2563eb; color:#fff; }
+  .card { border:1px solid #cbd5e1; border-radius:12px; padding:24px 18px 20px 18px;
+          box-shadow:0 2px 16px rgba(0,0,0,0.04); margin-bottom:22px;}
+  .prompt {font-size:1.35rem; font-weight:500; text-align:center; margin-bottom:24px;}
+  .toolbar {display:flex; flex-direction:column; align-items:center; gap:18px; margin-bottom:2px;}
+  .btn { appearance:none; background:#e0e7ef; color:#222; border:1px solid #cbd5e1;
+         border-radius:14px; padding:18px 22px; font-size:1.18rem; min-width:70px; min-height:54px; cursor:pointer; font-weight:500; margin-bottom:8px;}
+  .btn.primary {background:#2563eb; color:#fff; border:0;}
+  .btn:focus-visible, .icon-btn:focus-visible {outline:3px solid #2563eb;}
+  .btn[aria-disabled="true"] {opacity:0.4; cursor:not-allowed;}
+  .navigation { position:fixed; left:0; right:0; bottom:0; background:transparent;
+                display:flex; justify-content:center; gap:24px; padding:16px; z-index:5;}
+  @media (max-width:500px) {
+    .app {padding:2vw;}
+    .btn, .icon-btn {font-size:1.22rem;min-width:74px; min-height:61px;}
+  }
+  .reveal { padding-top:15px; border-top:1px dashed #cbd5e1; opacity:0; transition:opacity 0.32s;
+            display:block; min-height:38px;}
+  .reveal.visible { opacity:1; }
+  .greek-lines {display:grid; gap:9px; font-size:1.35rem; color:#2563eb;
+                text-align:center; font-weight:500; margin-bottom:10px;}
+  .phonetics { color:#183263; font-size:1.35rem; text-align:center; display:block; margin:16px 0 10px 0; width:100%; min-height:32px;}
+  .english-line { font-size:1.35rem; text-align:center; font-weight:500; color:#222; margin-top:10px; }
+  .modal { position:fixed; top:0; left:0; right:0; bottom:0;
+    display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);z-index:100;}
+  .modal[hidden] {display:none;}
+  .modal-content { background:#fff; border-radius:18px; padding:30px 22px 18px 22px;
+    box-shadow:0 6px 24px rgba(0,0,0,0.09); min-width:285px; max-width:96vw; position:relative;}
+  .switch { font-size:1.09rem; margin:22px 0 13px 0; display:block; }
+  .modal-content h2 {font-size:1.15rem; font-weight:600;}
+  .modal-content select {font-size:1.09rem; border-radius:8px; padding:5px 8px; margin-top:8px;}
+  body.darkmode, .modal-content.darkmode { background:#151926 !important; color:#e2e8f0 !important; }
+  .card.darkmode {background:#20243b;border-color:#354161;}
+  .btn.darkmode, .icon-btn.darkmode {background:#29304b;color:#e5e7eb;}
+  .prompt.darkmode, .greek-lines.darkmode, .phonetics.darkmode, .english-line.darkmode {color:#60a5fa;}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Arthur and Callie Learn Greek</h1>
+    <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">&#9881;</button>
+  </header>
+  <section class="card" id="cardContainer" aria-live="polite">
+    <div id="prompt" class="prompt" aria-label="Card prompt"></div>
+    <div id="phoneticsTop" class="phonetics" hidden></div>
+    <div class="toolbar"></div>
+    <div id="reveal" class="reveal" aria-label="Translation and phonetics" aria-hidden="true">
+      <div id="translation"></div>
+      <div id="phonetics" class="phonetics" hidden></div>
+      <button id="phonBtn" class="btn" aria-label="Show Phonetics" aria-disabled="true" disabled style="display:none;margin:0 auto 8px auto;">Show Phonetics</button>
+    </div>
+  </section>
+</div>
+<footer class="navigation">
+  <button id="prevBtn" class="btn" aria-label="Previous card">Previous</button>
+  <button id="nextBtn" class="btn" aria-label="Next card">Next</button>
+</footer>
+<div id="settingsModal" class="modal" aria-modal="true" role="dialog" hidden>
+  <div class="modal-content">
+    <button id="closeSettings" class="icon-btn close" aria-label="Close settings" title="Close settings">&#10006;</button>
+    <h2>Settings</h2>
+    <label class="switch">
+      <input type="checkbox" id="modalShuffle"> Shuffle cards
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="modalPhonetics"> Always Show Phonetics
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="modalDark"> Dark mode
+    </label>
+    <label class="switch" style="margin-bottom:8px;">
+      Initial language:
+      <select id="modalInitLang" style="font-size:1.08rem; margin-left:8px; border-radius:8px; padding:5px;">
+        <option value="en">English</option>
+        <option value="el">Greek</option>
+        <option value="random">Random</option>
+      </select>
+    </label>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
