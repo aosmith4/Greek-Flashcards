@@ -20,9 +20,28 @@
           box-shadow:0 2px 16px rgba(0,0,0,0.04); margin-bottom:22px;}
   .prompt {font-size:1.35rem; font-weight:500; text-align:center; margin-bottom:24px;}
   .toolbar {display:flex; flex-direction:column; align-items:center; gap:18px; margin-bottom:2px;}
-  .btn { appearance:none; background:#e0e7ef; color:#222; border:1px solid #cbd5e1;
-         border-radius:14px; padding:18px 22px; font-size:1.18rem; min-width:70px; min-height:54px; cursor:pointer; font-weight:500; margin-bottom:8px;}
-  .btn.primary {background:#2563eb; color:#fff; border:0;}
+  .btn {
+    appearance:none; background:#e0e7ef; color:#222;
+    border:1px solid #cbd5e1; border-radius:14px;
+    padding:18px 22px; font-size:1.18rem; min-width:70px; min-height:54px;
+    cursor:pointer; font-weight:500; margin-bottom:8px;
+    transition: background .15s, box-shadow .15s, color .15s, border .15s;
+  }
+  .btn.primary {
+    background: #2563eb;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 2px 16px rgba(30, 64, 175, 0.13);
+    font-weight: 600;
+    margin-top: 24px;
+  }
+  .btn.secondary, .btn.ghost {
+    background: transparent;
+    color: #475569;
+    border: 1.5px solid #b6bac7;
+    font-weight: 400;
+    box-shadow: none;
+  }
   .btn:focus-visible, .icon-btn:focus-visible {outline:3px solid #2563eb;}
   .btn[aria-disabled="true"] {opacity:0.4; cursor:not-allowed;}
   .navigation { position:fixed; left:0; right:0; bottom:0; background:transparent;
@@ -48,7 +67,21 @@
   .modal-content select {font-size:1.09rem; border-radius:8px; padding:5px 8px; margin-top:8px;}
   body.darkmode, .modal-content.darkmode { background:#151926 !important; color:#e2e8f0 !important; }
   .card.darkmode {background:#20243b;border-color:#354161;}
-  .btn.darkmode, .icon-btn.darkmode {background:#29304b;color:#e5e7eb;}
+  .btn.darkmode, .icon-btn.darkmode {background:#23283b;color:#e5e7eb;}
+  .btn.darkmode.primary {
+    background: #4880ea;
+    color: #fff;
+    border: 0;
+    font-weight: 600;
+    box-shadow: 0 2px 16px rgba(30, 64, 175, 0.23);
+  }
+  .btn.darkmode.secondary, .btn.darkmode.ghost {
+    background: transparent;
+    color: #b7bed3;
+    border: 1.5px solid #374151;
+    font-weight: 400;
+    box-shadow: none;
+  }
   .prompt.darkmode, .greek-lines.darkmode, .phonetics.darkmode, .english-line.darkmode {color:#60a5fa;}
 </style>
 </head>
@@ -65,7 +98,7 @@
     <div id="reveal" class="reveal" aria-label="Translation and phonetics" aria-hidden="true">
       <div id="translation"></div>
       <div id="phonetics" class="phonetics" hidden></div>
-      <button id="phonBtn" class="btn" aria-label="Show Phonetics" aria-disabled="true" disabled style="display:none;margin:0 auto 8px auto;">Show Phonetics</button>
+      <button id="phonBtn" class="btn secondary" aria-label="Show Phonetics" aria-disabled="true" disabled style="display:none;margin:0 auto 8px auto;">Show Phonetics</button>
     </div>
   </section>
 </div>
