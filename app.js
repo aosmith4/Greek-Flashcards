@@ -1,260 +1,113 @@
 let deck = [];
-let state = {
-  order: [],
-  index: 0,
-  shuffle: true,
-  alwaysPhon: false,
-  show: false,
-  initLang: "en",
-  curLang: null // tracks current card prompt language
-};
+let state = {order:[],index:0,shuffle:true,alwaysPhon:false,show:false,initLang:"en",curLang:null};
 
-async function loadDeck() {
-  const response = await fetch('deck.json');
-  deck = await response.json();
-  ensureOrder();
-  setCardLanguage();
-  render();
+// ---- Local stats management ----
+function getStats(id){
+  let s=localStorage.getItem("greekFlashStats:"+id);
+  return s?JSON.parse(s):{attempts:0,correct:0,incorrect:0};
 }
-function shuffledIndices(n) {
-  const arr = Array.from({length:n}, (_,i)=>i);
-  for (let i = n - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
+function updateStats(id,result){
+  let s=getStats(id);
+  s.attempts++;
+  if(result==="correct")s.correct++; if(result==="incorrect")s.incorrect++;
+  localStorage.setItem("greekFlashStats:"+id,JSON.stringify(s));
 }
-function ensureOrder() {
-  const n = deck.length;
-  if (!Array.isArray(state.order) || state.order.length !== n) {
-    state.order = state.shuffle ? shuffledIndices(n) : Array.from({length:n}, (_,i)=>i);
-    state.index = 0;
-  }
+
+// ---- Core Deck + Rendering ----
+async function loadDeck(){
+  const r=await fetch('deck.json'); deck=await r.json();
+  ensureOrder(); setCardLanguage(); render();
 }
-function setCardLanguage() {
-  if (state.initLang === "random") {
-    state.curLang = Math.random() < 0.5 ? "en" : "el";
-  } else {
-    state.curLang = state.initLang;
-  }
-}
-function currentCard() {
-  const idx = state.order[state.index] ?? 0;
-  return deck[idx];
-}
-function resetReveal() {
-  state.show = false;
+function shuffledIndices(n){const a=Array.from({length:n},(_,i)=>i); for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;}
+function ensureOrder(){const n=deck.length;if(!Array.isArray(state.order)||state.order.length!==n){state.order=state.shuffle?shuffledIndices(n):Array.from({length:n},(_,i)=>i);state.index=0;}}
+function setCardLanguage(){state.curLang=state.initLang==="random"?(Math.random()<0.5?"en":"el"):state.initLang;}
+function currentCard(){return deck[state.order[state.index]];}
+function resetReveal(){
+  state.show=false;
   document.getElementById('reveal').classList.remove('visible');
-  document.getElementById('reveal').setAttribute('aria-hidden', 'true');
-  document.getElementById('revealBtn') && (document.getElementById('revealBtn').textContent = 'Show Translation');
-  document.getElementById('phonBtn').setAttribute('aria-disabled', 'true');
-  document.getElementById('phonBtn').disabled = true;
-  document.getElementById('phonetics').hidden = true;
-  document.getElementById('phonetics').textContent = '';
-  document.getElementById('phoneticsTop').hidden = true;
-  document.getElementById('phoneticsTop').textContent = '';
-  document.getElementById('phonBtn').style.display = "none";
+  document.getElementById('phonetics').hidden=true;
+  document.getElementById('phoneticsTop').hidden=true;
+  document.getElementById('phonBtn').style.display="none";
+  document.getElementById('scoreButtons').hidden=true;
 }
-function render() {
-  const card = currentCard();
-  const showGreekFirst = (state.curLang === "el");
-  const dark = document.body.classList.contains('darkmode');
-
-  const promptEl = document.getElementById('prompt');
-  const phoneticsTop = document.getElementById('phoneticsTop');
-  const toolbar = document.querySelector('.toolbar');
-  promptEl.innerHTML = '';
-  phoneticsTop.hidden = true;
-  phoneticsTop.textContent = '';
-  toolbar.innerHTML = '';
-
-  if (showGreekFirst) {
-    // Greek first: prompt area
-    promptEl.innerHTML = `<div class='greek-lines'><div>${card.el_lower}</div><div>${card.el_upper}</div></div>`;
-    if (!state.alwaysPhon) {
-      const topBtn = document.createElement('button');
-      topBtn.id = 'phonBtnTop';
-      topBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
-      topBtn.textContent = 'Show Phonetics';
-      topBtn.setAttribute('aria-label','Show Phonetics');
-      topBtn.style.margin = "0 auto 8px auto";
-      toolbar.appendChild(topBtn);
-      topBtn.onclick = function() {
-        showPhonetics(card, true);
-      };
-    }
-    const revealBtn = document.createElement('button');
-    revealBtn.id = 'revealBtn';
-    revealBtn.className = 'btn primary' + (dark ? ' darkmode primary' : '');
-    revealBtn.textContent = state.show ? 'Hide Translation' : 'Show Translation';
-    revealBtn.setAttribute('aria-label', 'Show Translation');
-    toolbar.appendChild(revealBtn);
-    revealBtn.onclick = function() {
-      state.show = !state.show;
-      render();
-    };
-    if(state.alwaysPhon) {
-      showPhonetics(card, true);
-    }
+function render(){
+  const card=currentCard(); if(!card)return; const dark=document.body.classList.contains('darkmode');
+  const showGreek=(state.curLang==="el");
+  const p=document.getElementById('prompt'), tTop=document.getElementById('phoneticsTop'), tb=document.querySelector('.toolbar');
+  p.innerHTML="";tTop.hidden=true;tb.innerHTML="";
+  if(showGreek){
+    p.innerHTML=`<div class='greek-lines'><div>${card.el_lower}</div><div>${card.el_upper}</div></div>`;
+    const tBtn=document.createElement("button"); 
+    tBtn.className="btn secondary"+(dark?" darkmode secondary":"");
+    tBtn.textContent="Show Phonetics"; tBtn.onclick=()=>showPhonetics(card,true);
+    if(!state.alwaysPhon)tb.appendChild(tBtn); if(state.alwaysPhon)showPhonetics(card,true);
+    const rBtn=document.createElement("button");
+    rBtn.className="btn primary"+(dark?" darkmode primary":"");
+    rBtn.textContent=state.show?"Hide Translation":"Show Translation";
+    rBtn.onclick=()=>{state.show=!state.show;render();};
+    tb.appendChild(rBtn);
   } else {
-    // English first: prompt area
-    promptEl.textContent = card.en;
-    const revealBtn = document.createElement('button');
-    revealBtn.id = 'revealBtn';
-    revealBtn.className = 'btn primary' + (dark ? ' darkmode primary' : '');
-    revealBtn.textContent = state.show ? 'Hide Translation' : 'Show Translation';
-    revealBtn.setAttribute('aria-label', 'Show Translation');
-    toolbar.appendChild(revealBtn);
-    revealBtn.onclick = function() {
-      state.show = !state.show;
-      render();
-    };
+    p.textContent=card.en;
+    const rBtn=document.createElement("button");
+    rBtn.className="btn primary"+(dark?" darkmode primary":"");
+    rBtn.textContent=state.show?"Hide Translation":"Show Translation";
+    rBtn.onclick=()=>{state.show=!state.show;render();};
+    tb.appendChild(rBtn);
   }
-  // --- REVEAL/TRANSLATION ---
-  const translationDiv = document.getElementById('translation');
-  const phonBtn = document.getElementById('phonBtn');
-  const revealEl = document.getElementById('reveal');
-  const phoneticsDiv = document.getElementById('phonetics');
-  translationDiv.innerHTML = '';
-  phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
-  phonBtn.style.display = "none";
-  phonBtn.disabled = true;
-  phonBtn.setAttribute('aria-disabled', 'true');
-  phoneticsDiv.hidden = true;
-  phoneticsDiv.textContent = '';
-  if (state.show) {
-    revealEl.classList.add('visible');
-    revealEl.setAttribute('aria-hidden', 'false');
-    if (showGreekFirst) {
-      translationDiv.innerHTML = `<div class="english-line">${card.en}</div>`;
-    } else {
-      translationDiv.innerHTML = `<div class='greek-lines'><div>${card.el_lower}</div><div>${card.el_upper}</div></div>`;
-      translationDiv.after(phoneticsDiv);
-      phoneticsDiv.after(phonBtn);
-      phoneticsDiv.hidden = true;
-      phoneticsDiv.textContent = '';
-      phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
-      phonBtn.style.display = state.alwaysPhon ? "none" : "block";
-      phonBtn.disabled = false;
-      phonBtn.setAttribute('aria-disabled','false');
-      phonBtn.textContent = "Show Phonetics";
-      if (state.alwaysPhon) {
-        phoneticsDiv.textContent = `(${card.rom})`;
-        phoneticsDiv.hidden = false;
-        phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
-      } else {
-        phonBtn.onclick = function() {
-          phoneticsDiv.textContent = `(${card.rom})`;
-          phoneticsDiv.hidden = false;
-          phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
-        };
-      }
+  const tr=document.getElementById('translation'), ph=document.getElementById('phonetics'), phBtn=document.getElementById('phonBtn');
+  const scBtns=document.getElementById('scoreButtons'); ph.hidden=true; ph.textContent="";
+  if(state.show){
+    document.getElementById('reveal').classList.add('visible');
+    tr.innerHTML=showGreek?`<div class='english-line'>${card.en}</div>`:`<div class='greek-lines'><div>${card.el_lower}</div><div>${card.el_upper}</div></div>`;
+    if(!showGreek){
+      phBtn.textContent="Show Phonetics"; phBtn.className="btn secondary"+(dark?" darkmode secondary":"");
+      phBtn.style.display=state.alwaysPhon?"none":"block";
+      if(state.alwaysPhon){ph.textContent=`(${card.rom})`;ph.hidden=false;}
+      else phBtn.onclick=()=>{ph.textContent=`(${card.rom})`;ph.hidden=false;};
     }
-    document.getElementById('revealBtn').className = 'btn primary' + (dark ? ' darkmode primary' : '');
-    document.getElementById('revealBtn').textContent = 'Hide Translation';
-  } else {
-    revealEl.classList.remove('visible');
-    revealEl.setAttribute('aria-hidden', 'true');
-    phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
-    phonBtn.setAttribute('aria-disabled', 'true');
-    phonBtn.disabled = true;
-    phoneticsDiv.hidden = true;
-    phoneticsDiv.textContent = '';
-    phonBtn.style.display = "none";
+    scBtns.hidden=false;
+    document.getElementById('correctBtn').onclick=()=>{updateStats(card.id,"correct");nextCard();};
+    document.getElementById('wrongBtn').onclick=()=>{updateStats(card.id,"incorrect");nextCard();};
   }
-  phoneticsDiv.style.textAlign = "center";
-  phoneticsTop.style.textAlign = "center";
-  document.getElementById('cardContainer').classList.toggle('darkmode', dark);
-  document.querySelectorAll('.btn,.icon-btn,.prompt,.greek-lines,.phonetics,.english-line').forEach(el => {
-    if(el) el.classList.toggle('darkmode', dark);
-  });
+  else{scBtns.hidden=true;}
+  document.querySelectorAll('.btn,.prompt,.greek-lines,.phonetics,.english-line').forEach(x=>x.classList.toggle('darkmode',dark));
 }
-function showPhonetics(card, inPrompt) {
-  const dark = document.body.classList.contains('darkmode');
-  if (inPrompt) {
-    const phoneticsTop = document.getElementById('phoneticsTop');
-    phoneticsTop.textContent = `(${card.rom})`;
-    phoneticsTop.hidden = false;
-    phoneticsTop.className = 'phonetics' + (dark ? ' darkmode' : '');
-  } else {
-    const phoneticsDiv = document.getElementById('phonetics');
-    phoneticsDiv.textContent = `(${card.rom})`;
-    phoneticsDiv.hidden = false;
-    phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
-  }
+function nextCard(){if(state.index<deck.length-1)state.index++;else{ensureOrder();state.index=0;}setCardLanguage();resetReveal();render();}
+function prevCard(){if(state.index>0)state.index--;else state.index=deck.length-1;setCardLanguage();resetReveal();render();}
+function showPhonetics(card,inPrompt){const el=inPrompt?document.getElementById('phoneticsTop'):document.getElementById('phonetics');
+  el.textContent=`(${card.rom})`;el.hidden=false;}
+
+// ---- Stats Modal ----
+function showStats(){
+  const tbl=document.getElementById("statsTable");
+  let cards=deck.map(c=>{let s=getStats(c.id);let acc=s.attempts?(s.correct/s.attempts*100).toFixed(0):"--";return {...c,stats:s,acc:acc};});
+  cards.sort((a,b)=>b.acc-a.acc);
+  let html=`<table><thead><tr><th>Phrase</th><th>Accuracy</th><th>Attempts</th></tr></thead><tbody>`;
+  cards.forEach(c=>{html+=`<tr><td>${c.en}</td><td>${c.acc}%</td><td>${c.stats.attempts}</td></tr>`;});
+  html+=`</tbody></table>`; tbl.innerHTML=html;
+  document.getElementById('statsModal').hidden=false;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('prevBtn').onclick = function() {
-    if (state.index > 0) state.index--;
-    setCardLanguage();
-    resetReveal(); render();
-  };
-  document.getElementById('nextBtn').onclick = function() {
-    if (state.index < deck.length - 1) state.index++;
-    else { ensureOrder(); state.index = 0; }
-    setCardLanguage();
-    resetReveal(); render();
-  };
-  // Settings Modal Logic
-  const settingsBtn = document.getElementById('settingsBtn');
-  const settingsModal = document.getElementById('settingsModal');
-  const closeSettings = document.getElementById('closeSettings');
-  const modalShuffle = document.getElementById('modalShuffle');
-  const modalPhonetics = document.getElementById('modalPhonetics');
-  const modalDark = document.getElementById('modalDark');
-  const modalInitLang = document.getElementById('modalInitLang');
-  settingsBtn.onclick = function() {
-    modalShuffle.checked = state.shuffle;
-    modalPhonetics.checked = state.alwaysPhon;
-    modalDark.checked = document.body.classList.contains('darkmode');
-    modalInitLang.value = state.initLang || "en";
-    settingsModal.hidden = false;
-    document.querySelector('.modal-content').classList.toggle('darkmode', modalDark.checked);
-    document.body.style.overflow = "hidden";
-  };
-  closeSettings.onclick = function(e) {
-    settingsModal.hidden = true;
-    document.body.style.overflow = "";
-    render();
-    e.stopPropagation();
-  };
-  settingsModal.onclick = function(e) {
-    if (e.target === settingsModal) {
-      settingsModal.hidden = true;
-      document.body.style.overflow = "";
-      render();
-    }
-  };
-  modalShuffle.onchange = function() {
-    state.shuffle = modalShuffle.checked;
-    ensureOrder();
-    setCardLanguage();
-    resetReveal(); render();
-  };
-  modalPhonetics.onchange = function() {
-    state.alwaysPhon = modalPhonetics.checked;
-    render();
-  };
-  modalDark.onchange = function() {
-    document.body.classList.toggle('darkmode', modalDark.checked);
-    document.querySelector('.modal-content').classList.toggle('darkmode', modalDark.checked);
-    render();
-  };
-  modalInitLang.onchange = function() {
-    state.initLang = modalInitLang.value;
-    setCardLanguage();
-    render();
-  };
-  window.addEventListener("keydown", (e) => {
-    if(document.getElementById("settingsModal").hidden === false) return;
-    const tag = (e.target && e.target.tagName) || "";
-    if (tag === "INPUT" || tag === "TEXTAREA") return;
-    if (e.key === " " || e.code === "Space") { e.preventDefault(); document.getElementById('revealBtn') && document.getElementById('revealBtn').click(); }
-    if (e.key === "ArrowRight") document.getElementById('nextBtn').click();
-    if (e.key === "ArrowLeft") document.getElementById('prevBtn').click();
-  });
-  ensureOrder();
-  setCardLanguage();
+// ---- Controls ----
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('nextBtn').onclick=nextCard;
+  document.getElementById('prevBtn').onclick=prevCard;
+  const sBtn=document.getElementById('settingsBtn'),sMod=document.getElementById('settingsModal'),
+        cS=document.getElementById('closeSettings'),mSh=document.getElementById('modalShuffle'),
+        mPh=document.getElementById('modalPhonetics'),mD=document.getElementById('modalDark'),
+        mL=document.getElementById('modalInitLang');
+  sBtn.onclick=()=>{mSh.checked=state.shuffle;mPh.checked=state.alwaysPhon;mD.checked=document.body.classList.contains('darkmode');
+    mL.value=state.initLang;sMod.hidden=false;};
+  cS.onclick=()=>{sMod.hidden=true;render();};
+  mSh.onchange=()=>{state.shuffle=mSh.checked;ensureOrder();setCardLanguage();resetReveal();render();};
+  mPh.onchange=()=>{state.alwaysPhon=mPh.checked;render();};
+  mD.onchange=()=>{document.body.classList.toggle('darkmode',mD.checked);render();};
+  mL.onchange=()=>{state.initLang=mL.value;setCardLanguage();render();};
+  // Stats modal
+  document.getElementById('statsBtn').onclick=showStats;
+  document.getElementById('closeStats').onclick=()=>{document.getElementById('statsModal').hidden=true};
+  window.addEventListener("keydown",e=>{if(document.getElementById("settingsModal").hidden===false)return;
+    const k=e.key;if(k===" "||e.code==="Space"){e.preventDefault();document.getElementById('reveal').classList.contains('visible')?resetReveal():document.querySelector('.btn.primary')?.click();}
+    if(k==="ArrowRight")nextCard();if(k==="ArrowLeft")prevCard();});
   loadDeck();
 });
