@@ -57,8 +57,9 @@ function resetReveal() {
 }
 function render() {
   const card = currentCard();
-  // Read per-card initial language only once!
   const showGreekFirst = (state.curLang === "el");
+  const dark = document.body.classList.contains('darkmode');
+
   const promptEl = document.getElementById('prompt');
   const phoneticsTop = document.getElementById('phoneticsTop');
   const toolbar = document.querySelector('.toolbar');
@@ -73,7 +74,7 @@ function render() {
     if (!state.alwaysPhon) {
       const topBtn = document.createElement('button');
       topBtn.id = 'phonBtnTop';
-      topBtn.className = 'btn';
+      topBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
       topBtn.textContent = 'Show Phonetics';
       topBtn.setAttribute('aria-label','Show Phonetics');
       topBtn.style.margin = "0 auto 8px auto";
@@ -84,7 +85,7 @@ function render() {
     }
     const revealBtn = document.createElement('button');
     revealBtn.id = 'revealBtn';
-    revealBtn.className = 'btn primary';
+    revealBtn.className = 'btn primary' + (dark ? ' darkmode primary' : '');
     revealBtn.textContent = state.show ? 'Hide Translation' : 'Show Translation';
     revealBtn.setAttribute('aria-label', 'Show Translation');
     toolbar.appendChild(revealBtn);
@@ -100,7 +101,7 @@ function render() {
     promptEl.textContent = card.en;
     const revealBtn = document.createElement('button');
     revealBtn.id = 'revealBtn';
-    revealBtn.className = 'btn primary';
+    revealBtn.className = 'btn primary' + (dark ? ' darkmode primary' : '');
     revealBtn.textContent = state.show ? 'Hide Translation' : 'Show Translation';
     revealBtn.setAttribute('aria-label', 'Show Translation');
     toolbar.appendChild(revealBtn);
@@ -115,6 +116,7 @@ function render() {
   const revealEl = document.getElementById('reveal');
   const phoneticsDiv = document.getElementById('phonetics');
   translationDiv.innerHTML = '';
+  phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
   phonBtn.style.display = "none";
   phonBtn.disabled = true;
   phonBtn.setAttribute('aria-disabled', 'true');
@@ -131,6 +133,7 @@ function render() {
       phoneticsDiv.after(phonBtn);
       phoneticsDiv.hidden = true;
       phoneticsDiv.textContent = '';
+      phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
       phonBtn.style.display = state.alwaysPhon ? "none" : "block";
       phonBtn.disabled = false;
       phonBtn.setAttribute('aria-disabled','false');
@@ -138,19 +141,21 @@ function render() {
       if (state.alwaysPhon) {
         phoneticsDiv.textContent = `(${card.rom})`;
         phoneticsDiv.hidden = false;
-        phoneticsDiv.classList.toggle('darkmode', document.body.classList.contains('darkmode'));
+        phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
       } else {
         phonBtn.onclick = function() {
           phoneticsDiv.textContent = `(${card.rom})`;
           phoneticsDiv.hidden = false;
-          phoneticsDiv.classList.toggle('darkmode', document.body.classList.contains('darkmode'));
+          phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
         };
       }
     }
+    document.getElementById('revealBtn').className = 'btn primary' + (dark ? ' darkmode primary' : '');
     document.getElementById('revealBtn').textContent = 'Hide Translation';
   } else {
     revealEl.classList.remove('visible');
     revealEl.setAttribute('aria-hidden', 'true');
+    phonBtn.className = 'btn secondary' + (dark ? ' darkmode secondary' : '');
     phonBtn.setAttribute('aria-disabled', 'true');
     phonBtn.disabled = true;
     phoneticsDiv.hidden = true;
@@ -159,23 +164,23 @@ function render() {
   }
   phoneticsDiv.style.textAlign = "center";
   phoneticsTop.style.textAlign = "center";
-  const dark = document.body.classList.contains('darkmode');
   document.getElementById('cardContainer').classList.toggle('darkmode', dark);
   document.querySelectorAll('.btn,.icon-btn,.prompt,.greek-lines,.phonetics,.english-line').forEach(el => {
     if(el) el.classList.toggle('darkmode', dark);
   });
 }
 function showPhonetics(card, inPrompt) {
+  const dark = document.body.classList.contains('darkmode');
   if (inPrompt) {
     const phoneticsTop = document.getElementById('phoneticsTop');
     phoneticsTop.textContent = `(${card.rom})`;
     phoneticsTop.hidden = false;
-    phoneticsTop.classList.toggle('darkmode', document.body.classList.contains('darkmode'));
+    phoneticsTop.className = 'phonetics' + (dark ? ' darkmode' : '');
   } else {
     const phoneticsDiv = document.getElementById('phonetics');
     phoneticsDiv.textContent = `(${card.rom})`;
     phoneticsDiv.hidden = false;
-    phoneticsDiv.classList.toggle('darkmode', document.body.classList.contains('darkmode'));
+    phoneticsDiv.className = 'phonetics' + (dark ? ' darkmode' : '');
   }
 }
 
