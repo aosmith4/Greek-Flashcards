@@ -1,10 +1,19 @@
 let deck = [];
-let state = { order: [], index: 0, shuffle: true, alwaysPhon: false, show: false, initLang: "en" };
+let state = {
+  order: [],
+  index: 0,
+  shuffle: true,
+  alwaysPhon: false,
+  show: false,
+  initLang: "en",
+  curLang: null // tracks current card prompt language
+};
 
 async function loadDeck() {
   const response = await fetch('deck.json');
   deck = await response.json();
   ensureOrder();
+  setCardLanguage();
   render();
 }
 function shuffledIndices(n) {
@@ -20,6 +29,13 @@ function ensureOrder() {
   if (!Array.isArray(state.order) || state.order.length !== n) {
     state.order = state.shuffle ? shuffledIndices(n) : Array.from({length:n}, (_,i)=>i);
     state.index = 0;
+  }
+}
+function setCardLanguage() {
+  if (state.initLang === "random") {
+    state.curLang = Math.random() < 0.5 ? "en" : "el";
+  } else {
+    state.curLang = state.initLang;
   }
 }
 function currentCard() {
@@ -41,12 +57,8 @@ function resetReveal() {
 }
 function render() {
   const card = currentCard();
-  // Determine which language is prompt
-  let initLang = state.initLang;
-  if (initLang === "random") initLang = Math.random() < 0.5 ? "en" : "el";
-  const showGreekFirst = (initLang === "el");
-
-  // --- PROMPT SECTION ---
+  // Read per-card initial language only once!
+  const showGreekFirst = (state.curLang === "el");
   const promptEl = document.getElementById('prompt');
   const phoneticsTop = document.getElementById('phoneticsTop');
   const toolbar = document.querySelector('.toolbar');
@@ -56,7 +68,7 @@ function render() {
   toolbar.innerHTML = '';
 
   if (showGreekFirst) {
-    // Prompt area: Greek lines, phonetic blank, Show Phonetics button above Show Translation
+    // Greek first: prompt area
     promptEl.innerHTML = `<div class='greek-lines'><div>${card.el_lower}</div><div>${card.el_upper}</div></div>`;
     if (!state.alwaysPhon) {
       const topBtn = document.createElement('button');
@@ -77,12 +89,14 @@ function render() {
     revealBtn.setAttribute('aria-label', 'Show Translation');
     toolbar.appendChild(revealBtn);
     revealBtn.onclick = function() {
-      state.show = !state.show; render();
+      state.show = !state.show;
+      render();
     };
     if(state.alwaysPhon) {
       showPhonetics(card, true);
     }
   } else {
+    // English first: prompt area
     promptEl.textContent = card.en;
     const revealBtn = document.createElement('button');
     revealBtn.id = 'revealBtn';
@@ -91,10 +105,11 @@ function render() {
     revealBtn.setAttribute('aria-label', 'Show Translation');
     toolbar.appendChild(revealBtn);
     revealBtn.onclick = function() {
-      state.show = !state.show; render();
+      state.show = !state.show;
+      render();
     };
   }
-  // --- REVEAL/TRANSLATION SECTION ---
+  // --- REVEAL/TRANSLATION ---
   const translationDiv = document.getElementById('translation');
   const phonBtn = document.getElementById('phonBtn');
   const revealEl = document.getElementById('reveal');
@@ -167,11 +182,13 @@ function showPhonetics(card, inPrompt) {
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('prevBtn').onclick = function() {
     if (state.index > 0) state.index--;
+    setCardLanguage();
     resetReveal(); render();
   };
   document.getElementById('nextBtn').onclick = function() {
     if (state.index < deck.length - 1) state.index++;
     else { ensureOrder(); state.index = 0; }
+    setCardLanguage();
     resetReveal(); render();
   };
   // Settings Modal Logic
@@ -206,7 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   modalShuffle.onchange = function() {
     state.shuffle = modalShuffle.checked;
-    ensureOrder(); resetReveal(); render();
+    ensureOrder();
+    setCardLanguage();
+    resetReveal(); render();
   };
   modalPhonetics.onchange = function() {
     state.alwaysPhon = modalPhonetics.checked;
@@ -219,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   modalInitLang.onchange = function() {
     state.initLang = modalInitLang.value;
+    setCardLanguage();
     render();
   };
   window.addEventListener("keydown", (e) => {
@@ -229,5 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === "ArrowRight") document.getElementById('nextBtn').click();
     if (e.key === "ArrowLeft") document.getElementById('prevBtn').click();
   });
+  ensureOrder();
+  setCardLanguage();
   loadDeck();
 });
