@@ -81,12 +81,25 @@ function resetReveal() {
   document.getElementById('translation').innerHTML = "";
 }
 
+function showPhonetics(card, inPrompt) {
+  const el = inPrompt ? document.getElementById('phoneticsTop') : document.getElementById('phonetics');
+  el.textContent = card.rom;
+  el.hidden = false;
+  el.className = "phonetics" + (document.body.classList.contains('darkmode') ? " darkmode" : "");
+  el.style.display = "block";
+}
+
 function render() {
   const card = currentCard();
   if (!card) return;
   const dark = document.body.classList.contains('darkmode');
   const showGreek = (state.curLang === "el");
 
+  // Always apply dark mode to card
+  const cardContainer = document.querySelector('.card');
+  if (cardContainer) cardContainer.classList.toggle('darkmode', dark);
+
+  // Prompt and toolbar
   const p = document.getElementById('prompt'),
     tTop = document.getElementById('phoneticsTop'),
     tb = document.querySelector('.toolbar');
@@ -98,8 +111,11 @@ function render() {
 
   if (showGreek) {
     p.innerHTML =
-      `<div class="greek-lines">${card.el_lower}<br>${card.el_upper}</div>`;
-    if (!state.alwaysPhon) {
+      `<div class="greek-lines${dark ? ' darkmode' : ''}">${card.el_lower}<br>${card.el_upper}</div>`;
+    if (state.alwaysPhon) {
+      showPhonetics(card, true); // Always show phonetics at the top
+    } else {
+      tTop.hidden = true;
       const tBtn = document.createElement('button');
       tBtn.className = `btn secondary${dark ? " darkmode secondary" : ""}`;
       tBtn.textContent = "Show Phonetics";
@@ -119,7 +135,8 @@ function render() {
     };
     tb.appendChild(rBtn);
   } else {
-    p.textContent = card.en;
+    p.innerHTML = `<span class="english-line${dark ? ' darkmode' : ''}">${card.en}</span>`;
+    tTop.hidden = true;
     const rBtn = document.createElement('button');
     rBtn.className = `btn primary${dark ? " darkmode primary" : ""}`;
     rBtn.textContent = state.show ? "Hide Translation" : "Show Translation";
@@ -149,23 +166,19 @@ function render() {
     document.getElementById('reveal').classList.add('visible');
     scBtns.hidden = false;
     if (showGreek) {
-      tr.innerHTML = `<div class="english-line">${card.en}</div>`;
+      tr.innerHTML = `<div class="english-line${dark ? ' darkmode' : ''}">${card.en}</div>`;
     } else {
-      tr.innerHTML = `<div class="greek-lines">${card.el_lower}<br>${card.el_upper}</div>`;
-      phBtn.className = `btn secondary${dark ? " darkmode secondary" : ""}`;
-      phBtn.style.display = state.alwaysPhon ? "none" : "block";
-      phBtn.style.margin = "0 auto";
-      phBtn.disabled = false;
-      phBtn.setAttribute('aria-disabled', "false");
-      phBtn.textContent = "Show Phonetics";
+      tr.innerHTML = `<div class="greek-lines${dark ? ' darkmode' : ''}">${card.el_lower}<br>${card.el_upper}</div>`;
       if (state.alwaysPhon) {
-        ph.textContent = card.rom;
-        ph.hidden = false;
+        showPhonetics(card, false);
       } else {
-        phBtn.onclick = () => {
-          ph.textContent = card.rom;
-          ph.hidden = false;
-        };
+        phBtn.className = `btn secondary${dark ? " darkmode secondary" : ""}`;
+        phBtn.style.display = "block";
+        phBtn.style.margin = "0 auto";
+        phBtn.disabled = false;
+        phBtn.setAttribute('aria-disabled', "false");
+        phBtn.textContent = "Show Phonetics";
+        phBtn.onclick = () => showPhonetics(card, false);
       }
     }
     scBtns.style.display = "flex";
@@ -174,6 +187,8 @@ function render() {
     document.getElementById('wrongBtn').onclick = () => doScore("incorrect");
   } else {
     document.getElementById('reveal').classList.remove('visible');
+    ph.hidden = true;
+    ph.textContent = "";
   }
 }
 
@@ -198,14 +213,6 @@ function prevCard() {
   render();
 }
 
-function showPhonetics(card, inPrompt) {
-  const el = inPrompt ? document.getElementById('phoneticsTop') : document.getElementById('phonetics');
-  el.textContent = card.rom;
-  el.hidden = false;
-  el.style.display = "block";
-  el.className = "phonetics" + (document.body.classList.contains('darkmode') ? " darkmode" : "");
-}
-
 function showStats() {
   const tbl = document.getElementById('statsTable');
   let cards = deck.map(c => {
@@ -221,7 +228,16 @@ function showStats() {
   });
   html += "</tbody></table>";
   tbl.innerHTML = html;
-  document.getElementById('statsModal').classList.remove('hidden');
+
+  // Apply darkmode to stats modal if needed
+  const statsModal = document.getElementById('statsModal');
+  const statsModalContent = statsModal.querySelector('.modal-content');
+  if (document.body.classList.contains('darkmode')) {
+    statsModalContent.classList.add('darkmode');
+  } else {
+    statsModalContent.classList.remove('darkmode');
+  }
+  statsModal.classList.remove('hidden');
   document.getElementById('resetStatsBtn').onclick = () => {
     if (confirm("Are you sure you want to reset all your stats?")) {
       resetAllStats();
@@ -250,10 +266,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mL.value = state.initLang;
     mDS.value = state.deckSize;
     sMod.classList.remove('hidden');
+    // Apply dark mode to Settings modal if needed
+    const modalContent = sMod.querySelector('.modal-content');
     if (document.body.classList.contains('darkmode')) {
-      sMod.querySelector('.modal-content').classList.add('darkmode');
+      modalContent.classList.add('darkmode');
     } else {
-      sMod.querySelector('.modal-content').classList.remove('darkmode');
+      modalContent.classList.remove('darkmode');
     }
   };
 
@@ -273,6 +291,19 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   mD.onchange = () => {
     document.body.classList.toggle('darkmode', mD.checked);
+    // Apply dark mode to modals and card
+    const settingsModalContent = document.getElementById('settingsModal').querySelector('.modal-content');
+    const statsModalContent = document.getElementById('statsModal').querySelector('.modal-content');
+    const cardContainer = document.querySelector('.card');
+    if (document.body.classList.contains('darkmode')) {
+      settingsModalContent.classList.add('darkmode');
+      statsModalContent.classList.add('darkmode');
+      cardContainer.classList.add('darkmode');
+    } else {
+      settingsModalContent.classList.remove('darkmode');
+      statsModalContent.classList.remove('darkmode');
+      cardContainer.classList.remove('darkmode');
+    }
     render();
   };
   mL.onchange = () => {
@@ -287,8 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.getElementById('statsBtn').onclick = showStats;
-
-  // Stats modal close
   document.getElementById('closeStats').onclick = () => {
     document.getElementById('statsModal').classList.add('hidden');
   };
