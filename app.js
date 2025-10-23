@@ -36,7 +36,6 @@ async function loadDeck() {
 
 function applyDeckFilter() {
   let size = state.deckSize === "all" ? fullDeck.length : parseInt(state.deckSize);
-  // Sort by frequency (lowest first) then take top N
   deck = fullDeck.slice().sort((a, b) => a.frequency - b.frequency).slice(0, size);
   ensureOrder(deck.length);
   setCardLanguage();
@@ -110,7 +109,6 @@ function render() {
       tBtn.onclick = () => showPhonetics(card, true);
       tb.appendChild(tBtn);
     }
-    // Show Translation button
     const rBtn = document.createElement('button');
     rBtn.className = `btn primary${dark ? " darkmode primary" : ""}`;
     rBtn.textContent = state.show ? "Hide Translation" : "Show Translation";
@@ -135,7 +133,6 @@ function render() {
     tb.appendChild(rBtn);
   }
 
-  // Reveal translation/phonetics
   const tr = document.getElementById('translation'),
     ph = document.getElementById('phonetics'),
     phBtn = document.getElementById('phonBtn'),
@@ -172,7 +169,6 @@ function render() {
         };
       }
     }
-    // Score feedback buttons
     scBtns.style.display = "flex";
     scBtns.style.justifyContent = "center";
     document.getElementById('correctBtn').onclick = () => doScore("correct");
@@ -218,7 +214,6 @@ function showStats() {
     let acc = s.attempts ? Math.round((s.correct / s.attempts) * 100) : 0;
     return { ...c, stats: s, acc };
   });
-  // Sort by lowest accuracy first
   cards.sort((a, b) => a.acc - b.acc);
 
   let html = `<table><thead><tr><th>Phrase</th><th>Accuracy</th><th>Attempts</th></tr></thead><tbody>`;
@@ -240,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('nextBtn').onclick = nextCard;
   document.getElementById('prevBtn').onclick = prevCard;
 
-  // Settings modal controls
   const sBtn = document.getElementById('settingsBtn'),
     sMod = document.getElementById('settingsModal'),
     cS = document.getElementById('closeSettings'),
@@ -294,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.getElementById('statsBtn').onclick = showStats;
-
   document.getElementById('closeStats').onclick = () => {
     document.getElementById('statsModal').classList.add('hidden');
   };
