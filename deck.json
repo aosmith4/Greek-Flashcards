@@ -1,11 +1,4502 @@
 [
-  { "id": 1, "en": "Hello (informal)", "el_lower": "γειά σου", "el_upper": "ΓΕΙΑ ΣΟΥ", "rom": "yá sou" },
-  { "id": 2, "en": "Hello (formal/plural)", "el_lower": "γειά σας", "el_upper": "ΓΕΙΑ ΣΑΣ", "rom": "yá sas" },
-  { "id": 3, "en": "Good morning", "el_lower": "καλημέρα", "el_upper": "ΚΑΛΗΜΕΡΑ", "rom": "kaliméra" },
-  { "id": 4, "en": "Good evening", "el_lower": "καλησπέρα", "el_upper": "ΚΑΛΗΣΠΕΡΑ", "rom": "kalispéra" },
-  { "id": 5, "en": "Good night", "el_lower": "καληνύχτα", "el_upper": "ΚΑΛΗΝΥΧΤΑ", "rom": "kaliníhta" },
-  { "id": 6, "en": "Thank you", "el_lower": "ευχαριστώ", "el_upper": "ΕΥΧΑΡΙΣΤΩ", "rom": "efharistó" },
-  { "id": 7, "en": "Please / You’re welcome", "el_lower": "παρακαλώ", "el_upper": "ΠΑΡΑΚΑΛΩ", "rom": "parakaló" },
-  { "id": 8, "en": "Excuse me / Sorry", "el_lower": "συγγνώμη", "el_upper": "ΣΥΓΓΝΩΜΗ", "rom": "signómi" },
-  { "id": 9, "en": "Do you speak English?", "el_lower": "μιλάτε αγγλικά;", "el_upper": "ΜΙΛΑΤΕ ΑΓΓΛΙΚΑ;", "rom": "miláte angliká?" }
+  {
+    "id": 1,
+    "en": "Good morning",
+    "el_lower": "καλημέρα",
+    "el_upper": "ΚΑΛΗΜΕΡΑ",
+    "rom": "kaliméra",
+    "tag": "greeting",
+    "frequency": 1
+  },
+  {
+    "id": 2,
+    "en": "Hello",
+    "el_lower": "γεια σας",
+    "el_upper": "ΓΕΙΑ ΣΑΣ",
+    "rom": "yá sas",
+    "tag": "greeting",
+    "frequency": 2
+  },
+  {
+    "id": 3,
+    "en": "Good evening",
+    "el_lower": "καλησπέρα",
+    "el_upper": "ΚΑΛΗΣΠΕΡΑ",
+    "rom": "kalispéra",
+    "tag": "greeting",
+    "frequency": 3
+  },
+  {
+    "id": 4,
+    "en": "Good night",
+    "el_lower": "καληνύχτα",
+    "el_upper": "ΚΑΛΗΝΥΧΤΑ",
+    "rom": "kaliníkhta",
+    "tag": "greeting",
+    "frequency": 4
+  },
+  {
+    "id": 5,
+    "en": "Please",
+    "el_lower": "παρακαλώ",
+    "el_upper": "ΠΑΡΑΚΑΛΩ",
+    "rom": "parakaló",
+    "tag": "polite",
+    "frequency": 5
+  },
+  {
+    "id": 6,
+    "en": "Thank you",
+    "el_lower": "ευχαριστώ",
+    "el_upper": "ΕΥΧΑΡΙΣΤΩ",
+    "rom": "efcharistó",
+    "tag": "polite",
+    "frequency": 6
+  },
+  {
+    "id": 7,
+    "en": "Thank you very much",
+    "el_lower": "ευχαριστώ πολύ",
+    "el_upper": "ΕΥΧΑΡΙΣΤΩ ΠΟΛΥ",
+    "rom": "efcharistó polí",
+    "tag": "polite",
+    "frequency": 7
+  },
+  {
+    "id": 8,
+    "en": "Yes",
+    "el_lower": "ναι",
+    "el_upper": "ΝΑΙ",
+    "rom": "nai",
+    "tag": "basic",
+    "frequency": 8
+  },
+  {
+    "id": 9,
+    "en": "No",
+    "el_lower": "όχι",
+    "el_upper": "ΟΧΙ",
+    "rom": "óhi",
+    "tag": "basic",
+    "frequency": 9
+  },
+  {
+    "id": 10,
+    "en": "Excuse me",
+    "el_lower": "συγγνώμη",
+    "el_upper": "ΣΥΓΓΝΩΜΗ",
+    "rom": "syngnómi",
+    "tag": "polite",
+    "frequency": 10
+  },
+  {
+    "id": 11,
+    "en": "Excuse me, please",
+    "el_lower": "με συγχωρείτε",
+    "el_upper": "ΜΕ ΣΥΓΧΩΡΕΙΤΕ",
+    "rom": "me synkhoríte",
+    "tag": "polite",
+    "frequency": 11
+  },
+  {
+    "id": 12,
+    "en": "How are you?",
+    "el_lower": "τι κάνετε;",
+    "el_upper": "ΤΙ ΚΑΝΕΤΕ;",
+    "rom": "ti kánete?",
+    "tag": "small_talk",
+    "frequency": 12
+  },
+  {
+    "id": 13,
+    "en": "Good afternoon",
+    "el_lower": "καλό απόγευμα",
+    "el_upper": "ΚΑΛΟ ΑΠΟΓΕΥΜΑ",
+    "rom": "kaló apóyevma",
+    "tag": "greeting",
+    "frequency": 13
+  },
+  {
+    "id": 14,
+    "en": "What is your name?",
+    "el_lower": "πώς σας λένε;",
+    "el_upper": "ΠΩΣ ΣΑΣ ΛΕΝΕ;",
+    "rom": "pós sas léne?",
+    "tag": "small_talk",
+    "frequency": 14
+  },
+  {
+    "id": 15,
+    "en": "My name is",
+    "el_lower": "με λένε",
+    "el_upper": "ΜΕ ΛΕΝΕ",
+    "rom": "me léne",
+    "tag": "small_talk",
+    "frequency": 15
+  },
+  {
+    "id": 16,
+    "en": "Nice to meet you",
+    "el_lower": "χαίρω πολύ",
+    "el_upper": "ΧΑΙΡΩ ΠΟΛΥ",
+    "rom": "haíro polí",
+    "tag": "polite",
+    "frequency": 16
+  },
+  {
+    "id": 17,
+    "en": "Where is the bathroom?",
+    "el_lower": "πού είναι η τουαλέτα;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΤΟΥΑΛΕΤΑ;",
+    "rom": "poú íne i toualéta?",
+    "tag": "directions",
+    "frequency": 17
+  },
+  {
+    "id": 18,
+    "en": "Do you speak English?",
+    "el_lower": "μιλάτε αγγλικά;",
+    "el_upper": "ΜΙΛΑΤΕ ΑΓΓΛΙΚΑ;",
+    "rom": "miláte angliká?",
+    "tag": "service",
+    "frequency": 18
+  },
+  {
+    "id": 19,
+    "en": "I don’t understand",
+    "el_lower": "δεν καταλαβαίνω",
+    "el_upper": "ΔΕΝ ΚΑΤΑΛΑΒΑΙΝΩ",
+    "rom": "den katalavéno",
+    "tag": "basic",
+    "frequency": 19
+  },
+  {
+    "id": 20,
+    "en": "Could you repeat, please?",
+    "el_lower": "μπορείτε να επαναλάβετε, παρακαλώ;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΕΠΑΝΑΛΑΒΕΤΕ, ΠΑΡΑΚΑΛΩ;",
+    "rom": "boríte na epanalávete, parakaló?",
+    "tag": "request",
+    "frequency": 20
+  },
+  {
+    "id": 21,
+    "en": "How much is it?",
+    "el_lower": "πόσο κάνει;",
+    "el_upper": "ΠΟΣΟ ΚΑΝΕΙ;",
+    "rom": "póso káni?",
+    "tag": "shopping",
+    "frequency": 21
+  },
+  {
+    "id": 22,
+    "en": "Do you have",
+    "el_lower": "έχετε",
+    "el_upper": "ΕΧΕΤΕ",
+    "rom": "éhete",
+    "tag": "shopping",
+    "frequency": 22
+  },
+  {
+    "id": 23,
+    "en": "I would like",
+    "el_lower": "θα ήθελα",
+    "el_upper": "ΘΑ ΗΘΕΛΑ",
+    "rom": "tha íthela",
+    "tag": "request",
+    "frequency": 23
+  },
+  {
+    "id": 24,
+    "en": "A table for two, please",
+    "el_lower": "ένα τραπέζι για δύο, παρακαλώ",
+    "el_upper": "ΕΝΑ ΤΡΑΠΕΖΙ ΓΙΑ ΔΥΟ, ΠΑΡΑΚΑΛΩ",
+    "rom": "éna trapézi gia dýo, parakaló",
+    "tag": "food",
+    "frequency": 24
+  },
+  {
+    "id": 25,
+    "en": "The check, please",
+    "el_lower": "τον λογαριασμό, παρακαλώ",
+    "el_upper": "ΤΟΝ ΛΟΓΑΡΙΑΣΜΟ, ΠΑΡΑΚΑΛΩ",
+    "rom": "ton logariasmó, parakaló",
+    "tag": "food",
+    "frequency": 25
+  },
+  {
+    "id": 26,
+    "en": "Water, please",
+    "el_lower": "νερό, παρακαλώ",
+    "el_upper": "ΝΕΡΟ, ΠΑΡΑΚΑΛΩ",
+    "rom": "neró, parakaló",
+    "tag": "food",
+    "frequency": 26
+  },
+  {
+    "id": 27,
+    "en": "Coffee, please",
+    "el_lower": "καφέ, παρακαλώ",
+    "el_upper": "ΚΑΦΕ, ΠΑΡΑΚΑΛΩ",
+    "rom": "kafé, parakaló",
+    "tag": "food",
+    "frequency": 27
+  },
+  {
+    "id": 28,
+    "en": "Wine, please",
+    "el_lower": "κρασί, παρακαλώ",
+    "el_upper": "ΚΡΑΣΙ, ΠΑΡΑΚΑΛΩ",
+    "rom": "krasí, parakaló",
+    "tag": "food",
+    "frequency": 28
+  },
+  {
+    "id": 29,
+    "en": "Bread, please",
+    "el_lower": "ψωμί, παρακαλώ",
+    "el_upper": "ΨΩΜΙ, ΠΑΡΑΚΑΛΩ",
+    "rom": "psomí, parakaló",
+    "tag": "food",
+    "frequency": 29
+  },
+  {
+    "id": 30,
+    "en": "Where is the pharmacy?",
+    "el_lower": "πού είναι το φαρμακείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΦΑΡΜΑΚΕΙΟ;",
+    "rom": "poú íne to farmakío?",
+    "tag": "directions",
+    "frequency": 30
+  },
+  {
+    "id": 31,
+    "en": "Where is the bus stop?",
+    "el_lower": "πού είναι η στάση λεωφορείου;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΣΤΑΣΗ ΛΕΩΦΟΡΕΙΟΥ;",
+    "rom": "poú íne i stási leoforíou?",
+    "tag": "transport",
+    "frequency": 31
+  },
+  {
+    "id": 32,
+    "en": "Do you take credit cards?",
+    "el_lower": "δέχεστε πιστωτικές κάρτες;",
+    "el_upper": "ΔΕΧΕΣΤΕ ΠΙΣΤΩΤΙΚΕΣ ΚΑΡΤΕΣ;",
+    "rom": "décheste pistotikés kártes?",
+    "tag": "shopping",
+    "frequency": 32
+  },
+  {
+    "id": 33,
+    "en": "Where can I buy tickets?",
+    "el_lower": "πού μπορώ να αγοράσω εισιτήρια;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΑΓΟΡΑΣΩ ΕΙΣΙΤΗΡΙΑ;",
+    "rom": "poú boró na agoráso isitíria?",
+    "tag": "transport",
+    "frequency": 33
+  },
+  {
+    "id": 34,
+    "en": "Left",
+    "el_lower": "αριστερά",
+    "el_upper": "ΑΡΙΣΤΕΡΑ",
+    "rom": "aristerá",
+    "tag": "directions",
+    "frequency": 34
+  },
+  {
+    "id": 35,
+    "en": "Right",
+    "el_lower": "δεξιά",
+    "el_upper": "ΔΕΞΙΑ",
+    "rom": "dexiá",
+    "tag": "directions",
+    "frequency": 35
+  },
+  {
+    "id": 36,
+    "en": "Straight ahead",
+    "el_lower": "ευθεία",
+    "el_upper": "ΕΥΘΕΙΑ",
+    "rom": "evthía",
+    "tag": "directions",
+    "frequency": 36
+  },
+  {
+    "id": 37,
+    "en": "Where is the nearest ATM?",
+    "el_lower": "πού είναι το κοντινότερο ΑΤΜ;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΚΟΝΤΙΝΟΤΕΡΟ ΑΤΜ;",
+    "rom": "poú íne to kontinótero ATM?",
+    "tag": "banking",
+    "frequency": 37
+  },
+  {
+    "id": 38,
+    "en": "How do I get to the city center?",
+    "el_lower": "πώς πάω στο κέντρο;",
+    "el_upper": "ΠΩΣ ΠΑΩ ΣΤΟ ΚΕΝΤΡΟ;",
+    "rom": "pós páo sto kéntro?",
+    "tag": "directions",
+    "frequency": 38
+  },
+  {
+    "id": 39,
+    "en": "Can you help me?",
+    "el_lower": "μπορείτε να με βοηθήσετε;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΜΕ ΒΟΗΘΗΣΕΤΕ;",
+    "rom": "boríte na me voithísete?",
+    "tag": "emergency",
+    "frequency": 39
+  },
+  {
+    "id": 40,
+    "en": "Call the police!",
+    "el_lower": "φωνάξτε την αστυνομία!",
+    "el_upper": "ΦΩΝΑΞΤΕ ΤΗΝ ΑΣΤΥΝΟΜΙΑ!",
+    "rom": "fonáxte tin astynomía!",
+    "tag": "emergency",
+    "frequency": 40
+  },
+  {
+    "id": 41,
+    "en": "Help!",
+    "el_lower": "βοήθεια!",
+    "el_upper": "ΒΟΗΘΕΙΑ!",
+    "rom": "voítheia!",
+    "tag": "emergency",
+    "frequency": 41
+  },
+  {
+    "id": 42,
+    "en": "Where is the hospital?",
+    "el_lower": "πού είναι το νοσοκομείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΝΟΣΟΚΟΜΕΙΟ;",
+    "rom": "poú íne to nosokomío?",
+    "tag": "health",
+    "frequency": 42
+  },
+  {
+    "id": 43,
+    "en": "I am lost",
+    "el_lower": "έχω χαθεί",
+    "el_upper": "ΕΧΩ ΧΑΘΕΙ",
+    "rom": "ého hathí",
+    "tag": "directions",
+    "frequency": 43
+  },
+  {
+    "id": 44,
+    "en": "Where is the train station?",
+    "el_lower": "πού είναι ο σταθμός του τρένου;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Ο ΣΤΑΘΜΟΣ ΤΟΥ ΤΡΕΝΟΥ;",
+    "rom": "poú íne o stathmós tou trénou?",
+    "tag": "transport",
+    "frequency": 44
+  },
+  {
+    "id": 45,
+    "en": "Where can I exchange money?",
+    "el_lower": "πού μπορώ να αλλάξω χρήματα;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΑΛΛΑΞΩ ΧΡΗΜΑΤΑ;",
+    "rom": "poú boró na alláxo chrímata?",
+    "tag": "banking",
+    "frequency": 45
+  },
+  {
+    "id": 46,
+    "en": "I need a doctor",
+    "el_lower": "χρειάζομαι γιατρό",
+    "el_upper": "ΧΡΕΙΑΖΟΜΑΙ ΓΙΑΤΡΟ",
+    "rom": "chreiázome yatró",
+    "tag": "health",
+    "frequency": 46
+  },
+  {
+    "id": 47,
+    "en": "Emergency",
+    "el_lower": "έκτακτη ανάγκη",
+    "el_upper": "ΕΚΤΑΚΤΗ ΑΝΑΓΚΗ",
+    "rom": "éktakti anángi",
+    "tag": "emergency",
+    "frequency": 47
+  },
+  {
+    "id": 48,
+    "en": "Where is the supermarket?",
+    "el_lower": "πού είναι το σούπερ μάρκετ;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΣΟΥΠΕΡ ΜΑΡΚΕΤ;",
+    "rom": "poú íne to soúper márket?",
+    "tag": "shopping",
+    "frequency": 48
+  },
+  {
+    "id": 49,
+    "en": "Where is the nearest gas station?",
+    "el_lower": "πού είναι το κοντινότερο βενζινάδικο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΚΟΝΤΙΝΟΤΕΡΟ ΒΕΝΖΙΝΑΔΙΚΟ;",
+    "rom": "poú íne to kontinótero venzinádiko?",
+    "tag": "transport",
+    "frequency": 49
+  },
+  {
+    "id": 50,
+    "en": "Can I pay with cash?",
+    "el_lower": "μπορώ να πληρώσω με μετρητά;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΛΗΡΩΣΩ ΜΕ ΜΕΤΡΗΤΑ;",
+    "rom": "boró na pliróso me metritá?",
+    "tag": "shopping",
+    "frequency": 50
+  },
+  {
+    "id": 51,
+    "en": "Which bus goes to the airport?",
+    "el_lower": "ποιο λεωφορείο πάει στο αεροδρόμιο;",
+    "el_upper": "ΠΟΙΟ ΛΕΩΦΟΡΕΙΟ ΠΑΕΙ ΣΤΟ ΑΕΡΟΔΡΟΜΙΟ;",
+    "rom": "pio leoforío pái sto aerodrómio?",
+    "tag": "transport",
+    "frequency": 51
+  },
+  {
+    "id": 52,
+    "en": "Can you recommend a restaurant?",
+    "el_lower": "μπορείτε να προτείνετε ένα εστιατόριο;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΠΡΟΤΕΙΝΕΤΕ ΕΝΑ ΕΣΤΙΑΤΟΡΙΟ;",
+    "rom": "boríte na protínete éna estiatório?",
+    "tag": "food",
+    "frequency": 52
+  },
+  {
+    "id": 53,
+    "en": "Do you have Wi-Fi?",
+    "el_lower": "έχετε Wi-Fi;",
+    "el_upper": "ΕΧΕΤΕ WI-FI;",
+    "rom": "éhete Wi-Fi?",
+    "tag": "service",
+    "frequency": 53
+  },
+  {
+    "id": 54,
+    "en": "I am allergic to",
+    "el_lower": "έχω αλλεργία σε",
+    "el_upper": "ΕΧΩ ΑΛΛΕΡΓΙΑ ΣΕ",
+    "rom": "ého allergía se",
+    "tag": "health",
+    "frequency": 54
+  },
+  {
+    "id": 55,
+    "en": "Do you have vegetarian dishes?",
+    "el_lower": "έχετε χορτοφαγικά πιάτα;",
+    "el_upper": "ΕΧΕΤΕ ΧΟΡΤΟΦΑΓΙΚΑ ΠΙΑΤΑ;",
+    "rom": "éhete chortofagiká piáta?",
+    "tag": "food",
+    "frequency": 55
+  },
+  {
+    "id": 56,
+    "en": "Can I see the menu?",
+    "el_lower": "μπορώ να δω το μενού;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΔΩ ΤΟ ΜΕΝΟΥ;",
+    "rom": "boró na do to menú?",
+    "tag": "food",
+    "frequency": 56
+  },
+  {
+    "id": 57,
+    "en": "Without cheese",
+    "el_lower": "χωρίς τυρί",
+    "el_upper": "ΧΩΡΙΣ ΤΥΡΙ",
+    "rom": "chorís tyrí",
+    "tag": "food",
+    "frequency": 57
+  },
+  {
+    "id": 58,
+    "en": "I don’t eat meat",
+    "el_lower": "δεν τρώω κρέας",
+    "el_upper": "ΔΕΝ ΤΡΩΩ ΚΡΕΑΣ",
+    "rom": "den tróo kréas",
+    "tag": "food",
+    "frequency": 58
+  },
+  {
+    "id": 59,
+    "en": "Restroom, please",
+    "el_lower": "τουαλέτα, παρακαλώ",
+    "el_upper": "ΤΟΥΑΛΕΤΑ, ΠΑΡΑΚΑΛΩ",
+    "rom": "toualéta, parakaló",
+    "tag": "service",
+    "frequency": 59
+  },
+  {
+    "id": 60,
+    "en": "Where is the beach?",
+    "el_lower": "πού είναι η παραλία;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΠΑΡΑΛΙΑ;",
+    "rom": "poú íne i paralía?",
+    "tag": "directions",
+    "frequency": 60
+  },
+  {
+    "id": 61,
+    "en": "Beer, please",
+    "el_lower": "μπύρα, παρακαλώ",
+    "el_upper": "ΜΠΥΡΑ, ΠΑΡΑΚΑΛΩ",
+    "rom": "bíra, parakaló",
+    "tag": "food",
+    "frequency": 61
+  },
+  {
+    "id": 62,
+    "en": "Do you have a room available?",
+    "el_lower": "έχετε διαθέσιμο δωμάτιο;",
+    "el_upper": "ΕΧΕΤΕ ΔΙΑΘΕΣΙΜΟ ΔΩΜΑΤΙΟ;",
+    "rom": "éhete diathésimo domátio?",
+    "tag": "housing",
+    "frequency": 62
+  },
+  {
+    "id": 63,
+    "en": "How far is it?",
+    "el_lower": "πόσο μακριά είναι;",
+    "el_upper": "ΠΟΣΟ ΜΑΚΡΙΑ ΕΙΝΑΙ;",
+    "rom": "póso makriá íne?",
+    "tag": "directions",
+    "frequency": 63
+  },
+  {
+    "id": 64,
+    "en": "Do you have air conditioning?",
+    "el_lower": "έχετε κλιματισμό;",
+    "el_upper": "ΕΧΕΤΕ ΚΛΙΜΑΤΙΣΜΟ;",
+    "rom": "éhete klimatismó?",
+    "tag": "housing",
+    "frequency": 64
+  },
+  {
+    "id": 65,
+    "en": "Where is my room?",
+    "el_lower": "πού είναι το δωμάτιό μου;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΔΩΜΑΤΙΟ ΜΟΥ;",
+    "rom": "poú íne to domátio mou?",
+    "tag": "housing",
+    "frequency": 65
+  },
+  {
+    "id": 66,
+    "en": "Where is the elevator?",
+    "el_lower": "πού είναι το ασανσέρ;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΑΣΑΝΣΕΡ;",
+    "rom": "poú íne to asansér?",
+    "tag": "housing",
+    "frequency": 66
+  },
+  {
+    "id": 67,
+    "en": "Can I have the password?",
+    "el_lower": "μπορώ να έχω τον κωδικό;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΤΟΝ ΚΩΔΙΚΟ;",
+    "rom": "boró na ého ton kodikó?",
+    "tag": "service",
+    "frequency": 67
+  },
+  {
+    "id": 68,
+    "en": "Is breakfast included?",
+    "el_lower": "περιλαμβάνεται πρωινό;",
+    "el_upper": "ΠΕΡΙΛΑΜΒΑΝΕΤΑΙ ΠΡΩΙΝΟ;",
+    "rom": "perilamvánete proinó?",
+    "tag": "housing",
+    "frequency": 68
+  },
+  {
+    "id": 69,
+    "en": "How many nights?",
+    "el_lower": "πόσες νύχτες;",
+    "el_upper": "ΠΟΣΕΣ ΝΥΧΤΕΣ;",
+    "rom": "póses nýchtes?",
+    "tag": "housing",
+    "frequency": 69
+  },
+  {
+    "id": 70,
+    "en": "Reservation",
+    "el_lower": "κράτηση",
+    "el_upper": "ΚΡΑΤΗΣΗ",
+    "rom": "krátisi",
+    "tag": "housing",
+    "frequency": 70
+  },
+  {
+    "id": 71,
+    "en": "What time is breakfast?",
+    "el_lower": "τι ώρα είναι το πρωινό;",
+    "el_upper": "ΤΙ ΩΡΑ ΕΙΝΑΙ ΤΟ ΠΡΩΙΝΟ;",
+    "rom": "ti óra íne to proinó?",
+    "tag": "housing",
+    "frequency": 71
+  },
+  {
+    "id": 72,
+    "en": "Taxi",
+    "el_lower": "ταξί",
+    "el_upper": "ΤΑΞΙ",
+    "rom": "taxí",
+    "tag": "transport",
+    "frequency": 72
+  },
+  {
+    "id": 73,
+    "en": "When does it leave?",
+    "el_lower": "πότε φεύγει;",
+    "el_upper": "ΠΟΤΕ ΦΕΥΓΕΙ;",
+    "rom": "póte févgei?",
+    "tag": "transport",
+    "frequency": 73
+  },
+  {
+    "id": 74,
+    "en": "Does it stop here?",
+    "el_lower": "σταματάει εδώ;",
+    "el_upper": "ΣΤΑΜΑΤΑΕΙ ΕΔΩ;",
+    "rom": "stamátei edó?",
+    "tag": "transport",
+    "frequency": 74
+  },
+  {
+    "id": 75,
+    "en": "What is this?",
+    "el_lower": "τι είναι αυτό;",
+    "el_upper": "ΤΙ ΕΙΝΑΙ ΑΥΤΟ;",
+    "rom": "ti íne aftó?",
+    "tag": "basic",
+    "frequency": 75
+  },
+  {
+    "id": 76,
+    "en": "How do I get there?",
+    "el_lower": "πώς πάω εκεί;",
+    "el_upper": "ΠΩΣ ΠΑΩ ΕΚΕΙ;",
+    "rom": "pós páo eki?",
+    "tag": "directions",
+    "frequency": 76
+  },
+  {
+    "id": 77,
+    "en": "How long does it take?",
+    "el_lower": "πόσο χρόνο χρειάζεται;",
+    "el_upper": "ΠΟΣΟ ΧΡΟΝΟ ΧΡΕΙΑΖΕΤΑΙ;",
+    "rom": "póso chróno chreiázete?",
+    "tag": "service",
+    "frequency": 77
+  },
+  {
+    "id": 78,
+    "en": "Is it far?",
+    "el_lower": "είναι μακριά;",
+    "el_upper": "ΕΙΝΑΙ ΜΑΚΡΙΑ;",
+    "rom": "íne makriá?",
+    "tag": "directions",
+    "frequency": 78
+  },
+  {
+    "id": 79,
+    "en": "Is it close?",
+    "el_lower": "είναι κοντά;",
+    "el_upper": "ΕΙΝΑΙ ΚΟΝΤΑ;",
+    "rom": "íne kondá?",
+    "tag": "directions",
+    "frequency": 79
+  },
+  {
+    "id": 80,
+    "en": "What is the address?",
+    "el_lower": "ποια είναι η διεύθυνση;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΔΙΕΥΘΥΝΣΗ;",
+    "rom": "piá íne i diéfthynsi?",
+    "tag": "service",
+    "frequency": 80
+  },
+  {
+    "id": 81,
+    "en": "Can I try it on?",
+    "el_lower": "μπορώ να το δοκιμάσω;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΤΟ ΔΟΚΙΜΑΣΩ;",
+    "rom": "boró na to dokimáso?",
+    "tag": "shopping",
+    "frequency": 81
+  },
+  {
+    "id": 82,
+    "en": "Do you have another size?",
+    "el_lower": "έχετε άλλο μέγεθος;",
+    "el_upper": "ΕΧΕΤΕ ΑΛΛΟ ΜΕΓΕΘΟΣ;",
+    "rom": "éhete állo mégethos?",
+    "tag": "shopping",
+    "frequency": 82
+  },
+  {
+    "id": 83,
+    "en": "I am just looking",
+    "el_lower": "κοιτάζω μόνο",
+    "el_upper": "ΚΟΙΤΑΖΩ ΜΟΝΟ",
+    "rom": "kitázo móno",
+    "tag": "shopping",
+    "frequency": 83
+  },
+  {
+    "id": 84,
+    "en": "That’s too expensive",
+    "el_lower": "είναι πολύ ακριβό",
+    "el_upper": "ΕΙΝΑΙ ΠΟΛΥ ΑΚΡΙΒΟ",
+    "rom": "íne polí akrivó",
+    "tag": "shopping",
+    "frequency": 84
+  },
+  {
+    "id": 85,
+    "en": "Do you have a cheaper one?",
+    "el_lower": "έχετε πιο φτηνό;",
+    "el_upper": "ΕΧΕΤΕ ΠΙΟ ΦΤΗΝΟ;",
+    "rom": "éhete pio ftinó?",
+    "tag": "shopping",
+    "frequency": 85
+  },
+  {
+    "id": 86,
+    "en": "Can I pay by card?",
+    "el_lower": "μπορώ να πληρώσω με κάρτα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΛΗΡΩΣΩ ΜΕ ΚΑΡΤΑ;",
+    "rom": "boró na pliróso me kárta?",
+    "tag": "shopping",
+    "frequency": 86
+  },
+  {
+    "id": 87,
+    "en": "Can you write it down?",
+    "el_lower": "μπορείτε να το γράψετε;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΤΟ ΓΡΑΨΕΤΕ;",
+    "rom": "boríte na to grápsete?",
+    "tag": "service",
+    "frequency": 87
+  },
+  {
+    "id": 88,
+    "en": "Can I use the phone?",
+    "el_lower": "μπορώ να χρησιμοποιήσω το τηλέφωνο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΩ ΤΟ ΤΗΛΕΦΩΝΟ;",
+    "rom": "boró na chrisimopoíso to tiléfono?",
+    "tag": "service",
+    "frequency": 88
+  },
+  {
+    "id": 89,
+    "en": "Do you know where it is?",
+    "el_lower": "ξέρετε πού είναι;",
+    "el_upper": "ΞΕΡΕΤΕ ΠΟΥ ΕΙΝΑΙ;",
+    "rom": "xérete poú íne?",
+    "tag": "service",
+    "frequency": 89
+  },
+  {
+    "id": 90,
+    "en": "I am not sure",
+    "el_lower": "δεν είμαι σίγουρος",
+    "el_upper": "ΔΕΝ ΕΙΜΑΙ ΣΙΓΟΥΡΟΣ",
+    "rom": "den íme síguros",
+    "tag": "basic",
+    "frequency": 90
+  },
+  {
+    "id": 91,
+    "en": "I like it",
+    "el_lower": "μ' αρέσει",
+    "el_upper": "Μ' ΑΡΕΣΕΙ",
+    "rom": "m' arési",
+    "tag": "small_talk",
+    "frequency": 91
+  },
+  {
+    "id": 92,
+    "en": "I don’t like it",
+    "el_lower": "δεν μ' αρέσει",
+    "el_upper": "ΔΕΝ Μ' ΑΡΕΣΕΙ",
+    "rom": "den m' arési",
+    "tag": "small_talk",
+    "frequency": 92
+  },
+  {
+    "id": 93,
+    "en": "What do you recommend?",
+    "el_lower": "τι προτείνετε;",
+    "el_upper": "ΤΙ ΠΡΟΤΕΙΝΕΤΕ;",
+    "rom": "ti protínete?",
+    "tag": "service",
+    "frequency": 93
+  },
+  {
+    "id": 94,
+    "en": "Do you serve breakfast?",
+    "el_lower": "σερβίρετε πρωινό;",
+    "el_upper": "ΣΕΡΒΙΡΕΤΕ ΠΡΩΙΝΟ;",
+    "rom": "servírete proinó?",
+    "tag": "food",
+    "frequency": 94
+  },
+  {
+    "id": 95,
+    "en": "Can I reserve a table?",
+    "el_lower": "μπορώ να κάνω κράτηση;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΚΑΝΩ ΚΡΑΤΗΣΗ;",
+    "rom": "boró na káno krátisi?",
+    "tag": "food",
+    "frequency": 95
+  },
+  {
+    "id": 96,
+    "en": "Can you call a taxi?",
+    "el_lower": "μπορείτε να καλέσετε ταξί;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΚΑΛΕΣΕΤΕ ΤΑΞΙ;",
+    "rom": "boríte na kalésete taxí?",
+    "tag": "transport",
+    "frequency": 96
+  },
+  {
+    "id": 97,
+    "en": "How much does it cost?",
+    "el_lower": "πόσο κοστίζει;",
+    "el_upper": "ΠΟΣΟ ΚΟΣΤΙΖΕΙ;",
+    "rom": "póso kostízei?",
+    "tag": "shopping",
+    "frequency": 97
+  },
+  {
+    "id": 98,
+    "en": "That’s all, thank you",
+    "el_lower": "αυτό είναι όλα, ευχαριστώ",
+    "el_upper": "ΑΥΤΟ ΕΙΝΑΙ ΟΛΑ, ΕΥΧΑΡΙΣΤΩ",
+    "rom": "aftó íne óla, efcharistó",
+    "tag": "polite",
+    "frequency": 98
+  },
+  {
+    "id": 99,
+    "en": "Do you have a map?",
+    "el_lower": "έχετε χάρτη;",
+    "el_upper": "ΕΧΕΤΕ ΧΑΡΤΗ;",
+    "rom": "éhete chárti?",
+    "tag": "service",
+    "frequency": 99
+  },
+  {
+    "id": 100,
+    "en": "Can you show me?",
+    "el_lower": "μπορείτε να μου δείξετε;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΜΟΥ ΔΕΙΞΕΤΕ;",
+    "rom": "boríte na mou díxete?",
+    "tag": "service",
+    "frequency": 100
+  },
+  {
+    "id": 101,
+    "en": "Is there a bathroom nearby?",
+    "el_lower": "υπάρχει τουαλέτα εδώ κοντά;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΤΟΥΑΛΕΤΑ ΕΔΩ ΚΟΝΤΑ;",
+    "rom": "ipárchi toualéta edó konda?",
+    "tag": "service",
+    "frequency": 101
+  },
+  {
+    "id": 102,
+    "en": "Do you speak Greek?",
+    "el_lower": "μιλάτε ελληνικά;",
+    "el_upper": "ΜΙΛΑΤΕ ΕΛΛΗΝΙΚΑ;",
+    "rom": "miláte elliniká?",
+    "tag": "service",
+    "frequency": 102
+  },
+  {
+    "id": 103,
+    "en": "I’m from the United States",
+    "el_lower": "είμαι από τις Ηνωμένες Πολιτείες",
+    "el_upper": "ΕΙΜΑΙ ΑΠΟ ΤΙΣ ΗΝΩΜΕΝΕΣ ΠΟΛΙΤΕΙΕΣ",
+    "rom": "íme apó tis Inoménes Politeíes",
+    "tag": "small_talk",
+    "frequency": 103
+  },
+  {
+    "id": 104,
+    "en": "I’m on vacation",
+    "el_lower": "είμαι σε διακοπές",
+    "el_upper": "ΕΙΜΑΙ ΣΕ ΔΙΑΚΟΠΕΣ",
+    "rom": "íme se diakopés",
+    "tag": "small_talk",
+    "frequency": 104
+  },
+  {
+    "id": 105,
+    "en": "Today",
+    "el_lower": "σήμερα",
+    "el_upper": "ΣΗΜΕΡΑ",
+    "rom": "símera",
+    "tag": "time",
+    "frequency": 105
+  },
+  {
+    "id": 106,
+    "en": "Tomorrow",
+    "el_lower": "αύριο",
+    "el_upper": "ΑΥΡΙΟ",
+    "rom": "ávrio",
+    "tag": "time",
+    "frequency": 106
+  },
+  {
+    "id": 107,
+    "en": "Yesterday",
+    "el_lower": "χθες",
+    "el_upper": "ΧΘΕΣ",
+    "rom": "kthes",
+    "tag": "time",
+    "frequency": 107
+  },
+  {
+    "id": 108,
+    "en": "Now",
+    "el_lower": "τώρα",
+    "el_upper": "ΤΩΡΑ",
+    "rom": "tóra",
+    "tag": "time",
+    "frequency": 108
+  },
+  {
+    "id": 109,
+    "en": "Morning",
+    "el_lower": "πρωί",
+    "el_upper": "ΠΡΩΙ",
+    "rom": "proí",
+    "tag": "time",
+    "frequency": 109
+  },
+  {
+    "id": 110,
+    "en": "Evening",
+    "el_lower": "βράδυ",
+    "el_upper": "ΒΡΑΔΥ",
+    "rom": "vrádi",
+    "tag": "time",
+    "frequency": 110
+  },
+  {
+    "id": 111,
+    "en": "Night",
+    "el_lower": "νύχτα",
+    "el_upper": "ΝΥΧΤΑ",
+    "rom": "nýchta",
+    "tag": "time",
+    "frequency": 111
+  },
+  {
+    "id": 112,
+    "en": "Week",
+    "el_lower": "εβδομάδα",
+    "el_upper": "ΕΒΔΟΜΑΔΑ",
+    "rom": "evdomáda",
+    "tag": "time",
+    "frequency": 112
+  },
+  {
+    "id": 113,
+    "en": "Month",
+    "el_lower": "μήνας",
+    "el_upper": "ΜΗΝΑΣ",
+    "rom": "mínas",
+    "tag": "time",
+    "frequency": 113
+  },
+  {
+    "id": 114,
+    "en": "Year",
+    "el_lower": "χρόνος",
+    "el_upper": "ΧΡΟΝΟΣ",
+    "rom": "chrónos",
+    "tag": "time",
+    "frequency": 114
+  },
+  {
+    "id": 115,
+    "en": "Monday",
+    "el_lower": "Δευτέρα",
+    "el_upper": "ΔΕΥΤΕΡΑ",
+    "rom": "Deftéra",
+    "tag": "time",
+    "frequency": 115
+  },
+  {
+    "id": 116,
+    "en": "Tuesday",
+    "el_lower": "Τρίτη",
+    "el_upper": "ΤΡΙΤΗ",
+    "rom": "Tríti",
+    "tag": "time",
+    "frequency": 116
+  },
+  {
+    "id": 117,
+    "en": "Wednesday",
+    "el_lower": "Τετάρτη",
+    "el_upper": "ΤΕΤΑΡΤΗ",
+    "rom": "Tetárti",
+    "tag": "time",
+    "frequency": 117
+  },
+  {
+    "id": 118,
+    "en": "Thursday",
+    "el_lower": "Πέμπτη",
+    "el_upper": "ΠΕΜΠΤΗ",
+    "rom": "Pémpti",
+    "tag": "time",
+    "frequency": 118
+  },
+  {
+    "id": 119,
+    "en": "Friday",
+    "el_lower": "Παρασκευή",
+    "el_upper": "ΠΑΡΑΣΚΕΥΗ",
+    "rom": "Paraskeví",
+    "tag": "time",
+    "frequency": 119
+  },
+  {
+    "id": 120,
+    "en": "Saturday",
+    "el_lower": "Σάββατο",
+    "el_upper": "ΣΑΒΒΑΤΟ",
+    "rom": "Sávato",
+    "tag": "time",
+    "frequency": 120
+  },
+  {
+    "id": 121,
+    "en": "Sunday",
+    "el_lower": "Κυριακή",
+    "el_upper": "ΚΥΡΙΑΚΗ",
+    "rom": "Kiriakí",
+    "tag": "time",
+    "frequency": 121
+  },
+  {
+    "id": 122,
+    "en": "What time is it?",
+    "el_lower": "τι ώρα είναι;",
+    "el_upper": "ΤΙ ΩΡΑ ΕΙΝΑΙ;",
+    "rom": "ti óra íne?",
+    "tag": "time",
+    "frequency": 122
+  },
+  {
+    "id": 123,
+    "en": "At what time?",
+    "el_lower": "τι ώρα;",
+    "el_upper": "ΤΙ ΩΡΑ;",
+    "rom": "ti óra?",
+    "tag": "time",
+    "frequency": 123
+  },
+  {
+    "id": 124,
+    "en": "Open",
+    "el_lower": "ανοιχτό",
+    "el_upper": "ΑΝΟΙΧΤΟ",
+    "rom": "anichtó",
+    "tag": "service",
+    "frequency": 124
+  },
+  {
+    "id": 125,
+    "en": "Closed",
+    "el_lower": "κλειστό",
+    "el_upper": "ΚΛΕΙΣΤΟ",
+    "rom": "kleistó",
+    "tag": "service",
+    "frequency": 125
+  },
+  {
+    "id": 126,
+    "en": "What is your phone number?",
+    "el_lower": "ποιος είναι ο αριθμός τηλεφώνου σας;",
+    "el_upper": "ΠΟΙΟΣ ΕΙΝΑΙ Ο ΑΡΙΘΜΟΣ ΤΗΛΕΦΩΝΟΥ ΣΑΣ;",
+    "rom": "pios íne o arithmós tilefónou sas?",
+    "tag": "service",
+    "frequency": 126
+  },
+  {
+    "id": 127,
+    "en": "Where are you from?",
+    "el_lower": "από πού είστε;",
+    "el_upper": "ΑΠΟ ΠΟΥ ΕΙΣΤΕ;",
+    "rom": "apó poú íste?",
+    "tag": "small_talk",
+    "frequency": 127
+  },
+  {
+    "id": 128,
+    "en": "I am from...",
+    "el_lower": "είμαι από...",
+    "el_upper": "ΕΙΜΑΙ ΑΠΟ...",
+    "rom": "íme apó...",
+    "tag": "small_talk",
+    "frequency": 128
+  },
+  {
+    "id": 129,
+    "en": "Do you have children?",
+    "el_lower": "έχετε παιδιά;",
+    "el_upper": "ΕΧΕΤΕ ΠΑΙΔΙΑ;",
+    "rom": "éhete pediá?",
+    "tag": "small_talk",
+    "frequency": 129
+  },
+  {
+    "id": 130,
+    "en": "Do you have pets?",
+    "el_lower": "έχετε κατοικίδια;",
+    "el_upper": "ΕΧΕΤΕ ΚΑΤΟΙΚΙΔΙΑ;",
+    "rom": "éhete katoikídia?",
+    "tag": "small_talk",
+    "frequency": 130
+  },
+  {
+    "id": 131,
+    "en": "My wife",
+    "el_lower": "η γυναίκα μου",
+    "el_upper": "Η ΓΥΝΑΙΚΑ ΜΟΥ",
+    "rom": "i yinéka mou",
+    "tag": "small_talk",
+    "frequency": 131
+  },
+  {
+    "id": 132,
+    "en": "My husband",
+    "el_lower": "ο άντρας μου",
+    "el_upper": "Ο ΑΝΤΡΑΣ ΜΟΥ",
+    "rom": "o ándras mou",
+    "tag": "small_talk",
+    "frequency": 132
+  },
+  {
+    "id": 133,
+    "en": "My child",
+    "el_lower": "το παιδί μου",
+    "el_upper": "ΤΟ ΠΑΙΔΙ ΜΟΥ",
+    "rom": "to pedí mou",
+    "tag": "small_talk",
+    "frequency": 133
+  },
+  {
+    "id": 134,
+    "en": "My friend",
+    "el_lower": "ο φίλος μου",
+    "el_upper": "Ο ΦΙΛΟΣ ΜΟΥ",
+    "rom": "o fílos mou",
+    "tag": "small_talk",
+    "frequency": 134
+  },
+  {
+    "id": 135,
+    "en": "Excuse me, where is...?",
+    "el_lower": "συγγνώμη, πού είναι...;",
+    "el_upper": "ΣΥΓΓΝΩΜΗ, ΠΟΥ ΕΙΝΑΙ...;",
+    "rom": "syngnómi, poú íne...?",
+    "tag": "directions",
+    "frequency": 135
+  },
+  {
+    "id": 136,
+    "en": "Turn left",
+    "el_lower": "στρίψτε αριστερά",
+    "el_upper": "ΣΤΡΙΨΤΕ ΑΡΙΣΤΕΡΑ",
+    "rom": "strípste aristerá",
+    "tag": "directions",
+    "frequency": 136
+  },
+  {
+    "id": 137,
+    "en": "Turn right",
+    "el_lower": "στρίψτε δεξιά",
+    "el_upper": "ΣΤΡΙΨΤΕ ΔΕΞΙΑ",
+    "rom": "strípste dexiá",
+    "tag": "directions",
+    "frequency": 137
+  },
+  {
+    "id": 138,
+    "en": "Go straight",
+    "el_lower": "πηγαίνετε ευθεία",
+    "el_upper": "ΠΗΓΑΙΝΕΤΕ ΕΥΘΕΙΑ",
+    "rom": "piyénete evthía",
+    "tag": "directions",
+    "frequency": 138
+  },
+  {
+    "id": 139,
+    "en": "Go back",
+    "el_lower": "επιστρέψτε πίσω",
+    "el_upper": "ΕΠΙΣΤΡΕΨΤΕ ΠΙΣΩ",
+    "rom": "epistrépste píso",
+    "tag": "directions",
+    "frequency": 139
+  },
+  {
+    "id": 140,
+    "en": "Danger",
+    "el_lower": "κίνδυνος",
+    "el_upper": "ΚΙΝΔΥΝΟΣ",
+    "rom": "kíndynos",
+    "tag": "emergency",
+    "frequency": 140
+  },
+  {
+    "id": 141,
+    "en": "Lost",
+    "el_lower": "χαμένος",
+    "el_upper": "ΧΑΜΕΝΟΣ",
+    "rom": "haménos",
+    "tag": "directions",
+    "frequency": 141
+  },
+  {
+    "id": 142,
+    "en": "Ticket",
+    "el_lower": "εισιτήριο",
+    "el_upper": "ΕΙΣΙΤΗΡΙΟ",
+    "rom": "isitírio",
+    "tag": "transport",
+    "frequency": 142
+  },
+  {
+    "id": 143,
+    "en": "Line",
+    "el_lower": "γραμμή",
+    "el_upper": "ΓΡΑΜΜΗ",
+    "rom": "grammí",
+    "tag": "transport",
+    "frequency": 143
+  },
+  {
+    "id": 144,
+    "en": "Platform",
+    "el_lower": "αποβάθρα",
+    "el_upper": "ΑΠΟΒΑΘΡΑ",
+    "rom": "apováthra",
+    "tag": "transport",
+    "frequency": 144
+  },
+  {
+    "id": 145,
+    "en": "Luggage",
+    "el_lower": "αποσκευές",
+    "el_upper": "ΑΠΟΣΚΕΥΕΣ",
+    "rom": "aposkevés",
+    "tag": "transport",
+    "frequency": 145
+  },
+  {
+    "id": 146,
+    "en": "Bag",
+    "el_lower": "τσάντα",
+    "el_upper": "ΤΣΑΝΤΑ",
+    "rom": "tsánda",
+    "tag": "shopping",
+    "frequency": 146
+  },
+  {
+    "id": 147,
+    "en": "Suitcase",
+    "el_lower": "βαλίτσα",
+    "el_upper": "ΒΑΛΙΤΣΑ",
+    "rom": "valítsa",
+    "tag": "transport",
+    "frequency": 147
+  },
+  {
+    "id": 148,
+    "en": "Can I help you?",
+    "el_lower": "μπορώ να σας βοηθήσω;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΣΑΣ ΒΟΗΘΗΣΩ;",
+    "rom": "boró na sas voithíso?",
+    "tag": "service",
+    "frequency": 148
+  },
+  {
+    "id": 149,
+    "en": "Can you help me with this?",
+    "el_lower": "μπορείτε να με βοηθήσετε με αυτό;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΜΕ ΒΟΗΘΗΣΕΤΕ ΜΕ ΑΥΤΟ;",
+    "rom": "boríte na me voithísete me aftó?",
+    "tag": "service",
+    "frequency": 149
+  },
+  {
+    "id": 150,
+    "en": "No problem",
+    "el_lower": "κανένα πρόβλημα",
+    "el_upper": "ΚΑΝΕΝΑ ΠΡΟΒΛΗΜΑ",
+    "rom": "kanéna próvlima",
+    "tag": "polite",
+    "frequency": 150
+  },
+  {
+    "id": 151,
+    "en": "What is your email?",
+    "el_lower": "ποιο είναι το email σας;",
+    "el_upper": "ΠΟΙΟ ΕΙΝΑΙ ΤΟ EMAIL ΣΑΣ;",
+    "rom": "pio íne to email sas?",
+    "tag": "service",
+    "frequency": 151
+  },
+  {
+    "id": 152,
+    "en": "It’s urgent",
+    "el_lower": "είναι επείγον",
+    "el_upper": "ΕΙΝΑΙ ΕΠΕΙΓΟΝ",
+    "rom": "íne epígon",
+    "tag": "emergency",
+    "frequency": 152
+  },
+  {
+    "id": 153,
+    "en": "Call an ambulance!",
+    "el_lower": "καλέστε ασθενοφόρο!",
+    "el_upper": "ΚΑΛΕΣΤΕ ΑΣΘΕΝΟΦΟΡΟ!",
+    "rom": "kaléste asthenofóro!",
+    "tag": "emergency",
+    "frequency": 153
+  },
+  {
+    "id": 154,
+    "en": "I need help",
+    "el_lower": "χρειάζομαι βοήθεια",
+    "el_upper": "ΧΡΕΙΑΖΟΜΑΙ ΒΟΗΘΕΙΑ",
+    "rom": "chreiázome voítheia",
+    "tag": "emergency",
+    "frequency": 154
+  },
+  {
+    "id": 155,
+    "en": "Stop!",
+    "el_lower": "σταματήστε!",
+    "el_upper": "ΣΤΑΜΑΤΗΣΤΕ!",
+    "rom": "stamatíste!",
+    "tag": "emergency",
+    "frequency": 155
+  },
+  {
+    "id": 156,
+    "en": "Fire!",
+    "el_lower": "φωτιά!",
+    "el_upper": "ΦΩΤΙΑ!",
+    "rom": "fotiá!",
+    "tag": "emergency",
+    "frequency": 156
+  },
+  {
+    "id": 157,
+    "en": "My wallet was stolen",
+    "el_lower": "μου έκλεψαν το πορτοφόλι",
+    "el_upper": "ΜΟΥ ΕΚΛΕΨΑΝ ΤΟ ΠΟΡΤΟΦΟΛΙ",
+    "rom": "mou éklepsan to portofóli",
+    "tag": "emergency",
+    "frequency": 157
+  },
+  {
+    "id": 158,
+    "en": "My passport was stolen",
+    "el_lower": "μου έκλεψαν το διαβατήριο",
+    "el_upper": "ΜΟΥ ΕΚΛΕΨΑΝ ΤΟ ΔΙΑΒΑΤΗΡΙΟ",
+    "rom": "mou éklepsan to diavatírio",
+    "tag": "emergency",
+    "frequency": 158
+  },
+  {
+    "id": 159,
+    "en": "Where is the embassy?",
+    "el_lower": "πού είναι η πρεσβεία;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΠΡΕΣΒΕΙΑ;",
+    "rom": "poú íne i presvía?",
+    "tag": "emergency",
+    "frequency": 159
+  },
+  {
+    "id": 160,
+    "en": "I need a pharmacy",
+    "el_lower": "χρειάζομαι φαρμακείο",
+    "el_upper": "ΧΡΕΙΑΖΟΜΑΙ ΦΑΡΜΑΚΕΙΟ",
+    "rom": "chreiázome farmakío",
+    "tag": "health",
+    "frequency": 160
+  },
+  {
+    "id": 161,
+    "en": "I need to see a doctor",
+    "el_lower": "χρειάζομαι να δω γιατρό",
+    "el_upper": "ΧΡΕΙΑΖΟΜΑΙ ΝΑ ΔΩ ΓΙΑΤΡΟ",
+    "rom": "chreiázome na do yatró",
+    "tag": "health",
+    "frequency": 161
+  },
+  {
+    "id": 162,
+    "en": "Is there a hospital nearby?",
+    "el_lower": "υπάρχει νοσοκομείο εδώ κοντά;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΝΟΣΟΚΟΜΕΙΟ ΕΔΩ ΚΟΝΤΑ;",
+    "rom": "ipárchi nosokomío edó konda?",
+    "tag": "health",
+    "frequency": 162
+  },
+  {
+    "id": 163,
+    "en": "I feel sick",
+    "el_lower": "νιώθω άρρωστος",
+    "el_upper": "ΝΙΩΘΩ ΑΡΡΩΣΤΟΣ",
+    "rom": "niótho árrhostos",
+    "tag": "health",
+    "frequency": 163
+  },
+  {
+    "id": 164,
+    "en": "Pain",
+    "el_lower": "πόνος",
+    "el_upper": "ΠΟΝΟΣ",
+    "rom": "pónos",
+    "tag": "health",
+    "frequency": 164
+  },
+  {
+    "id": 165,
+    "en": "I have a fever",
+    "el_lower": "έχω πυρετό",
+    "el_upper": "ΕΧΩ ΠΥΡΕΤΟ",
+    "rom": "ého piretó",
+    "tag": "health",
+    "frequency": 165
+  },
+  {
+    "id": 166,
+    "en": "My head hurts",
+    "el_lower": "με πονάει το κεφάλι",
+    "el_upper": "ΜΕ ΠΟΝΑΕΙ ΤΟ ΚΕΦΑΛΙ",
+    "rom": "me ponái to kefáli",
+    "tag": "health",
+    "frequency": 166
+  },
+  {
+    "id": 167,
+    "en": "I hurt my arm",
+    "el_lower": "χτύπησα το χέρι μου",
+    "el_upper": "ΧΤΥΠΗΣΑ ΤΟ ΧΕΡΙ ΜΟΥ",
+    "rom": "xtýpisa to chéri mou",
+    "tag": "health",
+    "frequency": 167
+  },
+  {
+    "id": 168,
+    "en": "I have a cold",
+    "el_lower": "έχω κρυολόγημα",
+    "el_upper": "ΕΧΩ ΚΡΥΟΛΟΓΗΜΑ",
+    "rom": "ého kriológima",
+    "tag": "health",
+    "frequency": 168
+  },
+  {
+    "id": 169,
+    "en": "Toothache",
+    "el_lower": "πονόδοντος",
+    "el_upper": "ΠΟΝΟΔΟΝΤΟΣ",
+    "rom": "ponódontos",
+    "tag": "health",
+    "frequency": 169
+  },
+  {
+    "id": 170,
+    "en": "Stomachache",
+    "el_lower": "πονόκοιλος",
+    "el_upper": "ΠΟΝΟΚΟΙΛΟΣ",
+    "rom": "ponókilos",
+    "tag": "health",
+    "frequency": 170
+  },
+  {
+    "id": 171,
+    "en": "Do you have any medicine?",
+    "el_lower": "έχετε κάποιο φάρμακο;",
+    "el_upper": "ΕΧΕΤΕ ΚΑΠΟΙΟ ΦΑΡΜΑΚΟ;",
+    "rom": "éhete kápio fármako?",
+    "tag": "health",
+    "frequency": 171
+  },
+  {
+    "id": 172,
+    "en": "Pharmacy",
+    "el_lower": "φαρμακείο",
+    "el_upper": "ΦΑΡΜΑΚΕΙΟ",
+    "rom": "farmakío",
+    "tag": "health",
+    "frequency": 172
+  },
+  {
+    "id": 173,
+    "en": "Doctor",
+    "el_lower": "γιατρός",
+    "el_upper": "ΓΙΑΤΡΟΣ",
+    "rom": "yatrós",
+    "tag": "health",
+    "frequency": 173
+  },
+  {
+    "id": 174,
+    "en": "Hospital",
+    "el_lower": "νοσοκομείο",
+    "el_upper": "ΝΟΣΟΚΟΜΕΙΟ",
+    "rom": "nosokomío",
+    "tag": "health",
+    "frequency": 174
+  },
+  {
+    "id": 175,
+    "en": "Clinic",
+    "el_lower": "κλινική",
+    "el_upper": "ΚΛΙΝΙΚΗ",
+    "rom": "klinikí",
+    "tag": "health",
+    "frequency": 175
+  },
+  {
+    "id": 176,
+    "en": "I have a reservation",
+    "el_lower": "έχω κράτηση",
+    "el_upper": "ΕΧΩ ΚΡΑΤΗΣΗ",
+    "rom": "ého krátisi",
+    "tag": "housing",
+    "frequency": 176
+  },
+  {
+    "id": 177,
+    "en": "Do you have a single room?",
+    "el_lower": "έχετε μονόκλινο δωμάτιο;",
+    "el_upper": "ΕΧΕΤΕ ΜΟΝΟΚΛΙΝΟ ΔΩΜΑΤΙΟ;",
+    "rom": "éhete monóklino domátio?",
+    "tag": "housing",
+    "frequency": 177
+  },
+  {
+    "id": 178,
+    "en": "Do you have a double room?",
+    "el_lower": "έχετε δίκλινο δωμάτιο;",
+    "el_upper": "ΕΧΕΤΕ ΔΙΚΛΙΝΟ ΔΩΜΑΤΙΟ;",
+    "rom": "éhete díklino domátio?",
+    "tag": "housing",
+    "frequency": 178
+  },
+  {
+    "id": 179,
+    "en": "How much per night?",
+    "el_lower": "πόσο για κάθε νύχτα;",
+    "el_upper": "ΠΟΣΟ ΓΙΑ ΚΑΘΕ ΝΥΧΤΑ;",
+    "rom": "póso gia káthe nýchta?",
+    "tag": "housing",
+    "frequency": 179
+  },
+  {
+    "id": 180,
+    "en": "How many guests?",
+    "el_lower": "πόσοι επισκέπτες;",
+    "el_upper": "ΠΟΣΟΙ ΕΠΙΣΚΕΠΤΕΣ;",
+    "rom": "pósi episképtes?",
+    "tag": "housing",
+    "frequency": 180
+  },
+  {
+    "id": 181,
+    "en": "I want to check in",
+    "el_lower": "θέλω να κάνω check-in",
+    "el_upper": "ΘΕΛΩ ΝΑ ΚΑΝΩ CHECK-IN",
+    "rom": "thélo na káno check-in",
+    "tag": "housing",
+    "frequency": 181
+  },
+  {
+    "id": 182,
+    "en": "I want to check out",
+    "el_lower": "θέλω να κάνω check-out",
+    "el_upper": "ΘΕΛΩ ΝΑ ΚΑΝΩ CHECK-OUT",
+    "rom": "thélo na káno check-out",
+    "tag": "housing",
+    "frequency": 182
+  },
+  {
+    "id": 183,
+    "en": "When is check-in?",
+    "el_lower": "πότε είναι το check-in;",
+    "el_upper": "ΠΟΤΕ ΕΙΝΑΙ ΤΟ CHECK-IN;",
+    "rom": "póte íne to check-in?",
+    "tag": "housing",
+    "frequency": 183
+  },
+  {
+    "id": 184,
+    "en": "When is check-out?",
+    "el_lower": "πότε είναι το check-out;",
+    "el_upper": "ΠΟΤΕ ΕΙΝΑΙ ΤΟ CHECK-OUT;",
+    "rom": "póte íne to check-out?",
+    "tag": "housing",
+    "frequency": 184
+  },
+  {
+    "id": 185,
+    "en": "Can I leave my bags?",
+    "el_lower": "μπορώ να αφήσω τις αποσκευές μου;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΑΦΗΣΩ ΤΙΣ ΑΠΟΣΚΕΥΕΣ ΜΟΥ;",
+    "rom": "boró na afíso tis aposkevés mou?",
+    "tag": "housing",
+    "frequency": 185
+  },
+  {
+    "id": 186,
+    "en": "Is there parking?",
+    "el_lower": "υπάρχει πάρκινγκ;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΠΑΡΚΙΝΓΚ;",
+    "rom": "ipárchi párkingk?",
+    "tag": "housing",
+    "frequency": 186
+  },
+  {
+    "id": 187,
+    "en": "Is there internet?",
+    "el_lower": "υπάρχει ίντερνετ;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΙΝΤΕΡΝΕΤ;",
+    "rom": "ipárchi ínternet?",
+    "tag": "service",
+    "frequency": 187
+  },
+  {
+    "id": 188,
+    "en": "Can I have a receipt?",
+    "el_lower": "μπορώ να έχω απόδειξη;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΑΠΟΔΕΙΞΗ;",
+    "rom": "boró na ého apódixi?",
+    "tag": "shopping",
+    "frequency": 188
+  },
+  {
+    "id": 189,
+    "en": "Do you have change?",
+    "el_lower": "έχετε ψιλά;",
+    "el_upper": "ΕΧΕΤΕ ΨΙΛΑ;",
+    "rom": "éhete psilá?",
+    "tag": "shopping",
+    "frequency": 189
+  },
+  {
+    "id": 190,
+    "en": "Where can I buy groceries?",
+    "el_lower": "πού μπορώ να αγοράσω παντοπωλείο;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΑΓΟΡΑΣΩ ΠΑΝΤΟΠΩΛΕΙΟ;",
+    "rom": "poú boró na agoráso pantopolío?",
+    "tag": "shopping",
+    "frequency": 190
+  },
+  {
+    "id": 191,
+    "en": "Can I see the price?",
+    "el_lower": "μπορώ να δω την τιμή;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΔΩ ΤΗΝ ΤΙΜΗ;",
+    "rom": "boró na do tin timí?",
+    "tag": "shopping",
+    "frequency": 191
+  },
+  {
+    "id": 192,
+    "en": "Do you sell stamps?",
+    "el_lower": "πουλάτε γραμματόσημα;",
+    "el_upper": "ΠΟΥΛΑΤΕ ΓΡΑΜΜΑΤΟΣΗΜΑ;",
+    "rom": "pouláte grammatósima?",
+    "tag": "service",
+    "frequency": 192
+  },
+  {
+    "id": 193,
+    "en": "Where is the post office?",
+    "el_lower": "πού είναι το ταχυδρομείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΤΑΧΥΔΡΟΜΕΙΟ;",
+    "rom": "poú íne to tachydromeío?",
+    "tag": "service",
+    "frequency": 193
+  },
+  {
+    "id": 194,
+    "en": "How do I send a package?",
+    "el_lower": "πώς στέλνω ένα πακέτο;",
+    "el_upper": "ΠΩΣ ΣΤΕΛΝΩ ΕΝΑ ΠΑΚΕΤΟ;",
+    "rom": "pós stélno éna pakéto?",
+    "tag": "service",
+    "frequency": 194
+  },
+  {
+    "id": 195,
+    "en": "Do you need my signature?",
+    "el_lower": "χρειάζεστε την υπογραφή μου;",
+    "el_upper": "ΧΡΕΙΑΖΕΣΤΕ ΤΗΝ ΥΠΟΓΡΑΦΗ ΜΟΥ;",
+    "rom": "chreiázeste tin ypografí mou?",
+    "tag": "service",
+    "frequency": 195
+  },
+  {
+    "id": 196,
+    "en": "Can I pay now?",
+    "el_lower": "μπορώ να πληρώσω τώρα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΛΗΡΩΣΩ ΤΩΡΑ;",
+    "rom": "boró na pliróso tóra?",
+    "tag": "shopping",
+    "frequency": 196
+  },
+  {
+    "id": 197,
+    "en": "Is this seat taken?",
+    "el_lower": "είναι κατειλημμένη αυτή η θέση;",
+    "el_upper": "ΕΙΝΑΙ ΚΑΤΕΙΛΗΜΜΕΝΗ ΑΥΤΗ Η ΘΕΣΗ;",
+    "rom": "íne kateilimméni aftí i thési?",
+    "tag": "transport",
+    "frequency": 197
+  },
+  {
+    "id": 198,
+    "en": "How do I get to the port?",
+    "el_lower": "πώς πάω στο λιμάνι;",
+    "el_upper": "ΠΩΣ ΠΑΩ ΣΤΟ ΛΙΜΑΝΙ;",
+    "rom": "pós páo sto limáni?",
+    "tag": "transport",
+    "frequency": 198
+  },
+  {
+    "id": 199,
+    "en": "Where does this bus go?",
+    "el_lower": "πού πηγαίνει αυτό το λεωφορείο;",
+    "el_upper": "ΠΟΥ ΠΗΓΑΙΝΕΙ ΑΥΤΟ ΤΟ ΛΕΩΦΟΡΕΙΟ;",
+    "rom": "poú piyéni aftó to leoforío?",
+    "tag": "transport",
+    "frequency": 199
+  },
+  {
+    "id": 200,
+    "en": "Where do I buy tickets?",
+    "el_lower": "πού αγοράζω εισιτήρια;",
+    "el_upper": "ΠΟΥ ΑΓΟΡΑΖΩ ΕΙΣΙΤΗΡΙΑ;",
+    "rom": "poú agorázo isitíria?",
+    "tag": "transport",
+    "frequency": 200
+  },
+  {
+    "id": 201,
+    "en": "How do I get internet?",
+    "el_lower": "πώς έχω ίντερνετ;",
+    "el_upper": "ΠΩΣ ΕΧΩ ΙΝΤΕΡΝΕΤ;",
+    "rom": "pós ého ínternet?",
+    "tag": "service",
+    "frequency": 201
+  },
+  {
+    "id": 202,
+    "en": "Do you have laundry service?",
+    "el_lower": "έχετε υπηρεσία πλυντηρίου;",
+    "el_upper": "ΕΧΕΤΕ ΥΠΗΡΕΣΙΑ ΠΛΥΝΤΗΡΙΟΥ;",
+    "rom": "éhete ipiresía plyntiríou?",
+    "tag": "service",
+    "frequency": 202
+  },
+  {
+    "id": 203,
+    "en": "Can I get a wake-up call?",
+    "el_lower": "μπορώ να έχω ξύπνημα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΞΥΠΝΗΜΑ;",
+    "rom": "boró na ého xýpnima?",
+    "tag": "housing",
+    "frequency": 203
+  },
+  {
+    "id": 204,
+    "en": "How do I call a taxi?",
+    "el_lower": "πώς καλώ ταξί;",
+    "el_upper": "ΠΩΣ ΚΑΛΩ ΤΑΞΙ;",
+    "rom": "pós kaló taxí?",
+    "tag": "transport",
+    "frequency": 204
+  },
+  {
+    "id": 205,
+    "en": "What is the fare?",
+    "el_lower": "ποια είναι η ταρίφα;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΤΑΡΙΦΑ;",
+    "rom": "piá íne i tarífa?",
+    "tag": "transport",
+    "frequency": 205
+  },
+  {
+    "id": 206,
+    "en": "Where do I get off?",
+    "el_lower": "πού κατεβαίνω;",
+    "el_upper": "ΠΟΥ ΚΑΤΕΒΑΙΝΩ;",
+    "rom": "poú katevaino?",
+    "tag": "transport",
+    "frequency": 206
+  },
+  {
+    "id": 207,
+    "en": "Is it far from here?",
+    "el_lower": "είναι μακριά από εδώ;",
+    "el_upper": "ΕΙΝΑΙ ΜΑΚΡΙΑ ΑΠΟ ΕΔΩ;",
+    "rom": "íne makriá apó edó?",
+    "tag": "directions",
+    "frequency": 207
+  },
+  {
+    "id": 208,
+    "en": "Which way is it?",
+    "el_lower": "ποια κατεύθυνση είναι;",
+    "el_upper": "ΠΟΙΑ ΚΑΤΕΥΘΥΝΣΗ ΕΙΝΑΙ;",
+    "rom": "piá katéfthynsi íne?",
+    "tag": "directions",
+    "frequency": 208
+  },
+  {
+    "id": 209,
+    "en": "Turn around",
+    "el_lower": "γυρίστε πίσω",
+    "el_upper": "ΓΥΡΙΣΤΕ ΠΙΣΩ",
+    "rom": "yiríste píso",
+    "tag": "directions",
+    "frequency": 209
+  },
+  {
+    "id": 210,
+    "en": "Can I sit here?",
+    "el_lower": "μπορώ να καθίσω εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΚΑΘΙΣΩ ΕΔΩ;",
+    "rom": "boró na kathíso edó?",
+    "tag": "transport",
+    "frequency": 210
+  },
+  {
+    "id": 211,
+    "en": "What is the next stop?",
+    "el_lower": "ποια είναι η επόμενη στάση;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΕΠΟΜΕΝΗ ΣΤΑΣΗ;",
+    "rom": "piá íne i epómeni stási?",
+    "tag": "transport",
+    "frequency": 211
+  },
+  {
+    "id": 212,
+    "en": "How many stops?",
+    "el_lower": "πόσες στάσεις;",
+    "el_upper": "ΠΟΣΕΣ ΣΤΑΣΕΙΣ;",
+    "rom": "póses stásis?",
+    "tag": "transport",
+    "frequency": 212
+  },
+  {
+    "id": 213,
+    "en": "What is the schedule?",
+    "el_lower": "ποιο είναι το ωράριο;",
+    "el_upper": "ΠΟΙΟ ΕΙΝΑΙ ΤΟ ΩΡΑΡΙΟ;",
+    "rom": "pio íne to orário?",
+    "tag": "service",
+    "frequency": 213
+  },
+  {
+    "id": 214,
+    "en": "How much is the ticket?",
+    "el_lower": "πόσο κοστίζει το εισιτήριο;",
+    "el_upper": "ΠΟΣΟ ΚΟΣΤΙΖΕΙ ΤΟ ΕΙΣΙΤΗΡΙΟ;",
+    "rom": "póso kostízei to isitírio?",
+    "tag": "transport",
+    "frequency": 214
+  },
+  {
+    "id": 215,
+    "en": "Do you have an ID?",
+    "el_lower": "έχετε ταυτότητα;",
+    "el_upper": "ΕΧΕΤΕ ΤΑΥΤΟΤΗΤΑ;",
+    "rom": "éhete taftótita?",
+    "tag": "service",
+    "frequency": 215
+  },
+  {
+    "id": 216,
+    "en": "Where is the entrance?",
+    "el_lower": "πού είναι η είσοδος;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΕΙΣΟΔΟΣ;",
+    "rom": "poú íne i ísodos?",
+    "tag": "directions",
+    "frequency": 216
+  },
+  {
+    "id": 217,
+    "en": "Where is the exit?",
+    "el_lower": "πού είναι η έξοδος;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΕΞΟΔΟΣ;",
+    "rom": "poú íne i éxodos?",
+    "tag": "directions",
+    "frequency": 217
+  },
+  {
+    "id": 218,
+    "en": "I would like a ticket",
+    "el_lower": "θα ήθελα ένα εισιτήριο",
+    "el_upper": "ΘΑ ΗΘΕΛΑ ΕΝΑ ΕΙΣΙΤΗΡΙΟ",
+    "rom": "tha íthela éna isitírio",
+    "tag": "transport",
+    "frequency": 218
+  },
+  {
+    "id": 219,
+    "en": "Where is the museum?",
+    "el_lower": "πού είναι το μουσείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΜΟΥΣΕΙΟ;",
+    "rom": "poú íne to mouseío?",
+    "tag": "directions",
+    "frequency": 219
+  },
+  {
+    "id": 220,
+    "en": "Is there a discount?",
+    "el_lower": "υπάρχει έκπτωση;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΕΚΠΤΩΣΗ;",
+    "rom": "ipárchi ékptosi?",
+    "tag": "shopping",
+    "frequency": 220
+  },
+  {
+    "id": 221,
+    "en": "Is everything alright?",
+    "el_lower": "είναι όλα εντάξει;",
+    "el_upper": "ΕΙΝΑΙ ΟΛΑ ΕΝΤΑΞΕΙ;",
+    "rom": "íne óla entáxi?",
+    "tag": "polite",
+    "frequency": 221
+  },
+  {
+    "id": 222,
+    "en": "Can you show me the way?",
+    "el_lower": "μπορείτε να μου δείξετε τον δρόμο;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΜΟΥ ΔΕΙΞΕΤΕ ΤΟΝ ΔΡΟΜΟ;",
+    "rom": "boríte na mou díxete ton drómo?",
+    "tag": "directions",
+    "frequency": 222
+  },
+  {
+    "id": 223,
+    "en": "Which way to the market?",
+    "el_lower": "ποια κατεύθυνση για την αγορά;",
+    "el_upper": "ΠΟΙΑ ΚΑΤΕΥΘΥΝΣΗ ΓΙΑ ΤΗΝ ΑΓΟΡΑ;",
+    "rom": "piá katéfthynsi gia tin agorá?",
+    "tag": "shopping",
+    "frequency": 223
+  },
+  {
+    "id": 224,
+    "en": "How do I pay?",
+    "el_lower": "πώς πληρώνω;",
+    "el_upper": "ΠΩΣ ΠΛΗΡΩΝΩ;",
+    "rom": "pós pliróno?",
+    "tag": "shopping",
+    "frequency": 224
+  },
+  {
+    "id": 225,
+    "en": "Can I get this to go?",
+    "el_lower": "μπορώ να το πάρω για έξω;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΤΟ ΠΑΡΩ ΓΙΑ ΕΞΩ;",
+    "rom": "boró na to páro gia éxo?",
+    "tag": "food",
+    "frequency": 225
+  },
+  {
+    "id": 226,
+    "en": "Eat in or take away?",
+    "el_lower": "εδώ ή για έξω;",
+    "el_upper": "ΕΔΩ Η ΓΙΑ ΕΞΩ;",
+    "rom": "edó i gia éxo?",
+    "tag": "food",
+    "frequency": 226
+  },
+  {
+    "id": 227,
+    "en": "May I have the bill?",
+    "el_lower": "μπορώ να έχω τον λογαριασμό;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΤΟΝ ΛΟΓΑΡΙΑΣΜΟ;",
+    "rom": "boró na ého ton logariasmó?",
+    "tag": "food",
+    "frequency": 227
+  },
+  {
+    "id": 228,
+    "en": "Is service included?",
+    "el_lower": "περιλαμβάνεται το σέρβις;",
+    "el_upper": "ΠΕΡΙΛΑΜΒΑΝΕΤΑΙ ΤΟ ΣΕΡΒΙΣ;",
+    "rom": "perilamvánete to sérvis?",
+    "tag": "food",
+    "frequency": 228
+  },
+  {
+    "id": 229,
+    "en": "Can I order?",
+    "el_lower": "μπορώ να παραγγείλω;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΑΡΑΓΓΕΙΛΩ;",
+    "rom": "boró na paragílo?",
+    "tag": "food",
+    "frequency": 229
+  },
+  {
+    "id": 230,
+    "en": "What do you suggest?",
+    "el_lower": "τι προτείνετε;",
+    "el_upper": "ΤΙ ΠΡΟΤΕΙΝΕΤΕ;",
+    "rom": "ti protínete?",
+    "tag": "food",
+    "frequency": 230
+  },
+  {
+    "id": 231,
+    "en": "I am a vegetarian",
+    "el_lower": "είμαι χορτοφάγος",
+    "el_upper": "ΕΙΜΑΙ ΧΟΡΤΟΦΑΓΟΣ",
+    "rom": "íme chortofágos",
+    "tag": "food",
+    "frequency": 231
+  },
+  {
+    "id": 232,
+    "en": "I am allergic to nuts",
+    "el_lower": "έχω αλλεργία στα ξηροί καρποί",
+    "el_upper": "ΕΧΩ ΑΛΛΕΡΓΙΑ ΣΤΑ ΞΗΡΟΙ ΚΑΡΠΟΙ",
+    "rom": "ého allergía sta xirió karpí",
+    "tag": "food",
+    "frequency": 232
+  },
+  {
+    "id": 233,
+    "en": "I am allergic to wheat",
+    "el_lower": "έχω αλλεργία στο σιτάρι",
+    "el_upper": "ΕΧΩ ΑΛΛΕΡΓΙΑ ΣΤΟ ΣΙΤΑΡΙ",
+    "rom": "ého allergía sto sitári",
+    "tag": "food",
+    "frequency": 233
+  },
+  {
+    "id": 234,
+    "en": "Without sugar",
+    "el_lower": "χωρίς ζάχαρη",
+    "el_upper": "ΧΩΡΙΣ ΖΑΧΑΡΗ",
+    "rom": "chorís záchari",
+    "tag": "food",
+    "frequency": 234
+  },
+  {
+    "id": 235,
+    "en": "Without milk",
+    "el_lower": "χωρίς γάλα",
+    "el_upper": "ΧΩΡΙΣ ΓΑΛΑ",
+    "rom": "chorís gála",
+    "tag": "food",
+    "frequency": 235
+  },
+  {
+    "id": 236,
+    "en": "Without meat",
+    "el_lower": "χωρίς κρέας",
+    "el_upper": "ΧΩΡΙΣ ΚΡΕΑΣ",
+    "rom": "chorís kréas",
+    "tag": "food",
+    "frequency": 236
+  },
+  {
+    "id": 237,
+    "en": "Without bread",
+    "el_lower": "χωρίς ψωμί",
+    "el_upper": "ΧΩΡΙΣ ΨΩΜΙ",
+    "rom": "chorís psomí",
+    "tag": "food",
+    "frequency": 237
+  },
+  {
+    "id": 238,
+    "en": "Can I get a glass of water?",
+    "el_lower": "μπορώ να πάρω ένα ποτήρι νερό;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΑΡΩ ΕΝΑ ΠΟΤΗΡΙ ΝΕΡΟ;",
+    "rom": "boró na páro éna potíri neró?",
+    "tag": "food",
+    "frequency": 238
+  },
+  {
+    "id": 239,
+    "en": "Can I have coffee?",
+    "el_lower": "μπορώ να έχω καφέ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΚΑΦΕ;",
+    "rom": "boró na ého kafé?",
+    "tag": "food",
+    "frequency": 239
+  },
+  {
+    "id": 240,
+    "en": "Can I have some wine?",
+    "el_lower": "μπορώ να έχω κρασί;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΚΡΑΣΙ;",
+    "rom": "boró na ého krasí?",
+    "tag": "food",
+    "frequency": 240
+  },
+  {
+    "id": 241,
+    "en": "Can I have some bread?",
+    "el_lower": "μπορώ να έχω ψωμί;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΨΩΜΙ;",
+    "rom": "boró na ého psomí?",
+    "tag": "food",
+    "frequency": 241
+  },
+  {
+    "id": 242,
+    "en": "Can I have a beer?",
+    "el_lower": "μπορώ να έχω μπύρα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΜΠΥΡΑ;",
+    "rom": "boró na ého bíra?",
+    "tag": "food",
+    "frequency": 242
+  },
+  {
+    "id": 243,
+    "en": "Cheers!",
+    "el_lower": "στην υγειά μας!",
+    "el_upper": "ΣΤΗΝ ΥΓΕΙΑ ΜΑΣ!",
+    "rom": "stin ygiá mas!",
+    "tag": "food",
+    "frequency": 243
+  },
+  {
+    "id": 244,
+    "en": "Bon appétit!",
+    "el_lower": "καλή όρεξη!",
+    "el_upper": "ΚΑΛΗ ΟΡΕΞΗ!",
+    "rom": "kalí órexi!",
+    "tag": "food",
+    "frequency": 244
+  },
+  {
+    "id": 245,
+    "en": "Enjoy your meal",
+    "el_lower": "καλή σας όρεξη",
+    "el_upper": "ΚΑΛΗ ΣΑΣ ΟΡΕΞΗ",
+    "rom": "kalí sas órexi",
+    "tag": "food",
+    "frequency": 245
+  },
+  {
+    "id": 246,
+    "en": "Are you ready to order?",
+    "el_lower": "είστε έτοιμοι να παραγγείλετε;",
+    "el_upper": "ΕΙΣΤΕ ΕΤΟΙΜΟΙ ΝΑ ΠΑΡΑΓΓΕΙΛΕΤΕ;",
+    "rom": "íste étoimi na paragílete?",
+    "tag": "food",
+    "frequency": 246
+  },
+  {
+    "id": 247,
+    "en": "I’m full",
+    "el_lower": "χόρτασα",
+    "el_upper": "ΧΟΡΤΑΣΑ",
+    "rom": "chórtasa",
+    "tag": "food",
+    "frequency": 247
+  },
+  {
+    "id": 248,
+    "en": "Delicious",
+    "el_lower": "νόστιμο",
+    "el_upper": "ΝΟΣΤΙΜΟ",
+    "rom": "nóstimo",
+    "tag": "food",
+    "frequency": 248
+  },
+  {
+    "id": 249,
+    "en": "Is it spicy?",
+    "el_lower": "είναι πικάντικο;",
+    "el_upper": "ΕΙΝΑΙ ΠΙΚΑΝΤΙΚΟ;",
+    "rom": "íne pikántiko?",
+    "tag": "food",
+    "frequency": 249
+  },
+  {
+    "id": 250,
+    "en": "No onions, please",
+    "el_lower": "χωρίς κρεμμύδια, παρακαλώ",
+    "el_upper": "ΧΩΡΙΣ ΚΡΕΜΜΥΔΙΑ, ΠΑΡΑΚΑΛΩ",
+    "rom": "chorís kremmýdia, parakaló",
+    "tag": "food",
+    "frequency": 250
+  },
+  {
+    "id": 251,
+    "en": "No garlic, please",
+    "el_lower": "χωρίς σκόρδο, παρακαλώ",
+    "el_upper": "ΧΩΡΙΣ ΣΚΟΡΔΟ, ΠΑΡΑΚΑΛΩ",
+    "rom": "chorís skórdo, parakaló",
+    "tag": "food",
+    "frequency": 251
+  },
+  {
+    "id": 252,
+    "en": "No pepper, please",
+    "el_lower": "χωρίς πιπέρι, παρακαλώ",
+    "el_upper": "ΧΩΡΙΣ ΠΙΠΕΡΙ, ΠΑΡΑΚΑΛΩ",
+    "rom": "chorís pipéri, parakaló",
+    "tag": "food",
+    "frequency": 252
+  },
+  {
+    "id": 253,
+    "en": "How long will it take?",
+    "el_lower": "πόσο θα πάρει;",
+    "el_upper": "ΠΟΣΟ ΘΑ ΠΑΡΕΙ;",
+    "rom": "póso tha pári?",
+    "tag": "service",
+    "frequency": 253
+  },
+  {
+    "id": 254,
+    "en": "I’m in a hurry",
+    "el_lower": "βιάζομαι",
+    "el_upper": "ΒΙΑΖΟΜΑΙ",
+    "rom": "viázome",
+    "tag": "service",
+    "frequency": 254
+  },
+  {
+    "id": 255,
+    "en": "At what time do you open?",
+    "el_lower": "τι ώρα ανοίγετε;",
+    "el_upper": "ΤΙ ΩΡΑ ΑΝΟΙΓΕΤΕ;",
+    "rom": "ti óra aníyete?",
+    "tag": "service",
+    "frequency": 255
+  },
+  {
+    "id": 256,
+    "en": "At what time do you close?",
+    "el_lower": "τι ώρα κλείνετε;",
+    "el_upper": "ΤΙ ΩΡΑ ΚΛΕΙΝΕΤΕ;",
+    "rom": "ti óra klínete?",
+    "tag": "service",
+    "frequency": 256
+  },
+  {
+    "id": 257,
+    "en": "Do you accept euros?",
+    "el_lower": "δέχεστε ευρώ;",
+    "el_upper": "ΔΕΧΕΣΤΕ ΕΥΡΩ;",
+    "rom": "dékheste evró?",
+    "tag": "shopping",
+    "frequency": 257
+  },
+  {
+    "id": 258,
+    "en": "Do you have a business card?",
+    "el_lower": "έχετε επαγγελματική κάρτα;",
+    "el_upper": "ΕΧΕΤΕ ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΚΑΡΤΑ;",
+    "rom": "éhete epangelmatikí kárta?",
+    "tag": "service",
+    "frequency": 258
+  },
+  {
+    "id": 259,
+    "en": "Do you deliver?",
+    "el_lower": "κάνετε διανομή;",
+    "el_upper": "ΚΑΝΕΤΕ ΔΙΑΝΟΜΗ;",
+    "rom": "kánete dianomí?",
+    "tag": "service",
+    "frequency": 259
+  },
+  {
+    "id": 260,
+    "en": "Is there a delivery fee?",
+    "el_lower": "υπάρχει χρέωση διανομής;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΧΡΕΩΣΗ ΔΙΑΝΟΜΗΣ;",
+    "rom": "ipárchi chréosi dianomís?",
+    "tag": "service",
+    "frequency": 260
+  },
+  {
+    "id": 261,
+    "en": "What is your address?",
+    "el_lower": "ποια είναι η διεύθυνσή σας;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΔΙΕΥΘΥΝΣΗ ΣΑΣ;",
+    "rom": "piá íne i diéfthynsí sas?",
+    "tag": "service",
+    "frequency": 261
+  },
+  {
+    "id": 262,
+    "en": "Can I speak to the manager?",
+    "el_lower": "μπορώ να μιλήσω με τον υπεύθυνο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΜΙΛΗΣΩ ΜΕ ΤΟΝ ΥΠΕΥΘΥΝΟ;",
+    "rom": "boró na milíso me ton ypéfthyno?",
+    "tag": "service",
+    "frequency": 262
+  },
+  {
+    "id": 263,
+    "en": "Is there a discount for students?",
+    "el_lower": "υπάρχει έκπτωση για φοιτητές;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΕΚΠΤΩΣΗ ΓΙΑ ΦΟΙΤΗΤΕΣ;",
+    "rom": "ipárchi ékptosi gia foitités?",
+    "tag": "shopping",
+    "frequency": 263
+  },
+  {
+    "id": 264,
+    "en": "Do you serve dinner?",
+    "el_lower": "σερβίρετε δείπνο;",
+    "el_upper": "ΣΕΡΒΙΡΕΤΕ ΔΕΙΠΝΟ;",
+    "rom": "servírete dípno?",
+    "tag": "food",
+    "frequency": 264
+  },
+  {
+    "id": 265,
+    "en": "Do you serve lunch?",
+    "el_lower": "σερβίρετε μεσημεριανό;",
+    "el_upper": "ΣΕΡΒΙΡΕΤΕ ΜΕΣΗΜΕΡΙΑΝΟ;",
+    "rom": "servírete mesimeriáno?",
+    "tag": "food",
+    "frequency": 265
+  },
+  {
+    "id": 266,
+    "en": "Room number",
+    "el_lower": "αριθμός δωματίου",
+    "el_upper": "ΑΡΙΘΜΟΣ ΔΩΜΑΤΙΟΥ",
+    "rom": "arithmós domatíou",
+    "tag": "housing",
+    "frequency": 266
+  },
+  {
+    "id": 267,
+    "en": "Key",
+    "el_lower": "κλειδί",
+    "el_upper": "ΚΛΕΙΔΙ",
+    "rom": "kleidí",
+    "tag": "housing",
+    "frequency": 267
+  },
+  {
+    "id": 268,
+    "en": "Hotel",
+    "el_lower": "ξενοδοχείο",
+    "el_upper": "ΞΕΝΟΔΟΧΕΙΟ",
+    "rom": "ksenodochío",
+    "tag": "housing",
+    "frequency": 268
+  },
+  {
+    "id": 269,
+    "en": "Reception",
+    "el_lower": "ρεσεψιόν",
+    "el_upper": "ΡΕΣΕΨΙΟΝ",
+    "rom": "resepsión",
+    "tag": "housing",
+    "frequency": 269
+  },
+  {
+    "id": 270,
+    "en": "Elevator",
+    "el_lower": "ανσανσέρ",
+    "el_upper": "ΑΝΣΑΝΣΕΡ",
+    "rom": "ansansér",
+    "tag": "housing",
+    "frequency": 270
+  },
+  {
+    "id": 271,
+    "en": "Stairs",
+    "el_lower": "σκάλα",
+    "el_upper": "ΣΚΑΛΑ",
+    "rom": "skála",
+    "tag": "housing",
+    "frequency": 271
+  },
+  {
+    "id": 272,
+    "en": "Floor",
+    "el_lower": "όροφος",
+    "el_upper": "ΟΡΟΦΟΣ",
+    "rom": "órofos",
+    "tag": "housing",
+    "frequency": 272
+  },
+  {
+    "id": 273,
+    "en": "Upstairs",
+    "el_lower": "πάνω",
+    "el_upper": "ΠΑΝΩ",
+    "rom": "páno",
+    "tag": "housing",
+    "frequency": 273
+  },
+  {
+    "id": 274,
+    "en": "Downstairs",
+    "el_lower": "κάτω",
+    "el_upper": "ΚΑΤΩ",
+    "rom": "káto",
+    "tag": "housing",
+    "frequency": 274
+  },
+  {
+    "id": 275,
+    "en": "Can I sleep here?",
+    "el_lower": "μπορώ να κοιμηθώ εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΚΟΙΜΗΘΩ ΕΔΩ;",
+    "rom": "boró na kimithó edó?",
+    "tag": "housing",
+    "frequency": 275
+  },
+  {
+    "id": 276,
+    "en": "Where is the laundry?",
+    "el_lower": "πού είναι το πλυντήριο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΠΛΥΝΤΗΡΙΟ;",
+    "rom": "poú íne to plyntírio?",
+    "tag": "housing",
+    "frequency": 276
+  },
+  {
+    "id": 277,
+    "en": "Where is the kitchen?",
+    "el_lower": "πού είναι η κουζίνα;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΚΟΥΖΙΝΑ;",
+    "rom": "poú íne i kouzína?",
+    "tag": "housing",
+    "frequency": 277
+  },
+  {
+    "id": 278,
+    "en": "Where is the living room?",
+    "el_lower": "πού είναι το σαλόνι;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΣΑΛΟΝΙ;",
+    "rom": "poú íne to salónι?",
+    "tag": "housing",
+    "frequency": 278
+  },
+  {
+    "id": 279,
+    "en": "Where is the bedroom?",
+    "el_lower": "πού είναι η κρεβατοκάμαρα;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΚΡΕΒΑΤΟΚΑΜΑΡΑ;",
+    "rom": "poú íne i krevatokámara?",
+    "tag": "housing",
+    "frequency": 279
+  },
+  {
+    "id": 280,
+    "en": "Where is the garden?",
+    "el_lower": "πού είναι ο κήπος;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Ο ΚΗΠΟΣ;",
+    "rom": "poú íne o kípos?",
+    "tag": "housing",
+    "frequency": 280
+  },
+  {
+    "id": 281,
+    "en": "Can I open the window?",
+    "el_lower": "μπορώ να ανοίξω το παράθυρο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΑΝΟΙΞΩ ΤΟ ΠΑΡΑΘΥΡΟ;",
+    "rom": "boró na aníxo to paráthyro?",
+    "tag": "housing",
+    "frequency": 281
+  },
+  {
+    "id": 282,
+    "en": "Can I close the door?",
+    "el_lower": "μπορώ να κλείσω την πόρτα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΚΛΕΙΣΩ ΤΗΝ ΠΟΡΤΑ;",
+    "rom": "boró na klíso tin porta?",
+    "tag": "housing",
+    "frequency": 282
+  },
+  {
+    "id": 283,
+    "en": "Can I use the shower?",
+    "el_lower": "μπορώ να χρησιμοποιήσω το ντους;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΩ ΤΟ ΝΤΟΥΣ;",
+    "rom": "boró na chrisimopoíso to ntous?",
+    "tag": "housing",
+    "frequency": 283
+  },
+  {
+    "id": 284,
+    "en": "Where is the shampoo?",
+    "el_lower": "πού είναι το σαμπουάν;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΣΑΜΠΟΥΑΝ;",
+    "rom": "poú íne to sampouán?",
+    "tag": "housing",
+    "frequency": 284
+  },
+  {
+    "id": 285,
+    "en": "Can I get extra towels?",
+    "el_lower": "μπορώ να έχω επιπλέον πετσέτες;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΕΠΙΠΛΕΟΝ ΠΕΤΣΕΤΕΣ;",
+    "rom": "boró na ého epipleón petsétes?",
+    "tag": "housing",
+    "frequency": 285
+  },
+  {
+    "id": 286,
+    "en": "Can I get extra blankets?",
+    "el_lower": "μπορώ να έχω επιπλέον κουβέρτες;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΕΠΙΠΛΕΟΝ ΚΟΥΒΕΡΤΕΣ;",
+    "rom": "boró na ého epipleón kouvétes?",
+    "tag": "housing",
+    "frequency": 286
+  },
+  {
+    "id": 287,
+    "en": "Can I charge my phone?",
+    "el_lower": "μπορώ να φορτίσω το κινητό μου;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΦΟΡΤΙΣΩ ΤΟ ΚΙΝΗΤΟ ΜΟΥ;",
+    "rom": "boró na fortíso to kinitó mou?",
+    "tag": "service",
+    "frequency": 287
+  },
+  {
+    "id": 288,
+    "en": "Do you have an adapter?",
+    "el_lower": "έχετε αντάπτορα;",
+    "el_upper": "ΕΧΕΤΕ ΑΝΤΑΠΤΟΡΑ;",
+    "rom": "éhete antáptora?",
+    "tag": "service",
+    "frequency": 288
+  },
+  {
+    "id": 289,
+    "en": "Where can I buy batteries?",
+    "el_lower": "πού μπορώ να αγοράσω μπαταρίες;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΑΓΟΡΑΣΩ ΜΠΑΤΑΡΙΕΣ;",
+    "rom": "poú boró na agoráso bateríes?",
+    "tag": "shopping",
+    "frequency": 289
+  },
+  {
+    "id": 290,
+    "en": "Do you have a plug?",
+    "el_lower": "έχετε πρίζα;",
+    "el_upper": "ΕΧΕΤΕ ΠΡΙΖΑ;",
+    "rom": "éhete príza?",
+    "tag": "housing",
+    "frequency": 290
+  },
+  {
+    "id": 291,
+    "en": "Is there hot water?",
+    "el_lower": "υπάρχει ζεστό νερό;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΖΕΣΤΟ ΝΕΡΟ;",
+    "rom": "ipárchi zestó neró?",
+    "tag": "housing",
+    "frequency": 291
+  },
+  {
+    "id": 292,
+    "en": "Can I use the washing machine?",
+    "el_lower": "μπορώ να χρησιμοποιήσω το πλυντήριο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΩ ΤΟ ΠΛΥΝΤΗΡΙΟ;",
+    "rom": "boró na chrisimopoíso to plyntírio?",
+    "tag": "housing",
+    "frequency": 292
+  },
+  {
+    "id": 293,
+    "en": "Can I use the fridge?",
+    "el_lower": "μπορώ να χρησιμοποιήσω το ψυγείο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΩ ΤΟ ΨΥΓΕΙΟ;",
+    "rom": "boró na chrisimopoíso to psychío?",
+    "tag": "housing",
+    "frequency": 293
+  },
+  {
+    "id": 294,
+    "en": "Can I cook here?",
+    "el_lower": "μπορώ να μαγειρέψω εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΜΑΓΕΙΡΕΨΩ ΕΔΩ;",
+    "rom": "boró na magirépso edó?",
+    "tag": "housing",
+    "frequency": 294
+  },
+  {
+    "id": 295,
+    "en": "Where is the trash?",
+    "el_lower": "πού είναι τα σκουπίδια;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΑ ΣΚΟΥΠΙΔΙΑ;",
+    "rom": "poú íne ta skoupídia?",
+    "tag": "housing",
+    "frequency": 295
+  },
+  {
+    "id": 296,
+    "en": "Where can I recycle?",
+    "el_lower": "πού μπορώ να ανακυκλώσω;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΑΝΑΚΥΚΛΩΣΩ;",
+    "rom": "poú boró na anakyklóso?",
+    "tag": "housing",
+    "frequency": 296
+  },
+  {
+    "id": 297,
+    "en": "Can I do the dishes?",
+    "el_lower": "μπορώ να πλύνω τα πιάτα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΛΥΝΩ ΤΑ ΠΙΑΤΑ;",
+    "rom": "boró na plíno ta piáta?",
+    "tag": "housing",
+    "frequency": 297
+  },
+  {
+    "id": 298,
+    "en": "Can I sweep here?",
+    "el_lower": "μπορώ να σκουπίσω εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΣΚΟΥΠΙΣΩ ΕΔΩ;",
+    "rom": "boró na skoupíso edó?",
+    "tag": "housing",
+    "frequency": 298
+  },
+  {
+    "id": 299,
+    "en": "Can I mop here?",
+    "el_lower": "μπορώ να σφουγγαρίσω εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΣΦΟΥΓΓΑΡΙΣΩ ΕΔΩ;",
+    "rom": "boró na sfoungaríso edó?",
+    "tag": "housing",
+    "frequency": 299
+  },
+  {
+    "id": 300,
+    "en": "Where are the cleaning supplies?",
+    "el_lower": "πού είναι τα καθαριστικά;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΑ ΚΑΘΑΡΙΣΤΙΚΑ;",
+    "rom": "poú íne ta katharistiká?",
+    "tag": "housing",
+    "frequency": 300
+  },
+  {
+    "id": 301,
+    "en": "Can I have a broom?",
+    "el_lower": "μπορώ να έχω σκούπα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΣΚΟΥΠΑ;",
+    "rom": "boró na ého skoúpa?",
+    "tag": "housing",
+    "frequency": 301
+  },
+  {
+    "id": 302,
+    "en": "Can I have a mop?",
+    "el_lower": "μπορώ να έχω σφουγγαρίστρα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΣΦΟΥΓΓΑΡΙΣΤΡΑ;",
+    "rom": "boró na ého sfoungarístra?",
+    "tag": "housing",
+    "frequency": 302
+  },
+  {
+    "id": 303,
+    "en": "Can I have a sponge?",
+    "el_lower": "μπορώ να έχω σφουγγάρι;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΣΦΟΥΓΓΑΡΙ;",
+    "rom": "boró na ého sfoungári?",
+    "tag": "housing",
+    "frequency": 303
+  },
+  {
+    "id": 304,
+    "en": "Can I have soap?",
+    "el_lower": "μπορώ να έχω σαπούνι;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΣΑΠΟΥΝΙ;",
+    "rom": "boró na ého sapoúni?",
+    "tag": "housing",
+    "frequency": 304
+  },
+  {
+    "id": 305,
+    "en": "Can I have detergent?",
+    "el_lower": "μπορώ να έχω απορρυπαντικό;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΑΠΟΡΡΥΠΑΝΤΙΚΟ;",
+    "rom": "boró na ého aporripantikó?",
+    "tag": "housing",
+    "frequency": 305
+  },
+  {
+    "id": 306,
+    "en": "Can I have a trash bag?",
+    "el_lower": "μπορώ να έχω σακούλα για σκουπίδια;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΣΑΚΟΥΛΑ ΓΙΑ ΣΚΟΥΠΙΔΙΑ;",
+    "rom": "boró na ého sakúla gia skoupídia?",
+    "tag": "housing",
+    "frequency": 306
+  },
+  {
+    "id": 307,
+    "en": "Is this recycled?",
+    "el_lower": "είναι ανακυκλωμένο;",
+    "el_upper": "ΕΙΝΑΙ ΑΝΑΚΥΚΛΩΜΕΝΟ;",
+    "rom": "íne anakykloméno?",
+    "tag": "housing",
+    "frequency": 307
+  },
+  {
+    "id": 308,
+    "en": "Do you recycle here?",
+    "el_lower": "ανακυκλώνετε εδώ;",
+    "el_upper": "ΑΝΑΚΥΚΛΩΝΕΤΕ ΕΔΩ;",
+    "rom": "anakyklónete edó?",
+    "tag": "housing",
+    "frequency": 308
+  },
+  {
+    "id": 309,
+    "en": "Where is the store?",
+    "el_lower": "πού είναι το κατάστημα;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΚΑΤΑΣΤΗΜΑ;",
+    "rom": "poú íne to katástima?",
+    "tag": "shopping",
+    "frequency": 309
+  },
+  {
+    "id": 310,
+    "en": "Where is the bakery?",
+    "el_lower": "πού είναι το φούρνος;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΦΟΥΡΝΟΣ;",
+    "rom": "poú íne to foúrnos?",
+    "tag": "food",
+    "frequency": 310
+  },
+  {
+    "id": 311,
+    "en": "Where is the butcher?",
+    "el_lower": "πού είναι το κρεοπωλείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΚΡΕΟΠΩΛΕΙΟ;",
+    "rom": "poú íne to kreopolío?",
+    "tag": "food",
+    "frequency": 311
+  },
+  {
+    "id": 312,
+    "en": "Where is the fish market?",
+    "el_lower": "πού είναι η ψαραγορά;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΨΑΡΑΓΟΡΑ;",
+    "rom": "poú íne i psaragorá?",
+    "tag": "food",
+    "frequency": 312
+  },
+  {
+    "id": 313,
+    "en": "Where is the farmers’ market?",
+    "el_lower": "πού είναι η λαϊκή αγορά;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΛΑΪΚΗ ΑΓΟΡΑ;",
+    "rom": "poú íne i laikí agorá?",
+    "tag": "food",
+    "frequency": 313
+  },
+  {
+    "id": 314,
+    "en": "Where is the pharmacy?",
+    "el_lower": "πού είναι το φαρμακείο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΦΑΡΜΑΚΕΙΟ;",
+    "rom": "poú íne to farmakío?",
+    "tag": "health",
+    "frequency": 314
+  },
+  {
+    "id": 315,
+    "en": "Where is the bank?",
+    "el_lower": "πού είναι η τράπεζα;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΤΡΑΠΕΖΑ;",
+    "rom": "poú íne i trápeza?",
+    "tag": "banking",
+    "frequency": 315
+  },
+  {
+    "id": 316,
+    "en": "Where is the bus station?",
+    "el_lower": "πού είναι ο σταθμός λεωφορείων;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Ο ΣΤΑΘΜΟΣ ΛΕΩΦΟΡΕΙΩΝ;",
+    "rom": "poú íne o stathmós leoforeíon?",
+    "tag": "transport",
+    "frequency": 316
+  },
+  {
+    "id": 317,
+    "en": "Where is the taxi stand?",
+    "el_lower": "πού είναι η πιάτσα ταξί;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΠΙΑΤΣΑ ΤΑΞΙ;",
+    "rom": "poú íne i piátsa taxí?",
+    "tag": "transport",
+    "frequency": 317
+  },
+  {
+    "id": 318,
+    "en": "Where is the boat?",
+    "el_lower": "πού είναι το καράβι;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΚΑΡΑΒΙ;",
+    "rom": "poú íne to karávi?",
+    "tag": "transport",
+    "frequency": 318
+  },
+  {
+    "id": 319,
+    "en": "Where is the ferry?",
+    "el_lower": "πού είναι το φέρι;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΦΕΡΙ;",
+    "rom": "poú íne to féri?",
+    "tag": "transport",
+    "frequency": 319
+  },
+  {
+    "id": 320,
+    "en": "Where is the airport?",
+    "el_lower": "πού είναι το αεροδρόμιο;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΑΕΡΟΔΡΟΜΙΟ;",
+    "rom": "poú íne to aerodrómio?",
+    "tag": "transport",
+    "frequency": 320
+  },
+  {
+    "id": 321,
+    "en": "What is the gate?",
+    "el_lower": "ποια είναι η πύλη;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΠΥΛΗ;",
+    "rom": "piá íne i píli?",
+    "tag": "transport",
+    "frequency": 321
+  },
+  {
+    "id": 322,
+    "en": "Where do I check in?",
+    "el_lower": "πού κάνω check-in;",
+    "el_upper": "ΠΟΥ ΚΑΝΩ CHECK-IN;",
+    "rom": "poú káno check-in?",
+    "tag": "transport",
+    "frequency": 322
+  },
+  {
+    "id": 323,
+    "en": "Where do I board?",
+    "el_lower": "πού επιβιβάζομαι;",
+    "el_upper": "ΠΟΥ ΕΠΙΒΙΒΑΖΟΜΑΙ;",
+    "rom": "poú epivivázome?",
+    "tag": "transport",
+    "frequency": 323
+  },
+  {
+    "id": 324,
+    "en": "Where do I claim luggage?",
+    "el_lower": "πού παίρνω τις αποσκευές;",
+    "el_upper": "ΠΟΥ ΠΑΙΡΝΩ ΤΙΣ ΑΠΟΣΚΕΥΕΣ;",
+    "rom": "poú pérno tis aposkevés?",
+    "tag": "transport",
+    "frequency": 324
+  },
+  {
+    "id": 325,
+    "en": "Do you have direct flights?",
+    "el_lower": "έχετε απευθείας πτήσεις;",
+    "el_upper": "ΕΧΕΤΕ ΑΠΕΥΘΕΙΑΣ ΠΤΗΣΕΙΣ;",
+    "rom": "éhete apeftheías ptíseis?",
+    "tag": "transport",
+    "frequency": 325
+  },
+  {
+    "id": 326,
+    "en": "What is the departure time?",
+    "el_lower": "ποια είναι η ώρα αναχώρησης;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΩΡΑ ΑΝΑΧΩΡΗΣΗΣ;",
+    "rom": "piá íne i óra anachórisis?",
+    "tag": "transport",
+    "frequency": 326
+  },
+  {
+    "id": 327,
+    "en": "What is the arrival time?",
+    "el_lower": "ποια είναι η ώρα άφιξης;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΩΡΑ ΑΦΙΞΗΣ;",
+    "rom": "piá íne i óra áfixis?",
+    "tag": "transport",
+    "frequency": 327
+  },
+  {
+    "id": 328,
+    "en": "Can I have a window seat?",
+    "el_lower": "μπορώ να έχω θέση στο παράθυρο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΘΕΣΗ ΣΤΟ ΠΑΡΑΘΥΡΟ;",
+    "rom": "boró na ého thési sto paráthyro?",
+    "tag": "transport",
+    "frequency": 328
+  },
+  {
+    "id": 329,
+    "en": "Can I have an aisle seat?",
+    "el_lower": "μπορώ να έχω θέση στον διάδρομο;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΕΧΩ ΘΕΣΗ ΣΤΟΝ ΔΙΑΔΡΟΜΟ;",
+    "rom": "boró na ého thési ston diádrómo?",
+    "tag": "transport",
+    "frequency": 329
+  },
+  {
+    "id": 330,
+    "en": "Is there a seat available?",
+    "el_lower": "υπάρχει διαθέσιμη θέση;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΔΙΑΘΕΣΙΜΗ ΘΕΣΗ;",
+    "rom": "ipárchi diathésimi thési?",
+    "tag": "transport",
+    "frequency": 330
+  },
+  {
+    "id": 331,
+    "en": "May I see your ticket?",
+    "el_lower": "μπορώ να δω το εισιτήριό σας;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΔΩ ΤΟ ΕΙΣΙΤΗΡΙΟ ΣΑΣ;",
+    "rom": "boró na do to isitírio sas?",
+    "tag": "transport",
+    "frequency": 331
+  },
+  {
+    "id": 332,
+    "en": "How do I get to my seat?",
+    "el_lower": "πώς πάω στη θέση μου;",
+    "el_upper": "ΠΩΣ ΠΑΩ ΣΤΗ ΘΕΣΗ ΜΟΥ;",
+    "rom": "pós páo sti thési mou?",
+    "tag": "transport",
+    "frequency": 332
+  },
+  {
+    "id": 333,
+    "en": "Is there space for luggage?",
+    "el_lower": "υπάρχει χώρος για αποσκευές;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΧΩΡΟΣ ΓΙΑ ΑΠΟΣΚΕΥΕΣ;",
+    "rom": "ipárchi chóros gia aposkevés?",
+    "tag": "transport",
+    "frequency": 333
+  },
+  {
+    "id": 334,
+    "en": "What platform?",
+    "el_lower": "ποια αποβάθρα;",
+    "el_upper": "ΠΟΙΑ ΑΠΟΒΑΘΡΑ;",
+    "rom": "piá apováthra?",
+    "tag": "transport",
+    "frequency": 334
+  },
+  {
+    "id": 335,
+    "en": "What gate?",
+    "el_lower": "ποια πύλη;",
+    "el_upper": "ΠΟΙΑ ΠΥΛΗ;",
+    "rom": "piá píli?",
+    "tag": "transport",
+    "frequency": 335
+  },
+  {
+    "id": 336,
+    "en": "Where do I get my luggage?",
+    "el_lower": "πού παίρνω τις αποσκευές;",
+    "el_upper": "ΠΟΥ ΠΑΙΡΝΩ ΤΙΣ ΑΠΟΣΚΕΥΕΣ;",
+    "rom": "poú pérno tis aposkevés?",
+    "tag": "transport",
+    "frequency": 336
+  },
+  {
+    "id": 337,
+    "en": "What time is boarding?",
+    "el_lower": "τι ώρα είναι η επιβίβαση;",
+    "el_upper": "ΤΙ ΩΡΑ ΕΙΝΑΙ Η ΕΠΙΒΙΒΑΣΗ;",
+    "rom": "ti óra íne i epivívasi?",
+    "tag": "transport",
+    "frequency": 337
+  },
+  {
+    "id": 338,
+    "en": "What is the flight number?",
+    "el_lower": "ποιος είναι ο αριθμός πτήσης;",
+    "el_upper": "ΠΟΙΟΣ ΕΙΝΑΙ Ο ΑΡΙΘΜΟΣ ΠΤΗΣΗΣ;",
+    "rom": "pios íne o arithmós ptísis?",
+    "tag": "transport",
+    "frequency": 338
+  },
+  {
+    "id": 339,
+    "en": "Is this direct?",
+    "el_lower": "είναι απευθείας;",
+    "el_upper": "ΕΙΝΑΙ ΑΠΕΥΘΕΙΑΣ;",
+    "rom": "íne apeftheías?",
+    "tag": "transport",
+    "frequency": 339
+  },
+  {
+    "id": 340,
+    "en": "Is food included?",
+    "el_lower": "περιλαμβάνεται φαγητό;",
+    "el_upper": "ΠΕΡΙΛΑΜΒΑΝΕΤΑΙ ΦΑΓΗΤΟ;",
+    "rom": "perilamvánete fagitó?",
+    "tag": "food",
+    "frequency": 340
+  },
+  {
+    "id": 341,
+    "en": "Is there Wi-Fi?",
+    "el_lower": "υπάρχει Wi-Fi;",
+    "el_upper": "ΥΠΑΡΧΕΙ WI-FI;",
+    "rom": "ipárchi Wi-Fi?",
+    "tag": "service",
+    "frequency": 341
+  },
+  {
+    "id": 342,
+    "en": "How do I pay for Wi-Fi?",
+    "el_lower": "πώς πληρώνω για Wi-Fi;",
+    "el_upper": "ΠΩΣ ΠΛΗΡΩΝΩ ΓΙΑ WI-FI;",
+    "rom": "pós pliróno gia Wi-Fi?",
+    "tag": "service",
+    "frequency": 342
+  },
+  {
+    "id": 343,
+    "en": "How do I connect?",
+    "el_lower": "πώς συνδέομαι;",
+    "el_upper": "ΠΩΣ ΣΥΝΔΕΟΜΑΙ;",
+    "rom": "pós sindéome?",
+    "tag": "service",
+    "frequency": 343
+  },
+  {
+    "id": 344,
+    "en": "Do you have amenities?",
+    "el_lower": "έχετε παροχές;",
+    "el_upper": "ΕΧΕΤΕ ΠΑΡΟΧΕΣ;",
+    "rom": "éhete parochés?",
+    "tag": "housing",
+    "frequency": 344
+  },
+  {
+    "id": 345,
+    "en": "How do I access amenities?",
+    "el_lower": "πώς χρησιμοποιώ τις παροχές;",
+    "el_upper": "ΠΩΣ ΧΡΗΣΙΜΟΠΟΙΩ ΤΙΣ ΠΑΡΟΧΕΣ;",
+    "rom": "pós chrisimopoió tis parochés?",
+    "tag": "housing",
+    "frequency": 345
+  },
+  {
+    "id": 346,
+    "en": "Where is customer service?",
+    "el_lower": "πού είναι η εξυπηρέτηση πελατών;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΕΞΥΠΗΡΕΤΗΣΗ ΠΕΛΑΤΩΝ;",
+    "rom": "poú íne i exypiretísi pelatón?",
+    "tag": "service",
+    "frequency": 346
+  },
+  {
+    "id": 347,
+    "en": "I would like to cancel",
+    "el_lower": "θα ήθελα να ακυρώσω",
+    "el_upper": "ΘΑ ΗΘΕΛΑ ΝΑ ΑΚΥΡΩΣΩ",
+    "rom": "tha íthela na akiróso",
+    "tag": "service",
+    "frequency": 347
+  },
+  {
+    "id": 348,
+    "en": "I would like to modify",
+    "el_lower": "θα ήθελα να τροποποιήσω",
+    "el_upper": "ΘΑ ΗΘΕΛΑ ΝΑ ΤΡΟΠΟΠΟΙΗΣΩ",
+    "rom": "tha íthela na tropopoíso",
+    "tag": "service",
+    "frequency": 348
+  },
+  {
+    "id": 349,
+    "en": "What is the maximum stay?",
+    "el_lower": "ποια είναι η μέγιστη διαμονή;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΜΕΓΙΣΤΗ ΔΙΑΜΟΝΗ;",
+    "rom": "piá íne i mégisti diamoní?",
+    "tag": "housing",
+    "frequency": 349
+  },
+  {
+    "id": 350,
+    "en": "What is the minimum stay?",
+    "el_lower": "ποια είναι η ελάχιστη διαμονή;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΕΛΑΧΙΣΤΗ ΔΙΑΜΟΝΗ;",
+    "rom": "piá íne i eláchisti diamoní?",
+    "tag": "housing",
+    "frequency": 350
+  },
+  {
+    "id": 351,
+    "en": "What is the cancellation policy?",
+    "el_lower": "ποια είναι η πολιτική ακύρωσης;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΠΟΛΙΤΙΚΗ ΑΚΥΡΩΣΗΣ;",
+    "rom": "piá íne i politikí akírosis?",
+    "tag": "housing",
+    "frequency": 351
+  },
+  {
+    "id": 352,
+    "en": "What is the refund policy?",
+    "el_lower": "ποια είναι η πολιτική επιστροφών;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΠΟΛΙΤΙΚΗ ΕΠΙΣΤΡΟΦΩΝ;",
+    "rom": "piá íne i politikí epistrofón?",
+    "tag": "housing",
+    "frequency": 352
+  },
+  {
+    "id": 353,
+    "en": "What is the deposit?",
+    "el_lower": "ποια είναι η προκαταβολή;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΠΡΟΚΑΤΑΒΟΛΗ;",
+    "rom": "piá íne i prokatavolí?",
+    "tag": "housing",
+    "frequency": 353
+  },
+  {
+    "id": 354,
+    "en": "Is breakfast included in the price?",
+    "el_lower": "περιλαμβάνεται πρωινό στην τιμή;",
+    "el_upper": "ΠΕΡΙΛΑΜΒΑΝΕΤΑΙ ΠΡΩΙΝΟ ΣΤΗΝ ΤΙΜΗ;",
+    "rom": "perilamvánete proinó stin timí?",
+    "tag": "housing",
+    "frequency": 354
+  },
+  {
+    "id": 355,
+    "en": "Are pets allowed?",
+    "el_lower": "επιτρέπονται τα κατοικίδια;",
+    "el_upper": "ΕΠΙΤΡΕΠΟΝΤΑΙ ΤΑ ΚΑΤΟΙΚΙΔΙΑ;",
+    "rom": "epitrépontai ta katoikídia?",
+    "tag": "housing",
+    "frequency": 355
+  },
+  {
+    "id": 356,
+    "en": "Is smoking allowed?",
+    "el_lower": "επιτρέπεται το κάπνισμα;",
+    "el_upper": "ΕΠΙΤΡΕΠΕΤΑΙ ΤΟ ΚΑΠΝΙΣΜΑ;",
+    "rom": "epitrépete to kápnisma?",
+    "tag": "housing",
+    "frequency": 356
+  },
+  {
+    "id": 357,
+    "en": "Can I book online?",
+    "el_lower": "μπορώ να κλείσω online;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΚΛΕΙΣΩ ONLINE;",
+    "rom": "boró na klíso online?",
+    "tag": "housing",
+    "frequency": 357
+  },
+  {
+    "id": 358,
+    "en": "Where can I park?",
+    "el_lower": "πού μπορώ να παρκάρω;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΠΑΡΚΑΡΩ;",
+    "rom": "poú boró na parkáro?",
+    "tag": "housing",
+    "frequency": 358
+  },
+  {
+    "id": 359,
+    "en": "Where is the ATM?",
+    "el_lower": "πού είναι το ΑΤΜ;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΑΤΜ;",
+    "rom": "poú íne to ATM?",
+    "tag": "banking",
+    "frequency": 359
+  },
+  {
+    "id": 360,
+    "en": "Can I get cash back?",
+    "el_lower": "μπορώ να πάρω επιστροφή μετρητών;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΠΑΡΩ ΕΠΙΣΤΡΟΦΗ ΜΕΤΡΗΤΩΝ;",
+    "rom": "boró na páro epistrofí metritón?",
+    "tag": "banking",
+    "frequency": 360
+  },
+  {
+    "id": 361,
+    "en": "Do you accept debit cards?",
+    "el_lower": "δέχεστε χρεωστικές κάρτες;",
+    "el_upper": "ΔΕΧΕΣΤΕ ΧΡΕΩΣΤΙΚΕΣ ΚΑΡΤΕΣ;",
+    "rom": "dékheste chreostikés kártes?",
+    "tag": "banking",
+    "frequency": 361
+  },
+  {
+    "id": 362,
+    "en": "Is there a bank nearby?",
+    "el_lower": "υπάρχει τράπεζα εδώ κοντά;",
+    "el_upper": "ΥΠΑΡΧΕΙ ΤΡΑΠΕΖΑ ΕΔΩ ΚΟΝΤΑ;",
+    "rom": "ipárchi trápeza edó konda?",
+    "tag": "banking",
+    "frequency": 362
+  },
+  {
+    "id": 363,
+    "en": "What is the exchange rate?",
+    "el_lower": "ποια είναι η ισοτιμία;",
+    "el_upper": "ΠΟΙΑ ΕΙΝΑΙ Η ΙΣΟΤΙΜΙΑ;",
+    "rom": "piá íne i isotimía?",
+    "tag": "banking",
+    "frequency": 363
+  },
+  {
+    "id": 364,
+    "en": "Can I exchange money here?",
+    "el_lower": "μπορώ να ανταλλάξω χρήματα εδώ;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΑΝΤΑΛΛΑΞΩ ΧΡΗΜΑΤΑ ΕΔΩ;",
+    "rom": "boró na antaláxo chrímata edó?",
+    "tag": "banking",
+    "frequency": 364
+  },
+  {
+    "id": 365,
+    "en": "Where is the currency exchange?",
+    "el_lower": "πού είναι το ανταλλακτήριο συναλλάγματος;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΑΝΤΑΛΛΑΚΤΗΡΙΟ ΣΥΝΑΛΛΑΓΜΑΤΟΣ;",
+    "rom": "poú íne to antallaktírio synallágmatos?",
+    "tag": "banking",
+    "frequency": 365
+  },
+  {
+    "id": 366,
+    "en": "Do you have any coins?",
+    "el_lower": "έχετε κέρματα;",
+    "el_upper": "ΕΧΕΤΕ ΚΕΡΜΑΤΑ;",
+    "rom": "éhete kérmata?",
+    "tag": "banking",
+    "frequency": 366
+  },
+  {
+    "id": 367,
+    "en": "Do you have small bills?",
+    "el_lower": "έχετε μικρά χαρτονομίσματα;",
+    "el_upper": "ΕΧΕΤΕ ΜΙΚΡΑ ΧΑΡΤΟΝΟΜΙΣΜΑΤΑ;",
+    "rom": "éhete mikrá chartonomísmata?",
+    "tag": "banking",
+    "frequency": 367
+  },
+  {
+    "id": 368,
+    "en": "I lost my card",
+    "el_lower": "έχασα την κάρτα μου",
+    "el_upper": "ΕΧΑΣΑ ΤΗΝ ΚΑΡΤΑ ΜΟΥ",
+    "rom": "éhasa tin kárta mou",
+    "tag": "banking",
+    "frequency": 368
+  },
+  {
+    "id": 369,
+    "en": "My card doesn’t work",
+    "el_lower": "η κάρτα μου δεν λειτουργεί",
+    "el_upper": "Η ΚΑΡΤΑ ΜΟΥ ΔΕΝ ΛΕΙΤΟΥΡΓΕΙ",
+    "rom": "i kárta mou den leitourgí",
+    "tag": "banking",
+    "frequency": 369
+  },
+  {
+    "id": 370,
+    "en": "Where can I use my card?",
+    "el_lower": "πού μπορώ να χρησιμοποιήσω την κάρτα μου;",
+    "el_upper": "ΠΟΥ ΜΠΟΡΩ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΣΩ ΤΗΝ ΚΑΡΤΑ ΜΟΥ;",
+    "rom": "poú boró na chrisimopoíso tin kárta mou?",
+    "tag": "banking",
+    "frequency": 370
+  },
+  {
+    "id": 371,
+    "en": "Transaction",
+    "el_lower": "συναλλαγή",
+    "el_upper": "ΣΥΝΑΛΛΑΓΗ",
+    "rom": "synallagí",
+    "tag": "banking",
+    "frequency": 371
+  },
+  {
+    "id": 372,
+    "en": "Withdrawal",
+    "el_lower": "ανάληψη",
+    "el_upper": "ΑΝΑΛΗΨΗ",
+    "rom": "análisi",
+    "tag": "banking",
+    "frequency": 372
+  },
+  {
+    "id": 373,
+    "en": "Deposit",
+    "el_lower": "κατάθεση",
+    "el_upper": "ΚΑΤΑΘΕΣΗ",
+    "rom": "katáthesi",
+    "tag": "banking",
+    "frequency": 373
+  },
+  {
+    "id": 374,
+    "en": "Balance",
+    "el_lower": "υπόλοιπο",
+    "el_upper": "ΥΠΟΛΟΙΠΟ",
+    "rom": "ypóloipo",
+    "tag": "banking",
+    "frequency": 374
+  },
+  {
+    "id": 375,
+    "en": "Receipt",
+    "el_lower": "απόδειξη",
+    "el_upper": "ΑΠΟΔΕΙΞΗ",
+    "rom": "apódixi",
+    "tag": "banking",
+    "frequency": 375
+  },
+  {
+    "id": 376,
+    "en": "Cash",
+    "el_lower": "μετρητά",
+    "el_upper": "ΜΕΤΡΗΤΑ",
+    "rom": "metritá",
+    "tag": "banking",
+    "frequency": 376
+  },
+  {
+    "id": 377,
+    "en": "Card",
+    "el_lower": "κάρτα",
+    "el_upper": "ΚΑΡΤΑ",
+    "rom": "kárta",
+    "tag": "banking",
+    "frequency": 377
+  },
+  {
+    "id": 378,
+    "en": "Credit",
+    "el_lower": "πίστωση",
+    "el_upper": "ΠΙΣΤΩΣΗ",
+    "rom": "pístosi",
+    "tag": "banking",
+    "frequency": 378
+  },
+  {
+    "id": 379,
+    "en": "Debit",
+    "el_lower": "χρέωση",
+    "el_upper": "ΧΡΕΩΣΗ",
+    "rom": "chréosi",
+    "tag": "banking",
+    "frequency": 379
+  },
+  {
+    "id": 380,
+    "en": "Limit",
+    "el_lower": "όριο",
+    "el_upper": "ΟΡΙΟ",
+    "rom": "ório",
+    "tag": "banking",
+    "frequency": 380
+  },
+  {
+    "id": 381,
+    "en": "Account",
+    "el_lower": "λογαριασμός",
+    "el_upper": "ΛΟΓΑΡΙΑΣΜΟΣ",
+    "rom": "logariasmós",
+    "tag": "banking",
+    "frequency": 381
+  },
+  {
+    "id": 382,
+    "en": "PIN",
+    "el_lower": "PIN",
+    "el_upper": "PIN",
+    "rom": "PIN",
+    "tag": "banking",
+    "frequency": 382
+  },
+  {
+    "id": 383,
+    "en": "Safe",
+    "el_lower": "χρηματοκιβώτιο",
+    "el_upper": "ΧΡΗΜΑΤΟΚΙΒΩΤΙΟ",
+    "rom": "chrimatokivótio",
+    "tag": "housing",
+    "frequency": 383
+  },
+  {
+    "id": 384,
+    "en": "Do you have a safe?",
+    "el_lower": "έχετε χρηματοκιβώτιο;",
+    "el_upper": "ΕΧΕΤΕ ΧΡΗΜΑΤΟΚΙΒΩΤΙΟ;",
+    "rom": "éhete chrimatokivótio?",
+    "tag": "housing",
+    "frequency": 384
+  },
+  {
+    "id": 385,
+    "en": "Can I store valuables?",
+    "el_lower": "μπορώ να φυλάξω τιμαλφή;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΦΥΛΑΞΩ ΤΙΜΑΛΦΗ;",
+    "rom": "boró na filáxo timalfí?",
+    "tag": "housing",
+    "frequency": 385
+  },
+  {
+    "id": 386,
+    "en": "Lock",
+    "el_lower": "κλειδαριά",
+    "el_upper": "ΚΛΕΙΔΑΡΙΑ",
+    "rom": "kleidariá",
+    "tag": "housing",
+    "frequency": 386
+  },
+  {
+    "id": 387,
+    "en": "Lost and found",
+    "el_lower": "απωλεσθέντα και ευρεθέντα",
+    "el_upper": "ΑΠΩΛΕΣΘΕΝΤΑ ΚΑΙ ΕΥΡΕΘΕΝΤΑ",
+    "rom": "apolesthénta kai evrethénta",
+    "tag": "service",
+    "frequency": 387
+  },
+  {
+    "id": 388,
+    "en": "Where is lost and found?",
+    "el_lower": "πού είναι το γραφείο απολεσθέντων;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ ΤΟ ΓΡΑΦΕΙΟ ΑΠΩΛΕΣΘΕΝΤΩΝ;",
+    "rom": "poú íne to grafío apolesthénton?",
+    "tag": "service",
+    "frequency": 388
+  },
+  {
+    "id": 389,
+    "en": "Can you contact me?",
+    "el_lower": "μπορείτε να επικοινωνήσετε μαζί μου;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΕΠΙΚΟΙΝΩΝΗΣΕΤΕ ΜΑΖΙ ΜΟΥ;",
+    "rom": "boríte na epikinonísete mazí mou?",
+    "tag": "service",
+    "frequency": 389
+  },
+  {
+    "id": 390,
+    "en": "Can you take a message?",
+    "el_lower": "μπορείτε να πάρετε μήνυμα;",
+    "el_upper": "ΜΠΟΡΕΙΤΕ ΝΑ ΠΑΡΕΤΕ ΜΗΝΥΜΑ;",
+    "rom": "boríte na párete mínyma?",
+    "tag": "service",
+    "frequency": 390
+  },
+  {
+    "id": 391,
+    "en": "Can I leave a message?",
+    "el_lower": "μπορώ να αφήσω μήνυμα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΑΦΗΣΩ ΜΗΝΥΜΑ;",
+    "rom": "boró na afíso mínyma?",
+    "tag": "service",
+    "frequency": 391
+  },
+  {
+    "id": 392,
+    "en": "Will you call me?",
+    "el_lower": "θα με καλέσετε;",
+    "el_upper": "ΘΑ ΜΕ ΚΑΛΕΣΕΤΕ;",
+    "rom": "tha me kalésete?",
+    "tag": "service",
+    "frequency": 392
+  },
+  {
+    "id": 393,
+    "en": "Phone",
+    "el_lower": "τηλέφωνο",
+    "el_upper": "ΤΗΛΕΦΩΝΟ",
+    "rom": "tiléfono",
+    "tag": "service",
+    "frequency": 393
+  },
+  {
+    "id": 394,
+    "en": "Mobile",
+    "el_lower": "κινητό",
+    "el_upper": "ΚΙΝΗΤΟ",
+    "rom": "kinitó",
+    "tag": "service",
+    "frequency": 394
+  },
+  {
+    "id": 395,
+    "en": "Number",
+    "el_lower": "αριθμός",
+    "el_upper": "ΑΡΙΘΜΟΣ",
+    "rom": "arithmós",
+    "tag": "basic",
+    "frequency": 395
+  },
+  {
+    "id": 396,
+    "en": "Call",
+    "el_lower": "κλήση",
+    "el_upper": "ΚΛΗΣΗ",
+    "rom": "klísi",
+    "tag": "service",
+    "frequency": 396
+  },
+  {
+    "id": 397,
+    "en": "Ring",
+    "el_lower": "κουδούνι",
+    "el_upper": "ΚΟΥΔΟΥΝΙ",
+    "rom": "koudúni",
+    "tag": "service",
+    "frequency": 397
+  },
+  {
+    "id": 398,
+    "en": "Message",
+    "el_lower": "μήνυμα",
+    "el_upper": "ΜΗΝΥΜΑ",
+    "rom": "mínyma",
+    "tag": "service",
+    "frequency": 398
+  },
+  {
+    "id": 399,
+    "en": "Text",
+    "el_lower": "γραπτό μήνυμα",
+    "el_upper": "ΓΡΑΠΤΟ ΜΗΝΥΜΑ",
+    "rom": "graptó mínyma",
+    "tag": "service",
+    "frequency": 399
+  },
+  {
+    "id": 400,
+    "en": "Can I send a text?",
+    "el_lower": "μπορώ να στείλω γραπτό μήνυμα;",
+    "el_upper": "ΜΠΟΡΩ ΝΑ ΣΤΕΙΛΩ ΓΡΑΠΤΟ ΜΗΝΥΜΑ;",
+    "rom": "boró na stílo graptó mínyma?",
+    "tag": "service",
+    "frequency": 400
+  },
+  {
+    "id": 401,
+    "en": "Internet",
+    "el_lower": "ίντερνετ",
+    "el_upper": "ΙΝΤΕΡΝΕΤ",
+    "rom": "ínternet",
+    "tag": "service",
+    "frequency": 401
+  },
+  {
+    "id": 402,
+    "en": "Password",
+    "el_lower": "κωδικός",
+    "el_upper": "ΚΩΔΙΚΟΣ",
+    "rom": "kodikós",
+    "tag": "service",
+    "frequency": 402
+  },
+  {
+    "id": 403,
+    "en": "Laptop",
+    "el_lower": "λάπτοπ",
+    "el_upper": "ΛΑΠΤΟΠ",
+    "rom": "láptop",
+    "tag": "service",
+    "frequency": 403
+  },
+  {
+    "id": 404,
+    "en": "Computer",
+    "el_lower": "υπολογιστής",
+    "el_upper": "ΥΠΟΛΟΓΙΣΤΗΣ",
+    "rom": "ipologistís",
+    "tag": "service",
+    "frequency": 404
+  },
+  {
+    "id": 405,
+    "en": "Email",
+    "el_lower": "email",
+    "el_upper": "EMAIL",
+    "rom": "email",
+    "tag": "service",
+    "frequency": 405
+  },
+  {
+    "id": 406,
+    "en": "Online",
+    "el_lower": "online",
+    "el_upper": "ONLINE",
+    "rom": "online",
+    "tag": "service",
+    "frequency": 406
+  },
+  {
+    "id": 407,
+    "en": "Website",
+    "el_lower": "ιστοσελίδα",
+    "el_upper": "ΙΣΤΟΣΕΛΙΔΑ",
+    "rom": "istoselída",
+    "tag": "service",
+    "frequency": 407
+  },
+  {
+    "id": 408,
+    "en": "Reservation code",
+    "el_lower": "κωδικός κράτησης",
+    "el_upper": "ΚΩΔΙΚΟΣ ΚΡΑΤΗΣΗΣ",
+    "rom": "kodikós krátisīs",
+    "tag": "housing",
+    "frequency": 408
+  },
+  {
+    "id": 409,
+    "en": "Reference number",
+    "el_lower": "αριθμός αναφοράς",
+    "el_upper": "ΑΡΙΘΜΟΣ ΑΝΑΦΟΡΑΣ",
+    "rom": "arithmós anaforás",
+    "tag": "service",
+    "frequency": 409
+  },
+  {
+    "id": 410,
+    "en": "Support",
+    "el_lower": "υποστήριξη",
+    "el_upper": "ΥΠΟΣΤΗΡΙΞΗ",
+    "rom": "ipostírixi",
+    "tag": "service",
+    "frequency": 410
+  },
+  {
+    "id": 411,
+    "en": "Assistance",
+    "el_lower": "βοήθεια",
+    "el_upper": "ΒΟΗΘΕΙΑ",
+    "rom": "voítheia",
+    "tag": "service",
+    "frequency": 411
+  },
+  {
+    "id": 412,
+    "en": "Receptionist",
+    "el_lower": "ρεσεψιονίστ",
+    "el_upper": "ΡΕΣΕΨΙΟΝΙΣΤ",
+    "rom": "resepsioníst",
+    "tag": "housing",
+    "frequency": 412
+  },
+  {
+    "id": 413,
+    "en": "Manager",
+    "el_lower": "διευθυντής",
+    "el_upper": "ΔΙΕΥΘΥΝΤΗΣ",
+    "rom": "diefthyntís",
+    "tag": "service",
+    "frequency": 413
+  },
+  {
+    "id": 414,
+    "en": "Staff",
+    "el_lower": "προσωπικό",
+    "el_upper": "ΠΡΟΣΩΠΙΚΟ",
+    "rom": "prosopikó",
+    "tag": "service",
+    "frequency": 414
+  },
+  {
+    "id": 415,
+    "en": "Cleaning",
+    "el_lower": "καθαριότητα",
+    "el_upper": "ΚΑΘΑΡΙΟΤΗΤΑ",
+    "rom": "kathariótita",
+    "tag": "housing",
+    "frequency": 415
+  },
+  {
+    "id": 416,
+    "en": "Laundry",
+    "el_lower": "πλυντήριο ρούχων",
+    "el_upper": "ΠΛΥΝΤΗΡΙΟ ΡΟΥΧΩΝ",
+    "rom": "plyntírio rouchón",
+    "tag": "housing",
+    "frequency": 416
+  },
+  {
+    "id": 417,
+    "en": "Shower",
+    "el_lower": "ντους",
+    "el_upper": "ΝΤΟΥΣ",
+    "rom": "ntous",
+    "tag": "housing",
+    "frequency": 417
+  },
+  {
+    "id": 418,
+    "en": "Toilet",
+    "el_lower": "τουαλέτα",
+    "el_upper": "ΤΟΥΑΛΕΤΑ",
+    "rom": "toualéta",
+    "tag": "service",
+    "frequency": 418
+  },
+  {
+    "id": 419,
+    "en": "Sink",
+    "el_lower": "νιπτήρας",
+    "el_upper": "ΝΙΠΤΗΡΑΣ",
+    "rom": "niptíras",
+    "tag": "housing",
+    "frequency": 419
+  },
+  {
+    "id": 420,
+    "en": "Soap",
+    "el_lower": "σαπούνι",
+    "el_upper": "ΣΑΠΟΥΝΙ",
+    "rom": "sapóyni",
+    "tag": "housing",
+    "frequency": 420
+  },
+  {
+    "id": 421,
+    "en": "Towel",
+    "el_lower": "πετσέτα",
+    "el_upper": "ΠΕΤΣΕΤΑ",
+    "rom": "petséta",
+    "tag": "housing",
+    "frequency": 421
+  },
+  {
+    "id": 422,
+    "en": "Blanket",
+    "el_lower": "κουβέρτα",
+    "el_upper": "ΚΟΥΒΕΡΤΑ",
+    "rom": "kouvérita",
+    "tag": "housing",
+    "frequency": 422
+  },
+  {
+    "id": 423,
+    "en": "Pillow",
+    "el_lower": "μαξιλάρι",
+    "el_upper": "ΜΑΞΙΛΑΡΙ",
+    "rom": "maxilári",
+    "tag": "housing",
+    "frequency": 423
+  },
+  {
+    "id": 424,
+    "en": "Bed",
+    "el_lower": "κρεβάτι",
+    "el_upper": "ΚΡΕΒΑΤΙ",
+    "rom": "kreváti",
+    "tag": "housing",
+    "frequency": 424
+  },
+  {
+    "id": 425,
+    "en": "Mattress",
+    "el_lower": "στρώμα",
+    "el_upper": "ΣΤΡΩΜΑ",
+    "rom": "stróma",
+    "tag": "housing",
+    "frequency": 425
+  },
+  {
+    "id": 426,
+    "en": "Sheet",
+    "el_lower": "σεντόνι",
+    "el_upper": "ΣΕΝΤΟΝΙ",
+    "rom": "sentóni",
+    "tag": "housing",
+    "frequency": 426
+  },
+  {
+    "id": 427,
+    "en": "Cover",
+    "el_lower": "κάλυμμα",
+    "el_upper": "ΚΑΛΥΜΜΑ",
+    "rom": "kálymma",
+    "tag": "housing",
+    "frequency": 427
+  },
+  {
+    "id": 428,
+    "en": "Duvet",
+    "el_lower": "πάπλωμα",
+    "el_upper": "ΠΑΠΛΩΜΑ",
+    "rom": "páploma",
+    "tag": "housing",
+    "frequency": 428
+  },
+  {
+    "id": 429,
+    "en": "Slippers",
+    "el_lower": "παντόφλες",
+    "el_upper": "ΠΑΝΤΟΦΛΕΣ",
+    "rom": "pantófles",
+    "tag": "housing",
+    "frequency": 429
+  },
+  {
+    "id": 430,
+    "en": "Wardrobe",
+    "el_lower": "ντουλάπα",
+    "el_upper": "ΝΤΟΥΛΑΠΑ",
+    "rom": "ntoulápa",
+    "tag": "housing",
+    "frequency": 430
+  },
+  {
+    "id": 431,
+    "en": "Drawer",
+    "el_lower": "συρτάρι",
+    "el_upper": "ΣΥΡΤΑΡΙ",
+    "rom": "sirtári",
+    "tag": "housing",
+    "frequency": 431
+  },
+  {
+    "id": 432,
+    "en": "Table",
+    "el_lower": "τραπέζι",
+    "el_upper": "ΤΡΑΠΕΖΙ",
+    "rom": "trapézi",
+    "tag": "housing",
+    "frequency": 432
+  },
+  {
+    "id": 433,
+    "en": "Chair",
+    "el_lower": "καρέκλα",
+    "el_upper": "ΚΑΡΕΚΛΑ",
+    "rom": "karékla",
+    "tag": "housing",
+    "frequency": 433
+  },
+  {
+    "id": 434,
+    "en": "Sofa",
+    "el_lower": "καναπές",
+    "el_upper": "ΚΑΝΑΠΕΣ",
+    "rom": "kanapés",
+    "tag": "housing",
+    "frequency": 434
+  },
+  {
+    "id": 435,
+    "en": "Lamp",
+    "el_lower": "λάμπα",
+    "el_upper": "ΛΑΜΠΑ",
+    "rom": "lámba",
+    "tag": "housing",
+    "frequency": 435
+  },
+  {
+    "id": 436,
+    "en": "Light",
+    "el_lower": "φως",
+    "el_upper": "ΦΩΣ",
+    "rom": "fos",
+    "tag": "housing",
+    "frequency": 436
+  },
+  {
+    "id": 437,
+    "en": "Switch",
+    "el_lower": "διακόπτης",
+    "el_upper": "ΔΙΑΚΟΠΤΗΣ",
+    "rom": "diakóptis",
+    "tag": "housing",
+    "frequency": 437
+  },
+  {
+    "id": 438,
+    "en": "Plug",
+    "el_lower": "πρίζα",
+    "el_upper": "ΠΡΙΖΑ",
+    "rom": "príza",
+    "tag": "housing",
+    "frequency": 438
+  },
+  {
+    "id": 439,
+    "en": "Adapter",
+    "el_lower": "αντάπτορας",
+    "el_upper": "ΑΝΤΑΠΤΟΡΑΣ",
+    "rom": "antáptoras",
+    "tag": "service",
+    "frequency": 439
+  },
+  {
+    "id": 440,
+    "en": "Remote control",
+    "el_lower": "τηλεχειριστήριο",
+    "el_upper": "ΤΗΛΕΧΕΙΡΙΣΤΗΡΙΟ",
+    "rom": "tilecheiristírio",
+    "tag": "housing",
+    "frequency": 440
+  },
+  {
+    "id": 441,
+    "en": "TV",
+    "el_lower": "τηλεόραση",
+    "el_upper": "ΤΗΛΕΟΡΑΣΗ",
+    "rom": "tileórasi",
+    "tag": "housing",
+    "frequency": 441
+  },
+  {
+    "id": 442,
+    "en": "Radio",
+    "el_lower": "ραδιόφωνο",
+    "el_upper": "ΡΑΔΙΟΦΩΝΟ",
+    "rom": "radiófono",
+    "tag": "housing",
+    "frequency": 442
+  },
+  {
+    "id": 443,
+    "en": "Fan",
+    "el_lower": "ανεμιστήρας",
+    "el_upper": "ΑΝΕΜΙΣΤΗΡΑΣ",
+    "rom": "anemistíras",
+    "tag": "housing",
+    "frequency": 443
+  },
+  {
+    "id": 444,
+    "en": "Heater",
+    "el_lower": "θερμαντικό σώμα",
+    "el_upper": "ΘΕΡΜΑΝΤΙΚΟ ΣΩΜΑ",
+    "rom": "thermantikó sóma",
+    "tag": "housing",
+    "frequency": 444
+  },
+  {
+    "id": 445,
+    "en": "Air conditioning",
+    "el_lower": "κλιματισμός",
+    "el_upper": "ΚΛΙΜΑΤΙΣΜΟΣ",
+    "rom": "klimatismós",
+    "tag": "housing",
+    "frequency": 445
+  },
+  {
+    "id": 446,
+    "en": "Window",
+    "el_lower": "παράθυρο",
+    "el_upper": "ΠΑΡΑΘΥΡΟ",
+    "rom": "paráthyro",
+    "tag": "housing",
+    "frequency": 446
+  },
+  {
+    "id": 447,
+    "en": "Door",
+    "el_lower": "πόρτα",
+    "el_upper": "ΠΟΡΤΑ",
+    "rom": "pórta",
+    "tag": "housing",
+    "frequency": 447
+  },
+  {
+    "id": 448,
+    "en": "Lock",
+    "el_lower": "κλειδαριά",
+    "el_upper": "ΚΛΕΙΔΑΡΙΑ",
+    "rom": "kleidariá",
+    "tag": "housing",
+    "frequency": 448
+  },
+  {
+    "id": 449,
+    "en": "Key",
+    "el_lower": "κλειδί",
+    "el_upper": "ΚΛΕΙΔΙ",
+    "rom": "kleidí",
+    "tag": "housing",
+    "frequency": 449
+  },
+  {
+    "id": 450,
+    "en": "Alarm",
+    "el_lower": "συναγερμός",
+    "el_upper": "ΣΥΝΑΓΕΡΜΟΣ",
+    "rom": "synagermós",
+    "tag": "housing",
+    "frequency": 450
+  },
+  {
+    "id": 451,
+    "en": "Smoke detector",
+    "el_lower": "ανιχνευτής καπνού",
+    "el_upper": "ΑΝΙΧΝΕΥΤΗΣ ΚΑΠΝΟΥ",
+    "rom": "anichneftís kapnoú",
+    "tag": "housing",
+    "frequency": 451
+  },
+  {
+    "id": 452,
+    "en": "Sprinkler",
+    "el_lower": "εκτοξευτήρας νερού",
+    "el_upper": "ΕΚΤΟΞΕΥΤΗΡΑΣ ΝΕΡΟΥ",
+    "rom": "ektoxeftíras neroú",
+    "tag": "housing",
+    "frequency": 452
+  },
+  {
+    "id": 453,
+    "en": "Emergency exit",
+    "el_lower": "έξοδος κινδύνου",
+    "el_upper": "ΕΞΟΔΟΣ ΚΙΝΔΥΝΟΥ",
+    "rom": "éxodos kindýnou",
+    "tag": "housing",
+    "frequency": 453
+  },
+  {
+    "id": 454,
+    "en": "Fire extinguisher",
+    "el_lower": "πυροσβεστήρας",
+    "el_upper": "ΠΥΡΟΣΒΕΣΤΗΡΑΣ",
+    "rom": "pyrosvestíras",
+    "tag": "housing",
+    "frequency": 454
+  },
+  {
+    "id": 455,
+    "en": "First aid kit",
+    "el_lower": "φαρμακείο πρώτων βοηθειών",
+    "el_upper": "ΦΑΡΜΑΚΕΙΟ ΠΡΩΤΩΝ ΒΟΗΘΕΙΩΝ",
+    "rom": "farmakío próton voítheion",
+    "tag": "health",
+    "frequency": 455
+  },
+  {
+    "id": 456,
+    "en": "Paramedic",
+    "el_lower": "διασώστης",
+    "el_upper": "ΔΙΑΣΩΣΤΗΣ",
+    "rom": "diasóstis",
+    "tag": "health",
+    "frequency": 456
+  },
+  {
+    "id": 457,
+    "en": "Ambulance",
+    "el_lower": "ασθενοφόρο",
+    "el_upper": "ΑΣΘΕΝΟΦΟΡΟ",
+    "rom": "asthenofóro",
+    "tag": "health",
+    "frequency": 457
+  },
+  {
+    "id": 458,
+    "en": "Police",
+    "el_lower": "αστυνομία",
+    "el_upper": "ΑΣΤΥΝΟΜΙΑ",
+    "rom": "astynomía",
+    "tag": "emergency",
+    "frequency": 458
+  },
+  {
+    "id": 459,
+    "en": "Fire department",
+    "el_lower": "πυροσβεστική",
+    "el_upper": "ΠΥΡΟΣΒΕΣΤΙΚΗ",
+    "rom": "pyrosvestikí",
+    "tag": "emergency",
+    "frequency": 459
+  },
+  {
+    "id": 460,
+    "en": "Doctor on call",
+    "el_lower": "εφημερεύων γιατρός",
+    "el_upper": "ΕΦΗΜΕΡΕΥΩΝ ΓΙΑΤΡΟΣ",
+    "rom": "efimerévon yatrós",
+    "tag": "health",
+    "frequency": 460
+  },
+  {
+    "id": 461,
+    "en": "Do you have insurance?",
+    "el_lower": "έχετε ασφάλεια;",
+    "el_upper": "ΕΧΕΤΕ ΑΣΦΑΛΕΙΑ;",
+    "rom": "éhete asfáleia?",
+    "tag": "health",
+    "frequency": 461
+  },
+  {
+    "id": 462,
+    "en": "I have travel insurance",
+    "el_lower": "έχω ταξιδιωτική ασφάλιση",
+    "el_upper": "ΕΧΩ ΤΑΞΙΔΙΩΤΙΚΗ ΑΣΦΑΛΙΣΗ",
+    "rom": "ého taxidiotikí asfálisi",
+    "tag": "health",
+    "frequency": 462
+  },
+  {
+    "id": 463,
+    "en": "Where is the embassy?",
+    "el_lower": "πού είναι η πρεσβεία;",
+    "el_upper": "ΠΟΥ ΕΙΝΑΙ Η ΠΡΕΣΒΕΙΑ;",
+    "rom": "poú íne i presvía?",
+    "tag": "emergency",
+    "frequency": 463
+  },
+  {
+    "id": 464,
+    "en": "Consulate",
+    "el_lower": "προξενείο",
+    "el_upper": "ΠΡΟΞΕΝΕΙΟ",
+    "rom": "proksenío",
+    "tag": "emergency",
+    "frequency": 464
+  },
+  {
+    "id": 465,
+    "en": "Visa",
+    "el_lower": "βίζα",
+    "el_upper": "ΒΙΖΑ",
+    "rom": "víza",
+    "tag": "emergency",
+    "frequency": 465
+  },
+  {
+    "id": 466,
+    "en": "Passport",
+    "el_lower": "διαβατήριο",
+    "el_upper": "ΔΙΑΒΑΤΗΡΙΟ",
+    "rom": "diavatírio",
+    "tag": "emergency",
+    "frequency": 466
+  },
+  {
+    "id": 467,
+    "en": "Identification",
+    "el_lower": "ταυτοποίηση",
+    "el_upper": "ΤΑΥΤΟΠΟΙΗΣΗ",
+    "rom": "taftopoíisi",
+    "tag": "emergency",
+    "frequency": 467
+  },
+  {
+    "id": 468,
+    "en": "Signature",
+    "el_lower": "υπογραφή",
+    "el_upper": "ΥΠΟΓΡΑΦΗ",
+    "rom": "ypografí",
+    "tag": "service",
+    "frequency": 468
+  },
+  {
+    "id": 469,
+    "en": "Form",
+    "el_lower": "έντυπο",
+    "el_upper": "ΕΝΤΥΠΟ",
+    "rom": "éntipo",
+    "tag": "service",
+    "frequency": 469
+  },
+  {
+    "id": 470,
+    "en": "Document",
+    "el_lower": "έγγραφο",
+    "el_upper": "ΕΓΓΡΑΦΟ",
+    "rom": "éngrafo",
+    "tag": "service",
+    "frequency": 470
+  },
+  {
+    "id": 471,
+    "en": "Application",
+    "el_lower": "αίτηση",
+    "el_upper": "ΑΙΤΗΣΗ",
+    "rom": "aítisi",
+    "tag": "service",
+    "frequency": 471
+  },
+  {
+    "id": 472,
+    "en": "Photocopy",
+    "el_lower": "φωτοτυπία",
+    "el_upper": "ΦΩΤΟΤΥΠΙΑ",
+    "rom": "fototypía",
+    "tag": "service",
+    "frequency": 472
+  },
+  {
+    "id": 473,
+    "en": "Stamp",
+    "el_lower": "σφραγίδα",
+    "el_upper": "ΣΦΡΑΓΙΔΑ",
+    "rom": "sfragída",
+    "tag": "service",
+    "frequency": 473
+  },
+  {
+    "id": 474,
+    "en": "Letter",
+    "el_lower": "γράμμα",
+    "el_upper": "ΓΡΑΜΜΑ",
+    "rom": "gráma",
+    "tag": "service",
+    "frequency": 474
+  },
+  {
+    "id": 475,
+    "en": "Package",
+    "el_lower": "πακέτο",
+    "el_upper": "ΠΑΚΕΤΟ",
+    "rom": "pakéto",
+    "tag": "service",
+    "frequency": 475
+  },
+  {
+    "id": 476,
+    "en": "Address",
+    "el_lower": "διεύθυνση",
+    "el_upper": "ΔΙΕΥΘΥΝΣΗ",
+    "rom": "diéfthynsi",
+    "tag": "service",
+    "frequency": 476
+  },
+  {
+    "id": 477,
+    "en": "Street",
+    "el_lower": "οδός",
+    "el_upper": "ΟΔΟΣ",
+    "rom": "odós",
+    "tag": "service",
+    "frequency": 477
+  },
+  {
+    "id": 478,
+    "en": "Number",
+    "el_lower": "αριθμός",
+    "el_upper": "ΑΡΙΘΜΟΣ",
+    "rom": "arithmós",
+    "tag": "service",
+    "frequency": 478
+  },
+  {
+    "id": 479,
+    "en": "City",
+    "el_lower": "πόλη",
+    "el_upper": "ΠΟΛΗ",
+    "rom": "póli",
+    "tag": "service",
+    "frequency": 479
+  },
+  {
+    "id": 480,
+    "en": "Region",
+    "el_lower": "περιοχή",
+    "el_upper": "ΠΕΡΙΟΧΗ",
+    "rom": "periochí",
+    "tag": "service",
+    "frequency": 480
+  },
+  {
+    "id": 481,
+    "en": "Country",
+    "el_lower": "χώρα",
+    "el_upper": "ΧΩΡΑ",
+    "rom": "chóra",
+    "tag": "service",
+    "frequency": 481
+  },
+  {
+    "id": 482,
+    "en": "Postal code",
+    "el_lower": "ταχυδρομικός κώδικας",
+    "el_upper": "ΤΑΧΥΔΡΟΜΙΚΟΣ ΚΩΔΙΚΑΣ",
+    "rom": "tachydromikós kódikas",
+    "tag": "service",
+    "frequency": 482
+  },
+  {
+    "id": 483,
+    "en": "Mail",
+    "el_lower": "αλληλογραφία",
+    "el_upper": "ΑΛΛΗΛΟΓΡΑΦΙΑ",
+    "rom": "allilografía",
+    "tag": "service",
+    "frequency": 483
+  },
+  {
+    "id": 484,
+    "en": "Send",
+    "el_lower": "στέλνω",
+    "el_upper": "ΣΤΕΛΝΩ",
+    "rom": "stélno",
+    "tag": "service",
+    "frequency": 484
+  },
+  {
+    "id": 485,
+    "en": "Receive",
+    "el_lower": "λαμβάνω",
+    "el_upper": "ΛΑΜΒΑΝΩ",
+    "rom": "lamváno",
+    "tag": "service",
+    "frequency": 485
+  },
+  {
+    "id": 486,
+    "en": "Pick up",
+    "el_lower": "παραλαμβάνω",
+    "el_upper": "ΠΑΡΑΛΑΜΒΑΝΩ",
+    "rom": "paralámvano",
+    "tag": "service",
+    "frequency": 486
+  },
+  {
+    "id": 487,
+    "en": "Drop off",
+    "el_lower": "παραδίδω",
+    "el_upper": "ΠΑΡΑΔΙΔΩ",
+    "rom": "paradído",
+    "tag": "service",
+    "frequency": 487
+  },
+  {
+    "id": 488,
+    "en": "Shipping",
+    "el_lower": "αποστολή",
+    "el_upper": "ΑΠΟΣΤΟΛΗ",
+    "rom": "apostolí",
+    "tag": "service",
+    "frequency": 488
+  },
+  {
+    "id": 489,
+    "en": "Recipient",
+    "el_lower": "παραλήπτης",
+    "el_upper": "ΠΑΡΑΛΗΠΤΗΣ",
+    "rom": "paralíptis",
+    "tag": "service",
+    "frequency": 489
+  },
+  {
+    "id": 490,
+    "en": "Sender",
+    "el_lower": "αποστολέας",
+    "el_upper": "ΑΠΟΣΤΟΛΕΑΣ",
+    "rom": "apostoléas",
+    "tag": "service",
+    "frequency": 490
+  },
+  {
+    "id": 491,
+    "en": "Parcel",
+    "el_lower": "δέμα",
+    "el_upper": "ΔΕΜΑ",
+    "rom": "déma",
+    "tag": "service",
+    "frequency": 491
+  },
+  {
+    "id": 492,
+    "en": "Delivery",
+    "el_lower": "παράδοση",
+    "el_upper": "ΠΑΡΑΔΟΣΗ",
+    "rom": "parádosi",
+    "tag": "service",
+    "frequency": 492
+  },
+  {
+    "id": 493,
+    "en": "Express",
+    "el_lower": "εξπρές",
+    "el_upper": "ΕΞΠΡΕΣ",
+    "rom": "exprés",
+    "tag": "service",
+    "frequency": 493
+  },
+  {
+    "id": 494,
+    "en": "Standard",
+    "el_lower": "τυπικό",
+    "el_upper": "ΤΥΠΙΚΟ",
+    "rom": "typikó",
+    "tag": "service",
+    "frequency": 494
+  },
+  {
+    "id": 495,
+    "en": "Tracking",
+    "el_lower": "παρακολούθηση",
+    "el_upper": "ΠΑΡΑΚΟΛΟΥΘΗΣΗ",
+    "rom": "parakoloúthisi",
+    "tag": "service",
+    "frequency": 495
+  },
+  {
+    "id": 496,
+    "en": "Courier",
+    "el_lower": "ταχυμεταφορέας",
+    "el_upper": "ΤΑΧΥΜΕΤΑΦΟΡΕΑΣ",
+    "rom": "tachymetaforéas",
+    "tag": "service",
+    "frequency": 496
+  },
+  {
+    "id": 497,
+    "en": "Instructions",
+    "el_lower": "οδηγίες",
+    "el_upper": "ΟΔΗΓΙΕΣ",
+    "rom": "odigíes",
+    "tag": "service",
+    "frequency": 497
+  },
+  {
+    "id": 498,
+    "en": "Information",
+    "el_lower": "πληροφορίες",
+    "el_upper": "ΠΛΗΡΟΦΟΡΙΕΣ",
+    "rom": "pliroforíes",
+    "tag": "service",
+    "frequency": 498
+  },
+  {
+    "id": 499,
+    "en": "Question",
+    "el_lower": "ερώτηση",
+    "el_upper": "ΕΡΩΤΗΣΗ",
+    "rom": "erótisi",
+    "tag": "question",
+    "frequency": 499
+  },
+  {
+    "id": 500,
+    "en": "Request",
+    "el_lower": "αίτημα",
+    "el_upper": "ΑΙΤΗΜΑ",
+    "rom": "étima",
+    "tag": "request",
+    "frequency": 500
+  }
 ]
