@@ -87,7 +87,6 @@ function render() {
   const dark = document.body.classList.contains('darkmode');
   const showGreek = (state.curLang === "el");
 
-  // Prompt and toolbar
   const p = document.getElementById('prompt'),
     tTop = document.getElementById('phoneticsTop'),
     tb = document.querySelector('.toolbar');
@@ -288,6 +287,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.getElementById('statsBtn').onclick = showStats;
+
+  // Stats modal close
   document.getElementById('closeStats').onclick = () => {
     document.getElementById('statsModal').classList.add('hidden');
   };
