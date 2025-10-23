@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Arthur and Callie Learn Greek</title>
-<style>
-  html, body {
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arthur and Callie Learn Greek</title>
+  <style>
+    html, body {
     margin: 0;
     height: 100%;
     background: #f8fafc;
@@ -140,58 +140,71 @@
     .btn, .icon-btn { font-size: 1.22rem; min-width: 74px; min-height: 61px; }
     .modal-content { min-width: 90vw; }
   }
-</style>
+  </style>
 </head>
 <body>
-<div class="app">
-  <header>
-    <h1>Arthur and Callie Learn Greek</h1>
-    <button id="settingsBtn" class="icon-btn" aria-label="Settings">&#9881;</button>
-  </header>
-  <section class="card" id="cardContainer">
-    <div id="prompt" class="prompt"></div>
-    <div id="phoneticsTop" class="phonetics" hidden></div>
-    <div class="toolbar"></div>
-    <div id="reveal" class="reveal" aria-hidden="true">
-      <div id="translation"></div>
-      <div id="phonetics" class="phonetics" hidden></div>
-      <button id="phonBtn" class="btn secondary" disabled style="display:none;">Show Phonetics</button>
-      <div class="result-buttons" id="scoreButtons" hidden>
-        <button id="correctBtn" class="btn secondary">I Got It</button>
-        <button id="wrongBtn" class="btn secondary">I Missed It</button>
+  <div class="app">
+    <header>
+      <h1>Arthur and Callie Learn Greek</h1>
+      <button id="settingsBtn" class="icon-btn" aria-label="Settings">&#9881;</button>
+    </header>
+    <section class="card" id="cardContainer">
+      <div id="prompt" class="prompt"></div>
+      <div id="phoneticsTop" class="phonetics hidden"></div>
+      <div class="toolbar"></div>
+      <div id="reveal" class="reveal" aria-hidden="true">
+        <div id="translation"></div>
+        <div id="phonetics" class="phonetics hidden"></div>
+        <button id="phonBtn" class="btn secondary" disabled style="display:none;">Show Phonetics</button>
+        <div class="result-buttons" id="scoreButtons" hidden>
+          <button id="correctBtn" class="btn secondary">I Got It</button>
+          <button id="wrongBtn" class="btn secondary">I Missed It</button>
+        </div>
+      </div>
+    </section>
+    <footer class="navigation">
+      <button id="prevBtn" class="btn">Previous</button>
+      <button id="nextBtn" class="btn">Next</button>
+    </footer>
+    <div id="settingsModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeSettings" class="icon-btn close">&#10006;</button>
+        <h2>Settings</h2>
+        <label class="switch"><input type="checkbox" id="modalShuffle"> Shuffle cards</label>
+        <label class="switch"><input type="checkbox" id="modalPhonetics"> Always Show Phonetics</label>
+        <label class="switch"><input type="checkbox" id="modalDark"> Dark mode</label>
+        <label class="switch">
+          Initial language:
+          <select id="modalInitLang" style="font-size:1rem;margin-top:6px;border-radius:8px;">
+            <option value="en">English</option>
+            <option value="el">Greek</option>
+            <option value="random">Random</option>
+          </select>
+        </label>
+        <label style="margin-top:12px;display:block;">
+          Deck size:
+          <select id="modalDeckSize" style="font-size:1rem;margin-left:8px;border-radius:8px;">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="all">All</option>
+          </select>
+        </label>
+        <button id="statsBtn" class="btn secondary" style="margin-top:18px;">View Stats</button>
       </div>
     </div>
-  </section>
-</div>
-<footer class="navigation">
-  <button id="prevBtn" class="btn">Previous</button>
-  <button id="nextBtn" class="btn">Next</button>
-</footer>
-<div id="settingsModal" class="modal" hidden>
-  <div class="modal-content">
-    <button id="closeSettings" class="icon-btn close">&#10006;</button>
-    <h2>Settings</h2>
-    <label class="switch"><input type="checkbox" id="modalShuffle"> Shuffle cards</label>
-    <label class="switch"><input type="checkbox" id="modalPhonetics"> Always Show Phonetics</label>
-    <label class="switch"><input type="checkbox" id="modalDark"> Dark mode</label>
-    <label class="switch">Initial language:
-      <select id="modalInitLang" style="font-size:1rem;margin-top:6px;border-radius:8px;">
-        <option value="en">English</option>
-        <option value="el">Greek</option>
-        <option value="random">Random</option>
-      </select>
-    </label>
-    <button id="statsBtn" class="btn secondary" style="margin-top:18px;">View Stats</button>
+    <div id="statsModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeStats" class="icon-btn close">&#10006;</button>
+        <h2>Your Performance Stats</h2>
+        <div id="statsTable"></div>
+        <button id="resetStatsBtn" class="btn secondary reset-btn">Reset Stats</button>
+      </div>
+    </div>
   </div>
-</div>
-<div id="statsModal" class="modal" hidden>
-  <div class="modal-content">
-    <button id="closeStats" class="icon-btn close">&#10006;</button>
-    <h2>Your Performance Stats</h2>
-    <div id="statsTable"></div>
-    <button id="resetStatsBtn" class="btn secondary reset-btn">Reset Stats</button>
-  </div>
-</div>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
