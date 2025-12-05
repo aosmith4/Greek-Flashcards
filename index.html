@@ -199,7 +199,6 @@
       transition: background-color 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out;
     }
 
-    /* Primary CTA: Show Translation */
     button.primary {
       background: var(--accent);
       color: #ffffff;
@@ -316,6 +315,39 @@
     .modal-section select,
     .modal-section input[type="checkbox"] {
       margin-top: 2px;
+    }
+
+    /* Small-height optimization for phones (e.g., iPhone 15 browser) */
+    @media (max-height: 750px) {
+      .app {
+        padding: 8px;
+      }
+
+      .card {
+        padding: 12px;
+      }
+
+      .card-inner {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        gap: 12px;
+      }
+
+      .slot-prompt {
+        height: 150px;
+      }
+
+      .slot-translation {
+        height: 150px;
+      }
+
+      .control-band {
+        margin-top: 4px;
+      }
+
+      .bottom-bar {
+        margin-top: 4px;
+      }
     }
   </style>
 </head>
