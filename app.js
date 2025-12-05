@@ -154,12 +154,19 @@ function goTo(index) {
   renderCard(true); // new card -> choose side (random if needed)
 }
 
+// Wrap-around next/previous
 function nextCard() {
-  goTo(state.currentIndex + 1);
+  const total = state.filteredCards.length;
+  if (total === 0) return;
+  const nextIndex = (state.currentIndex + 1) % total;
+  goTo(nextIndex);
 }
 
 function prevCard() {
-  goTo(state.currentIndex - 1);
+  const total = state.filteredCards.length;
+  if (total === 0) return;
+  const prevIndex = (state.currentIndex - 1 + total) % total;
+  goTo(prevIndex);
 }
 
 // Deck filtering by topic
