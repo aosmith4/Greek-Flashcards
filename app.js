@@ -1,338 +1,306 @@
-let fullDeck = [];
-let deck = [];
-let state = {
-  order: [],
-  index: 0,
-  shuffle: true,
-  alwaysPhon: false,
-  show: false,
-  initLang: "en",
-  curLang: null,
-  deckSize: "all"
+// Basic state
+const state = {
+  cards: [],
+  filteredCards: [],
+  currentIndex: 0,
+  currentTopic: "Alphabet",
+  promptLanguage: "en", // "en" | "el" | "random"
+  currentSide: "en",
+  translationShown: false,
+  phoneticsShown: false
 };
 
-function getStats(id) {
-  let s = localStorage.getItem("greekFlashStats:" + id);
-  return s ? JSON.parse(s) : { attempts: 0, correct: 0, incorrect: 0 };
-}
+// DOM refs
+const promptEl = document.getElementById("prompt");
+const promptPhonEl = document.getElementById("promptPhonetic");
+const translationTextEl = document.getElementById("translationText");
+const translationPhonEl = document.getElementById("translationPhonetic");
+const translationDividerEl = document.getElementById("translationDivider");
 
-function updateStats(id, result) {
-  let s = getStats(id);
-  s.attempts++;
-  if (result === "correct") s.correct++;
-  if (result === "incorrect") s.incorrect++;
-  localStorage.setItem("greekFlashStats:" + id, JSON.stringify(s));
-}
+const showTranslationBtn = document.getElementById("showTranslationBtn");
+const showPhoneticsBtn = document.getElementById("showPhoneticsBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const progressEl = document.getElementById("progress");
+const topicButton = document.getElementById("topicButton");
 
-function resetAllStats() {
-  deck.forEach(c => localStorage.removeItem("greekFlashStats:" + c.id));
-}
+// Topic modal elements
+const topicModalBackdrop = document.getElementById("topicModalBackdrop");
+const topicClose = document.getElementById("topicClose");
 
-async function loadDeck() {
-  const r = await fetch('deck.json');
-  fullDeck = await r.json();
-  applyDeckFilter();
-}
+// Settings modal elements
+const settingsButton = document.getElementById("settingsButton");
+const settingsModalBackdrop = document.getElementById("settingsModalBackdrop");
+const settingsClose = document.getElementById("settingsClose");
+const promptLanguageSelect = document.getElementById("promptLanguageSelect");
+const shuffleCheckbox = document.getElementById("shuffleCheckbox");
+const themeSelect = document.getElementById("themeSelect");
 
-function applyDeckFilter() {
-  let size = state.deckSize === "all" ? fullDeck.length : parseInt(state.deckSize);
-  deck = fullDeck.slice().sort((a, b) => a.frequency - b.frequency).slice(0, size);
-  ensureOrder(deck.length);
-  setCardLanguage();
-  render();
-}
-
-function shuffledIndices(n) {
-  const a = Array.from({ length: n }, (_, i) => i);
-  for (let i = n - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+// Helper: choose prompt side for this card
+function getPromptSide() {
+  if (state.promptLanguage === "random") {
+    return Math.random() < 0.5 ? "en" : "el";
   }
-  return a;
+  return state.promptLanguage; // "en" or "el"
 }
 
-function ensureOrder(n = deck.length) {
-  if (!Array.isArray(state.order) || state.order.length !== n) {
-    state.order = state.shuffle ? shuffledIndices(n) : Array.from({ length: n }, (_, i) => i);
-    state.index = 0;
-  }
-}
-
-function setCardLanguage() {
-  state.curLang = state.initLang === "random" ? (Math.random() < 0.5 ? "en" : "el") : state.initLang;
-}
-
+// Helper: current card
 function currentCard() {
-  return deck[state.order[state.index]];
+  return state.filteredCards[state.currentIndex] || null;
 }
 
-function resetReveal() {
-  state.show = false;
-  document.getElementById('reveal').classList.remove('visible');
-  document.getElementById('phonetics').hidden = true;
-  document.getElementById('phonetics').textContent = "";
-  document.getElementById('phoneticsTop').hidden = true;
-  document.getElementById('phoneticsTop').textContent = "";
-  let phBtn = document.getElementById('phonBtn');
-  phBtn.style.display = "none";
-  phBtn.disabled = true;
-  phBtn.setAttribute('aria-disabled', "true");
-  document.getElementById('scoreButtons').hidden = true;
-  document.getElementById('translation').innerHTML = "";
-}
-
-function showPhonetics(card, inPrompt) {
-  const el = inPrompt ? document.getElementById('phoneticsTop') : document.getElementById('phonetics');
-  el.textContent = card.rom;
-  el.hidden = false;
-  el.className = "phonetics" + (document.body.classList.contains('darkmode') ? " darkmode" : "");
-  el.style.display = "block";
-}
-
-function render() {
-  const card = currentCard();
-  if (!card) return;
-  const dark = document.body.classList.contains('darkmode');
-  const showGreek = (state.curLang === "el");
-
-  // Always apply dark mode to card
-  const cardContainer = document.querySelector('.card');
-  if (cardContainer) cardContainer.classList.toggle('darkmode', dark);
-
-  // Prompt and toolbar
-  const p = document.getElementById('prompt'),
-    tTop = document.getElementById('phoneticsTop'),
-    tb = document.querySelector('.toolbar');
-  p.innerHTML = "";
-  tTop.hidden = true;
-  tb.innerHTML = "";
-  tb.style.flexDirection = "column";
-  tb.style.alignItems = "center";
-
-  if (showGreek) {
-    p.innerHTML =
-      `<div class="greek-lines${dark ? ' darkmode' : ''}">${card.el_lower}<br>${card.el_upper}</div>`;
-    if (state.alwaysPhon) {
-      showPhonetics(card, true); // Always show phonetics at the top
-    } else {
-      tTop.hidden = true;
-      const tBtn = document.createElement('button');
-      tBtn.className = `btn secondary${dark ? " darkmode secondary" : ""}`;
-      tBtn.textContent = "Show Phonetics";
-      tBtn.style.display = "block";
-      tBtn.style.margin = "0 auto";
-      tBtn.onclick = () => showPhonetics(card, true);
-      tb.appendChild(tBtn);
-    }
-    const rBtn = document.createElement('button');
-    rBtn.className = `btn primary${dark ? " darkmode primary" : ""}`;
-    rBtn.textContent = state.show ? "Hide Translation" : "Show Translation";
-    rBtn.style.display = "block";
-    rBtn.style.margin = "24px auto 0 auto";
-    rBtn.onclick = () => {
-      state.show = !state.show;
-      render();
-    };
-    tb.appendChild(rBtn);
+// Helper: fade visibility toggle
+function setVisible(el, isVisible) {
+  if (!el) return;
+  if (isVisible) {
+    el.classList.add("visible");
   } else {
-    p.innerHTML = `<span class="english-line${dark ? ' darkmode' : ''}">${card.en}</span>`;
-    tTop.hidden = true;
-    const rBtn = document.createElement('button');
-    rBtn.className = `btn primary${dark ? " darkmode primary" : ""}`;
-    rBtn.textContent = state.show ? "Hide Translation" : "Show Translation";
-    rBtn.style.display = "block";
-    rBtn.style.margin = "24px auto 0 auto";
-    rBtn.onclick = () => {
-      state.show = !state.show;
-      render();
-    };
-    tb.appendChild(rBtn);
+    el.classList.remove("visible");
+  }
+}
+
+// Render current card
+function renderCard(resetReveal = true) {
+  const card = currentCard();
+  if (!card) {
+    promptEl.textContent = "No cards for this topic.";
+    promptPhonEl.textContent = "";
+    translationTextEl.textContent = "";
+    translationPhonEl.textContent = "";
+    setVisible(promptPhonEl, false);
+    setVisible(translationTextEl, false);
+    setVisible(translationPhonEl, false);
+    translationDividerEl.classList.remove("visible");
+    setVisible(showPhoneticsBtn, false);
+    progressEl.textContent = "Card 0 of 0";
+    return;
   }
 
-  const tr = document.getElementById('translation'),
-    ph = document.getElementById('phonetics'),
-    phBtn = document.getElementById('phonBtn'),
-    scBtns = document.getElementById('scoreButtons');
+  const total = state.filteredCards.length;
+  const index = state.currentIndex + 1;
+  progressEl.textContent = `Card ${index} of ${total}`;
+  topicButton.textContent = card.topic;
 
-  tr.innerHTML = "";
-  ph.hidden = true;
-  ph.textContent = "";
-  phBtn.style.display = "none";
-  phBtn.disabled = true;
-  phBtn.setAttribute('aria-disabled', "true");
-  scBtns.hidden = true;
+  // Reset reveal state and select side only when requested
+  if (resetReveal) {
+    state.currentSide = getPromptSide(); // "en" or "el"
+    state.translationShown = false;
+    state.phoneticsShown = false;
+  }
 
-  if (state.show) {
-    document.getElementById('reveal').classList.add('visible');
-    scBtns.hidden = false;
-    if (showGreek) {
-      tr.innerHTML = `<div class="english-line${dark ? ' darkmode' : ''}">${card.en}</div>`;
-    } else {
-      tr.innerHTML = `<div class="greek-lines${dark ? ' darkmode' : ''}">${card.el_lower}<br>${card.el_upper}</div>`;
-      if (state.alwaysPhon) {
-        showPhonetics(card, false);
-      } else {
-        phBtn.className = `btn secondary${dark ? " darkmode secondary" : ""}`;
-        phBtn.style.display = "block";
-        phBtn.style.margin = "0 auto";
-        phBtn.disabled = false;
-        phBtn.setAttribute('aria-disabled', "false");
-        phBtn.textContent = "Show Phonetics";
-        phBtn.onclick = () => showPhonetics(card, false);
+  const side = state.currentSide;
+
+  // Clear slot texts
+  promptPhonEl.textContent = "";
+  translationTextEl.textContent = "";
+  translationPhonEl.textContent = "";
+
+  // Hide all reveal slots/buttons by default
+  setVisible(promptPhonEl, false);
+  setVisible(translationTextEl, false);
+  setVisible(translationPhonEl, false);
+  translationDividerEl.classList.remove("visible");
+  setVisible(showPhoneticsBtn, false);
+
+  if (side === "en") {
+    // Prompt: English
+    promptEl.textContent = card.en;
+
+    if (state.translationShown) {
+      // Divider + Greek translation on two lines
+      translationDividerEl.classList.add("visible");
+      translationTextEl.textContent = `${card.el_upper}\n${card.el_lower}`;
+      setVisible(translationTextEl, true);
+
+      // Show Phonetics button to reveal phonetics for translation Greek
+      setVisible(showPhoneticsBtn, true);
+
+      if (state.phoneticsShown) {
+        translationPhonEl.textContent = card.rom;
+        setVisible(translationPhonEl, true);
       }
     }
-    scBtns.style.display = "flex";
-    scBtns.style.justifyContent = "center";
-    document.getElementById('correctBtn').onclick = () => doScore("correct");
-    document.getElementById('wrongBtn').onclick = () => doScore("incorrect");
   } else {
-    document.getElementById('reveal').classList.remove('visible');
-    ph.hidden = true;
-    ph.textContent = "";
+    // side === "el"
+    // Prompt: Greek, uppercase and lowercase on separate lines
+    promptEl.textContent = `${card.el_upper}\n${card.el_lower}`;
+
+    // Show Phonetics button is always available when Greek is prompt
+    setVisible(showPhoneticsBtn, true);
+
+    // Prompt phonetic slot (for Greek prompt)
+    if (state.phoneticsShown) {
+      promptPhonEl.textContent = card.rom;
+      setVisible(promptPhonEl, true);
+    }
+
+    if (state.translationShown) {
+      // Divider + English translation
+      translationDividerEl.classList.add("visible");
+      translationTextEl.textContent = card.en;
+      setVisible(translationTextEl, true);
+      // No translation phonetic for English translation
+    }
   }
 }
 
-function doScore(res) {
-  updateStats(currentCard().id, res);
-  nextCard();
+// Navigation
+function goTo(index) {
+  const total = state.filteredCards.length;
+  if (total === 0) return;
+  if (index < 0) index = 0;
+  if (index >= total) index = total - 1;
+  state.currentIndex = index;
+  renderCard(true); // new card -> choose side (random if needed)
 }
 
 function nextCard() {
-  if (state.index < deck.length - 1) state.index++;
-  else ensureOrder(deck.length);
-  setCardLanguage();
-  resetReveal();
-  render();
+  goTo(state.currentIndex + 1);
 }
 
 function prevCard() {
-  if (state.index > 0) state.index--;
-  else state.index = deck.length - 1;
-  setCardLanguage();
-  resetReveal();
-  render();
+  goTo(state.currentIndex - 1);
 }
 
-function showStats() {
-  const tbl = document.getElementById('statsTable');
-  let cards = deck.map(c => {
-    let s = getStats(c.id);
-    let acc = s.attempts ? Math.round((s.correct / s.attempts) * 100) : 0;
-    return { ...c, stats: s, acc };
-  });
-  cards.sort((a, b) => a.acc - b.acc);
-
-  let html = `<table><thead><tr><th>Phrase</th><th>Accuracy</th><th>Attempts</th></tr></thead><tbody>`;
-  cards.forEach(c => {
-    html += `<tr><td>${c.en}</td><td>${c.acc}%</td><td>${c.stats.attempts}</td></tr>`;
-  });
-  html += "</tbody></table>";
-  tbl.innerHTML = html;
-
-  // Apply darkmode to stats modal if needed
-  const statsModal = document.getElementById('statsModal');
-  const statsModalContent = statsModal.querySelector('.modal-content');
-  if (document.body.classList.contains('darkmode')) {
-    statsModalContent.classList.add('darkmode');
-  } else {
-    statsModalContent.classList.remove('darkmode');
+// Deck filtering by topic
+function applyTopicFilter(topic) {
+  state.currentTopic = topic;
+  state.filteredCards = state.cards.filter(c => c.topic === topic);
+  if (shuffleCheckbox.checked) {
+    // simple in-place shuffle
+    for (let i = state.filteredCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [state.filteredCards[i], state.filteredCards[j]] = [
+        state.filteredCards[j],
+        state.filteredCards[i]
+      ];
+    }
   }
-  statsModal.classList.remove('hidden');
-  document.getElementById('resetStatsBtn').onclick = () => {
-    if (confirm("Are you sure you want to reset all your stats?")) {
-      resetAllStats();
-      showStats();
-    }
-  };
+  state.currentIndex = 0;
+  renderCard(true);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('nextBtn').onclick = nextCard;
-  document.getElementById('prevBtn').onclick = prevCard;
-
-  const sBtn = document.getElementById('settingsBtn'),
-    sMod = document.getElementById('settingsModal'),
-    cS = document.getElementById('closeSettings'),
-    mSh = document.getElementById('modalShuffle'),
-    mPh = document.getElementById('modalPhonetics'),
-    mD = document.getElementById('modalDark'),
-    mL = document.getElementById('modalInitLang'),
-    mDS = document.getElementById('modalDeckSize');
-
-  sBtn.onclick = () => {
-    mSh.checked = state.shuffle;
-    mPh.checked = state.alwaysPhon;
-    mD.checked = document.body.classList.contains('darkmode');
-    mL.value = state.initLang;
-    mDS.value = state.deckSize;
-    sMod.classList.remove('hidden');
-    // Apply dark mode to Settings modal if needed
-    const modalContent = sMod.querySelector('.modal-content');
-    if (document.body.classList.contains('darkmode')) {
-      modalContent.classList.add('darkmode');
-    } else {
-      modalContent.classList.remove('darkmode');
-    }
-  };
-
-  cS.onclick = () => {
-    sMod.classList.add('hidden');
-    render();
-  };
-
-  mSh.onchange = () => {
-    state.shuffle = mSh.checked;
-    ensureOrder(deck.length);
-    render();
-  };
-  mPh.onchange = () => {
-    state.alwaysPhon = mPh.checked;
-    render();
-  };
-  mD.onchange = () => {
-    document.body.classList.toggle('darkmode', mD.checked);
-    // Apply dark mode to modals and card
-    const settingsModalContent = document.getElementById('settingsModal').querySelector('.modal-content');
-    const statsModalContent = document.getElementById('statsModal').querySelector('.modal-content');
-    const cardContainer = document.querySelector('.card');
-    if (document.body.classList.contains('darkmode')) {
-      settingsModalContent.classList.add('darkmode');
-      statsModalContent.classList.add('darkmode');
-      cardContainer.classList.add('darkmode');
-    } else {
-      settingsModalContent.classList.remove('darkmode');
-      statsModalContent.classList.remove('darkmode');
-      cardContainer.classList.remove('darkmode');
-    }
-    render();
-  };
-  mL.onchange = () => {
-    state.initLang = mL.value;
-    setCardLanguage();
-    render();
-  };
-
-  mDS.onchange = () => {
-    state.deckSize = mDS.value;
-    applyDeckFilter();
-  };
-
-  document.getElementById('statsBtn').onclick = showStats;
-  document.getElementById('closeStats').onclick = () => {
-    document.getElementById('statsModal').classList.add('hidden');
-  };
-
-  window.addEventListener('keydown', e => {
-    if (!document.getElementById('settingsModal').classList.contains('hidden')) return;
-    const k = e.key;
-    if (k === " " || e.code === "Space") {
-      e.preventDefault();
-      let rBtn = document.querySelector('.btn.primary');
-      if (rBtn) rBtn.click();
-    }
-    if (k === "ArrowRight") nextCard();
-    if (k === "ArrowLeft") prevCard();
-  });
-
-  loadDeck();
+// Event wiring: reveal buttons (do NOT reset side)
+showTranslationBtn.addEventListener("click", () => {
+  if (!currentCard()) return;
+  state.translationShown = true;
+  renderCard(false); // keep same prompt side even if random
 });
+
+showPhoneticsBtn.addEventListener("click", () => {
+  if (!currentCard()) return;
+  state.phoneticsShown = true;
+  renderCard(false); // keep same prompt side
+});
+
+nextBtn.addEventListener("click", nextCard);
+prevBtn.addEventListener("click", prevCard);
+
+// Topic modal
+topicButton.addEventListener("click", () => {
+  topicModalBackdrop.classList.add("active");
+  topicModalBackdrop.setAttribute("aria-hidden", "false");
+});
+
+topicClose.addEventListener("click", () => {
+  topicModalBackdrop.classList.remove("active");
+  topicModalBackdrop.setAttribute("aria-hidden", "true");
+});
+
+topicModalBackdrop.addEventListener("click", (e) => {
+  if (e.target === topicModalBackdrop) {
+    topicModalBackdrop.classList.remove("active");
+    topicModalBackdrop.setAttribute("aria-hidden", "true");
+    return;
+  }
+  const btn = e.target.closest("button[data-topic]");
+  if (!btn) return;
+  const topic = btn.getAttribute("data-topic");
+  applyTopicFilter(topic);
+  topicModalBackdrop.classList.remove("active");
+  topicModalBackdrop.setAttribute("aria-hidden", "true");
+});
+
+// Settings modal open/close
+settingsButton.addEventListener("click", () => {
+  settingsModalBackdrop.classList.add("active");
+  settingsModalBackdrop.setAttribute("aria-hidden", "false");
+});
+
+settingsClose.addEventListener("click", () => {
+  settingsModalBackdrop.classList.remove("active");
+  settingsModalBackdrop.setAttribute("aria-hidden", "true");
+});
+
+settingsModalBackdrop.addEventListener("click", (e) => {
+  if (e.target === settingsModalBackdrop) {
+    settingsModalBackdrop.classList.remove("active");
+    settingsModalBackdrop.setAttribute("aria-hidden", "true");
+  }
+});
+
+// Settings: prompt language, shuffle, theme
+promptLanguageSelect.addEventListener("change", () => {
+  state.promptLanguage = promptLanguageSelect.value;
+  try {
+    localStorage.setItem("promptLanguage", state.promptLanguage);
+  } catch (e) {}
+  renderCard(true); // user explicitly changed preference -> new side
+});
+
+shuffleCheckbox.addEventListener("change", () => {
+  try {
+    localStorage.setItem("shuffle", shuffleCheckbox.checked ? "1" : "0");
+  } catch (e) {}
+  applyTopicFilter(state.currentTopic); // reapply with / without shuffle
+});
+
+themeSelect.addEventListener("change", () => {
+  const theme = themeSelect.value;
+  document.body.classList.toggle("dark", theme === "dark");
+  try {
+    localStorage.setItem("theme", theme);
+  } catch (e) {}
+});
+
+// Initialize preferences from localStorage
+function loadPreferences() {
+  try {
+    const savedPromptLang = localStorage.getItem("promptLanguage");
+    if (savedPromptLang === "en" || savedPromptLang === "el" || savedPromptLang === "random") {
+      state.promptLanguage = savedPromptLang;
+    }
+    const savedShuffle = localStorage.getItem("shuffle");
+    if (savedShuffle === "1") shuffleCheckbox.checked = true;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      themeSelect.value = "dark";
+      document.body.classList.add("dark");
+    } else if (savedTheme === "light") {
+      themeSelect.value = "light";
+      document.body.classList.remove("dark");
+    }
+  } catch (e) {
+    // fall back to defaults if storage fails
+  }
+
+  // Reflect into controls
+  promptLanguageSelect.value = state.promptLanguage;
+}
+
+// Load deck.json and initialize
+async function loadDeck() {
+  loadPreferences();
+
+  try {
+    const res = await fetch("deck.json");
+    const data = await res.json();
+    state.cards = data;
+    applyTopicFilter(state.currentTopic);
+  } catch (err) {
+    console.error("Error loading deck:", err);
+    promptEl.textContent = "Error loading deck.json";
+  }
+}
+
+loadDeck();
