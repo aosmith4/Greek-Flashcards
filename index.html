@@ -32,7 +32,7 @@
       justify-content: center;
     }
 
-    /* Shell uses entire viewport, split into top / middle / bottom */
+    /* Shell: full height, three zones */
     .app-shell {
       flex: 1;
       max-width: 480px;
@@ -41,7 +41,7 @@
       flex-direction: column;
     }
 
-    /* Top bar: topic + settings */
+    /* Top bar */
     .top-bar {
       flex: 0 0 48px;
       padding: 8px 12px 0;
@@ -69,7 +69,7 @@
       cursor: pointer;
     }
 
-    /* Middle zone: fills remaining height, split 50/50 */
+    /* Middle area: split 50/50 */
     .main-card-area {
       flex: 1 1 auto;
       display: flex;
@@ -143,7 +143,7 @@
       visibility: visible;
     }
 
-    /* Bottom bar: fixed-height zone with all 4 buttons, safe-area aware */
+    /* Bottom bar: all buttons + progress, safe-area aware */
     .bottom-fixed-bar {
       flex: 0 0 auto;
       padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
@@ -179,9 +179,9 @@
       font-size: 1rem;
       cursor: pointer;
       font-weight: 500;
-      transition: background-color 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out;
       background: #020617;
       color: var(--fg);
+      transition: background-color 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out;
     }
 
     button.primary {
@@ -205,7 +205,7 @@
       text-align: center;
     }
 
-    /* Settings / topic modals (same as before, layout unchanged) */
+    /* Modals (unchanged behavior) */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -274,7 +274,7 @@
       <button id="settingsButton" class="settings-button" aria-label="Settings">⚙️</button>
     </div>
 
-    <!-- Middle area: prompt half + translation half -->
+    <!-- Middle: prompt half + translation half -->
     <div class="main-card-area">
       <div class="card-half card-half-top">
         <div class="prompt-main">
@@ -295,7 +295,7 @@
       </div>
     </div>
 
-    <!-- Bottom bar: all four buttons + progress -->
+    <!-- Bottom: all buttons + progress -->
     <div class="bottom-fixed-bar">
       <div class="bottom-fixed-bar-inner">
         <div class="control-row">
