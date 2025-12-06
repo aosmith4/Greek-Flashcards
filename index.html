@@ -191,9 +191,12 @@
       gap: 8px;
     }
 
+    /* Unified button styling */
     button.primary,
-    button.secondary {
-      width: 100%;
+    button.secondary,
+    .nav-row button {
+      -webkit-appearance: none;
+      appearance: none;
       border-radius: 999px;
       border: 1px solid transparent;
       padding: 10px 16px;
@@ -202,22 +205,26 @@
       font-weight: 500;
       background: var(--card-bg);
       color: var(--fg);
-      transition: background-color 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out;
+      transition: background-color 120ms ease-out,
+                  color 120ms ease-out,
+                  border-color 120ms ease-out;
     }
 
+    /* Primary CTA: Show Translation */
     button.primary {
       background: var(--accent-soft);
       border-color: var(--accent);
       font-weight: 600;
     }
 
+    /* Secondary: Show Phonetics */
     button.secondary {
       border-color: var(--accent);
       color: var(--accent);
       background: transparent;
     }
 
-    /* Previous/Next reuse shared button styling, only flex differs */
+    /* Previous/Next only differ by flex behavior */
     .nav-row button {
       flex: 1;
     }
@@ -311,7 +318,8 @@
       }
 
       button.primary,
-      button.secondary {
+      button.secondary,
+      .nav-row button {
         padding: 8px 14px;
         font-size: 0.95rem;
       }
