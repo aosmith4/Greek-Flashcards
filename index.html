@@ -58,9 +58,9 @@
       flex: 0 0 48px;
       padding: 8px 12px 0;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       font-size: 0.95rem;
+      gap: 8px;
     }
 
     .topic-button {
@@ -71,6 +71,14 @@
       font-weight: 600;
       padding: 4px 10px;
       cursor: pointer;
+    }
+
+    .progress {
+      margin-left: auto;
+      margin-right: 4px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
     }
 
     .settings-button {
@@ -155,7 +163,7 @@
       visibility: visible;
     }
 
-    /* Bottom bar: all buttons + progress, safe-area aware */
+    /* Bottom bar: all buttons, safe-area aware */
     .bottom-fixed-bar {
       flex: 0 0 auto;
       padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
@@ -209,19 +217,9 @@
       background: transparent;
     }
 
-    /* Ensure Previous/Next match theme */
+    /* Previous/Next reuse shared button styling, only flex differs */
     .nav-row button {
       flex: 1;
-      background: var(--card-bg);
-      color: var(--fg);
-      border-color: var(--muted);
-    }
-
-    .progress {
-      margin-top: 2px;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
     }
 
     /* Modals */
@@ -325,6 +323,7 @@
     <!-- Top bar -->
     <div class="top-bar">
       <button id="topicButton" class="topic-button">Alphabet</button>
+      <span id="progress" class="progress">0/0</span>
       <button id="settingsButton" class="settings-button" aria-label="Settings">⚙️</button>
     </div>
 
@@ -349,7 +348,7 @@
       </div>
     </div>
 
-    <!-- Bottom: all buttons + progress -->
+    <!-- Bottom: all buttons -->
     <div class="bottom-fixed-bar">
       <div class="bottom-fixed-bar-inner">
         <div class="control-row">
@@ -360,7 +359,6 @@
           <button id="prevBtn">Previous</button>
           <button id="nextBtn">Next</button>
         </div>
-        <div id="progress" class="progress">Card 0 of 0</div>
       </div>
     </div>
   </div>
