@@ -1,4 +1,5 @@
-// Basic state
+// ---------- State ----------
+
 const state = {
   cards: [],
   filteredCards: [],
@@ -10,25 +11,24 @@ const state = {
   phoneticsShown: false
 };
 
-// DOM refs
+// ---------- DOM references ----------
+
 const promptEl = document.getElementById("prompt");
 const promptPhonEl = document.getElementById("promptPhonetic");
 const translationTextEl = document.getElementById("translationText");
 const translationPhonEl = document.getElementById("translationPhonetic");
-const translationDividerEl = document.getElementById("translationDivider");
+const progressEl = document.getElementById("progress");
+const topicButton = document.getElementById("topicButton");
 
 const showTranslationBtn = document.getElementById("showTranslationBtn");
 const showPhoneticsBtn = document.getElementById("showPhoneticsBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
-const progressEl = document.getElementById("progress");
-const topicButton = document.getElementById("topicButton");
 
-// Topic modal elements
+// Modals
 const topicModalBackdrop = document.getElementById("topicModalBackdrop");
 const topicClose = document.getElementById("topicClose");
 
-// Settings modal elements
 const settingsButton = document.getElementById("settingsButton");
 const settingsModalBackdrop = document.getElementById("settingsModalBackdrop");
 const settingsClose = document.getElementById("settingsClose");
@@ -36,30 +36,26 @@ const promptLanguageSelect = document.getElementById("promptLanguageSelect");
 const shuffleCheckbox = document.getElementById("shuffleCheckbox");
 const themeSelect = document.getElementById("themeSelect");
 
-// Helper: choose prompt side for this card
-function getPromptSide() {
-  if (state.promptLanguage === "random") {
-    return Math.random() < 0.5 ? "en" : "el";
-  }
-  return state.promptLanguage; // "en" or "el"
-}
+// ---------- Helpers ----------
 
-// Helper: current card
 function currentCard() {
   return state.filteredCards[state.currentIndex] || null;
 }
 
-// Helper: fade visibility toggle
-function setVisible(el, isVisible) {
-  if (!el) return;
-  if (isVisible) {
-    el.classList.add("visible");
-  } else {
-    el.classList.remove("visible");
+function choosePromptSide() {
+  if (state.promptLanguage === "random") {
+    return Math.random() < 0.5 ? "en" : "el";
   }
+  return state.promptLanguage;
 }
 
-// Render current card
+function setVisible(el, on) {
+  if (!el) return;
+  el.classList.toggle("visible", !!on);
+}
+
+// ---------- Render ----------
+
 function renderCard(resetReveal = true) {
   const card = currentCard();
   if (!card) {
@@ -70,7 +66,6 @@ function renderCard(resetReveal = true) {
     setVisible(promptPhonEl, false);
     setVisible(translationTextEl, false);
     setVisible(translationPhonEl, false);
-    translationDividerEl.classList.remove("visible");
     setVisible(showPhoneticsBtn, false);
     progressEl.textContent = "Card 0 of 0";
     return;
@@ -81,100 +76,86 @@ function renderCard(resetReveal = true) {
   progressEl.textContent = `Card ${index} of ${total}`;
   topicButton.textContent = card.topic;
 
-  // Reset reveal state and select side only when requested
   if (resetReveal) {
-    state.currentSide = getPromptSide(); // "en" or "el"
+    state.currentSide = choosePromptSide();
     state.translationShown = false;
     state.phoneticsShown = false;
   }
 
   const side = state.currentSide;
 
-  // Clear slot texts
+  // Reset UI
   promptPhonEl.textContent = "";
   translationTextEl.textContent = "";
   translationPhonEl.textContent = "";
-
-  // Hide all reveal slots/buttons by default
   setVisible(promptPhonEl, false);
   setVisible(translationTextEl, false);
   setVisible(translationPhonEl, false);
-  translationDividerEl.classList.remove("visible");
   setVisible(showPhoneticsBtn, false);
 
   if (side === "en") {
-    // Prompt: English
+    // English prompt
     promptEl.textContent = card.en;
 
     if (state.translationShown) {
-      // Divider + Greek translation on two lines
-      translationDividerEl.classList.add("visible");
       translationTextEl.textContent = `${card.el_upper}\n${card.el_lower}`;
       setVisible(translationTextEl, true);
 
-      // Show Phonetics button to reveal phonetics for translation Greek
       setVisible(showPhoneticsBtn, true);
-
       if (state.phoneticsShown) {
         translationPhonEl.textContent = card.rom;
         setVisible(translationPhonEl, true);
       }
     }
   } else {
-    // side === "el"
-    // Prompt: Greek, uppercase and lowercase on separate lines
+    // Greek prompt
     promptEl.textContent = `${card.el_upper}\n${card.el_lower}`;
 
-    // Show Phonetics button is always available when Greek is prompt
     setVisible(showPhoneticsBtn, true);
 
-    // Prompt phonetic slot (for Greek prompt)
     if (state.phoneticsShown) {
       promptPhonEl.textContent = card.rom;
       setVisible(promptPhonEl, true);
     }
 
     if (state.translationShown) {
-      // Divider + English translation
-      translationDividerEl.classList.add("visible");
       translationTextEl.textContent = card.en;
       setVisible(translationTextEl, true);
-      // No translation phonetic for English translation
     }
   }
 }
 
-// Navigation
+// ---------- Navigation ----------
+
 function goTo(index) {
   const total = state.filteredCards.length;
   if (total === 0) return;
-  if (index < 0) index = 0;
-  if (index >= total) index = total - 1;
-  state.currentIndex = index;
-  renderCard(true); // new card -> choose side (random if needed)
+  const clamped = Math.max(0, Math.min(index, total - 1));
+  state.currentIndex = clamped;
+  renderCard(true);
 }
 
-// Wrap-around next/previous
 function nextCard() {
   const total = state.filteredCards.length;
   if (total === 0) return;
-  const nextIndex = (state.currentIndex + 1) % total;
-  goTo(nextIndex);
+  const next = (state.currentIndex + 1) % total;
+  goTo(next);
 }
 
 function prevCard() {
   const total = state.filteredCards.length;
   if (total === 0) return;
-  const prevIndex = (state.currentIndex - 1 + total) % total;
-  goTo(prevIndex);
+  const prev = (state.currentIndex - 1 + total) % total;
+  goTo(prev);
 }
 
-// Deck filtering by topic
+// ---------- Deck / topics ----------
+
 function applyTopicFilter(topic) {
   state.currentTopic = topic;
   state.filteredCards = state.cards.filter(c => c.topic === topic);
+
   if (shuffleCheckbox.checked) {
-    // simple in-place shuffle
     for (let i = state.filteredCards.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [state.filteredCards[i], state.filteredCards[j]] = [
@@ -183,23 +164,66 @@ function applyTopicFilter(topic) {
       ];
     }
   }
+
   state.currentIndex = 0;
   renderCard(true);
 }
 
-// Event wiring: reveal buttons (do NOT reset side)
+// ---------- Settings & preferences ----------
+
+function loadPreferences() {
+  try {
+    const savedPromptLang = localStorage.getItem("promptLanguage");
+    if (["en", "el", "random"].includes(savedPromptLang)) {
+      state.promptLanguage = savedPromptLang;
+    }
+    const savedShuffle = localStorage.getItem("shuffle");
+    shuffleCheckbox.checked = savedShuffle === "1";
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      themeSelect.value = "dark";
+      document.body.classList.add("dark");
+    } else if (savedTheme === "light") {
+      themeSelect.value = "light";
+      document.body.classList.remove("dark");
+    }
+  } catch (e) {
+    // ignore storage errors
+  }
+
+  promptLanguageSelect.value = state.promptLanguage;
+}
+
+async function loadDeck() {
+  loadPreferences();
+  try {
+    const res = await fetch("deck.json");
+    const data = await res.json();
+    state.cards = data;
+    applyTopicFilter(state.currentTopic);
+  } catch (err) {
+    console.error("Error loading deck:", err);
+    promptEl.textContent = "Error loading deck.json";
+  }
+}
+
+// ---------- Event wiring ----------
+
+// Reveal controls
 showTranslationBtn.addEventListener("click", () => {
   if (!currentCard()) return;
   state.translationShown = true;
-  renderCard(false); // keep same prompt side even if random
+  renderCard(false);
 });
 
 showPhoneticsBtn.addEventListener("click", () => {
   if (!currentCard()) return;
   state.phoneticsShown = true;
-  renderCard(false); // keep same prompt side
+  renderCard(false);
 });
 
+// Navigation
 nextBtn.addEventListener("click", nextCard);
 prevBtn.addEventListener("click", prevCard);
 
@@ -228,7 +252,7 @@ topicModalBackdrop.addEventListener("click", (e) => {
   topicModalBackdrop.setAttribute("aria-hidden", "true");
 });
 
-// Settings modal open/close
+// Settings modal
 settingsButton.addEventListener("click", () => {
   settingsModalBackdrop.classList.add("active");
   settingsModalBackdrop.setAttribute("aria-hidden", "false");
@@ -246,20 +270,20 @@ settingsModalBackdrop.addEventListener("click", (e) => {
   }
 });
 
-// Settings: prompt language, shuffle, theme
+// Settings controls
 promptLanguageSelect.addEventListener("change", () => {
   state.promptLanguage = promptLanguageSelect.value;
   try {
     localStorage.setItem("promptLanguage", state.promptLanguage);
   } catch (e) {}
-  renderCard(true); // user explicitly changed preference -> new side
+  renderCard(true);
 });
 
 shuffleCheckbox.addEventListener("change", () => {
   try {
     localStorage.setItem("shuffle", shuffleCheckbox.checked ? "1" : "0");
   } catch (e) {}
-  applyTopicFilter(state.currentTopic); // reapply with / without shuffle
+  applyTopicFilter(state.currentTopic);
 });
 
 themeSelect.addEventListener("change", () => {
@@ -270,44 +294,6 @@ themeSelect.addEventListener("change", () => {
   } catch (e) {}
 });
 
-// Initialize preferences from localStorage
-function loadPreferences() {
-  try {
-    const savedPromptLang = localStorage.getItem("promptLanguage");
-    if (savedPromptLang === "en" || savedPromptLang === "el" || savedPromptLang === "random") {
-      state.promptLanguage = savedPromptLang;
-    }
-    const savedShuffle = localStorage.getItem("shuffle");
-    if (savedShuffle === "1") shuffleCheckbox.checked = true;
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      themeSelect.value = "dark";
-      document.body.classList.add("dark");
-    } else if (savedTheme === "light") {
-      themeSelect.value = "light";
-      document.body.classList.remove("dark");
-    }
-  } catch (e) {
-    // fall back to defaults if storage fails
-  }
-
-  // Reflect into controls
-  promptLanguageSelect.value = state.promptLanguage;
-}
-
-// Load deck.json and initialize
-async function loadDeck() {
-  loadPreferences();
-
-  try {
-    const res = await fetch("deck.json");
-    const data = await res.json();
-    state.cards = data;
-    applyTopicFilter(state.currentTopic);
-  } catch (err) {
-    console.error("Error loading deck:", err);
-    promptEl.textContent = "Error loading deck.json";
-  }
-}
+// ---------- Init ----------
 
 loadDeck();
