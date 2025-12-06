@@ -1,5 +1,4 @@
-// ---------- State ----------
-
+// Basic state
 const state = {
   cards: [],
   filteredCards: [],
@@ -11,8 +10,7 @@ const state = {
   phoneticsShown: false
 };
 
-// ---------- DOM references ----------
-
+// DOM refs
 const promptEl = document.getElementById("prompt");
 const promptPhonEl = document.getElementById("promptPhonetic");
 const translationTextEl = document.getElementById("translationText");
@@ -25,10 +23,11 @@ const showPhoneticsBtn = document.getElementById("showPhoneticsBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-// Modals
+// Topic modal
 const topicModalBackdrop = document.getElementById("topicModalBackdrop");
 const topicClose = document.getElementById("topicClose");
 
+// Settings modal
 const settingsButton = document.getElementById("settingsButton");
 const settingsModalBackdrop = document.getElementById("settingsModalBackdrop");
 const settingsClose = document.getElementById("settingsClose");
@@ -36,8 +35,7 @@ const promptLanguageSelect = document.getElementById("promptLanguageSelect");
 const shuffleCheckbox = document.getElementById("shuffleCheckbox");
 const themeSelect = document.getElementById("themeSelect");
 
-// ---------- Helpers ----------
-
+// Helpers
 function currentCard() {
   return state.filteredCards[state.currentIndex] || null;
 }
@@ -54,8 +52,7 @@ function setVisible(el, on) {
   el.classList.toggle("visible", !!on);
 }
 
-// ---------- Render ----------
-
+// Render
 function renderCard(resetReveal = true) {
   const card = currentCard();
   if (!card) {
@@ -67,13 +64,13 @@ function renderCard(resetReveal = true) {
     setVisible(translationTextEl, false);
     setVisible(translationPhonEl, false);
     setVisible(showPhoneticsBtn, false);
-    progressEl.textContent = "Card 0 of 0";
+    progressEl.textContent = "0/0";
     return;
   }
 
   const total = state.filteredCards.length;
   const index = state.currentIndex + 1;
-  progressEl.textContent = `Card ${index} of ${total}`;
+  progressEl.textContent = `${index}/${total}`;
   topicButton.textContent = card.topic;
 
   if (resetReveal) {
@@ -125,8 +122,7 @@ function renderCard(resetReveal = true) {
   }
 }
 
-// ---------- Navigation ----------
-
+// Navigation
 function goTo(index) {
   const total = state.filteredCards.length;
   if (total === 0) return;
@@ -149,8 +145,7 @@ function prevCard() {
   goTo(prev);
 }
 
-// ---------- Deck / topics ----------
-
+// Topics
 function applyTopicFilter(topic) {
   state.currentTopic = topic;
   state.filteredCards = state.cards.filter(c => c.topic === topic);
@@ -169,8 +164,7 @@ function applyTopicFilter(topic) {
   renderCard(true);
 }
 
-// ---------- Settings & preferences ----------
-
+// Preferences
 function loadPreferences() {
   try {
     const savedPromptLang = localStorage.getItem("promptLanguage");
@@ -184,13 +178,11 @@ function loadPreferences() {
     if (savedTheme === "dark") {
       themeSelect.value = "dark";
       document.body.classList.add("dark");
-    } else if (savedTheme === "light") {
+    } else {
       themeSelect.value = "light";
       document.body.classList.remove("dark");
     }
-  } catch (e) {
-    // ignore storage errors
-  }
+  } catch (e) {}
 
   promptLanguageSelect.value = state.promptLanguage;
 }
@@ -208,9 +200,7 @@ async function loadDeck() {
   }
 }
 
-// ---------- Event wiring ----------
-
-// Reveal controls
+// Events: reveal
 showTranslationBtn.addEventListener("click", () => {
   if (!currentCard()) return;
   state.translationShown = true;
@@ -223,7 +213,7 @@ showPhoneticsBtn.addEventListener("click", () => {
   renderCard(false);
 });
 
-// Navigation
+// Events: navigation
 nextBtn.addEventListener("click", nextCard);
 prevBtn.addEventListener("click", prevCard);
 
@@ -294,6 +284,5 @@ themeSelect.addEventListener("change", () => {
   } catch (e) {}
 });
 
-// ---------- Init ----------
-
+// Init
 loadDeck();
