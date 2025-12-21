@@ -71,6 +71,10 @@
       font-weight: 600;
       padding: 4px 10px;
       cursor: pointer;
+      max-width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .progress {
@@ -217,7 +221,7 @@
       font-weight: 600;
     }
 
-    /* Secondary: Show Phonetics */
+    /* Secondary: Show Phonetics, topic-choice selected state reuses colors */
     button.secondary {
       border-color: var(--accent);
       color: var(--accent);
@@ -227,6 +231,32 @@
     /* Previous/Next only differ by flex behavior */
     .nav-row button {
       flex: 1;
+    }
+
+    /* Topic modal: multi-select pills */
+    .modal-topic-list {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .topic-choice {
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 999px;
+      border: 1px solid var(--divider);
+      background: transparent;
+      color: var(--fg);
+      padding: 4px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .topic-choice.is-selected {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--fg);
     }
 
     /* Modals */
@@ -330,7 +360,7 @@
   <div class="app-shell">
     <!-- Top bar -->
     <div class="top-bar">
-      <button id="topicButton" class="topic-button">Alphabet</button>
+      <button id="topicButton" class="topic-button">Topics</button>
       <span id="progress" class="progress">0/0</span>
       <button id="settingsButton" class="settings-button" aria-label="Settings">⚙️</button>
     </div>
@@ -405,25 +435,16 @@
     </div>
   </div>
 
-  <!-- Topic picker modal -->
+  <!-- Topic picker modal (multi-select, built from deck.json) -->
   <div id="topicModalBackdrop" class="modal-backdrop" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="topicTitle">
       <div class="modal-header">
-        <div id="topicTitle" class="modal-title">Choose a topic</div>
+        <div id="topicTitle" class="modal-title">Choose topics</div>
         <button id="topicClose" class="modal-close" aria-label="Close topic picker">✕</button>
       </div>
 
-      <div class="modal-section">
-        <button class="secondary" data-topic="Alphabet">Alphabet</button>
-      </div>
-      <div class="modal-section">
-        <button class="secondary" data-topic="Articles and Genders">Articles and Genders</button>
-      </div>
-      <div class="modal-section">
-        <button class="secondary" data-topic="Verb είμαι">Verb είμαι</button>
-      </div>
-      <div class="modal-section">
-        <button class="secondary" data-topic="Numbers 0-10">Numbers 0-10</button>
+      <div id="topicList" class="modal-topic-list">
+        <!-- topic-choice buttons injected by app.js -->
       </div>
     </div>
   </div>
