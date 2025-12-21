@@ -1,16 +1,16 @@
-// Basic state
+// ---------- State ----------
 const state = {
   cards: [],
   filteredCards: [],
   currentIndex: 0,
-  currentTopic: "Alphabet",
-  promptLanguage: "en", // "en" | "el" | "random"
+  selectedTopics: new Set(), // multi-select
+  promptLanguage: "en",      // "en" | "el" | "random"
   currentSide: "en",
   translationShown: false,
   phoneticsShown: false
 };
 
-// DOM refs
+// ---------- DOM references ----------
 const promptEl = document.getElementById("prompt");
 const promptPhonEl = document.getElementById("promptPhonetic");
 const translationTextEl = document.getElementById("translationText");
@@ -26,6 +26,7 @@ const nextBtn = document.getElementById("nextBtn");
 // Topic modal
 const topicModalBackdrop = document.getElementById("topicModalBackdrop");
 const topicClose = document.getElementById("topicClose");
+const topicListContainer = document.getElementById("topicList");
 
 // Settings modal
 const settingsButton = document.getElementById("settingsButton");
@@ -35,7 +36,7 @@ const promptLanguageSelect = document.getElementById("promptLanguageSelect");
 const shuffleCheckbox = document.getElementById("shuffleCheckbox");
 const themeSelect = document.getElementById("themeSelect");
 
-// Helpers
+// ---------- Helpers ----------
 function currentCard() {
   return state.filteredCards[state.currentIndex] || null;
 }
@@ -52,11 +53,31 @@ function setVisible(el, on) {
   el.classList.toggle("visible", !!on);
 }
 
-// Render
+function getUniqueTopics() {
+  const topics = Array.from(new Set(state.cards.map(c => c.topic)));
+  topics.sort();
+  return topics;
+}
+
+function buildTopicButtonsFromDeck() {
+  const topics = getUniqueTopics();
+  topicListContainer.innerHTML = "";
+
+  topics.forEach(topic => {
+    const btn = document.createElement("button");
+    btn.className = "topic-choice is-selected";
+    btn.textContent = topic;
+    btn.dataset.topic = topic;
+    btn.setAttribute("aria-pressed", "true");
+    topicListContainer.appendChild(btn);
+  });
+}
+
+// ---------- Render ----------
 function renderCard(resetReveal = true) {
   const card = currentCard();
   if (!card) {
-    promptEl.textContent = "No cards for this topic.";
+    promptEl.textContent = "No cards for these topics.";
     promptPhonEl.textContent = "";
     translationTextEl.textContent = "";
     translationPhonEl.textContent = "";
@@ -71,7 +92,6 @@ function renderCard(resetReveal = true) {
   const total = state.filteredCards.length;
   const index = state.currentIndex + 1;
   progressEl.textContent = `${index}/${total}`;
-  topicButton.textContent = card.topic;
 
   if (resetReveal) {
     state.currentSide = choosePromptSide();
@@ -122,7 +142,36 @@ function renderCard(resetReveal = true) {
   }
 }
 
-// Navigation
+// ---------- Topic filtering ----------
+function applyTopicFilter() {
+  const selected = state.selectedTopics;
+  state.filteredCards = state.cards.filter(c => selected.has(c.topic));
+
+  if (shuffleCheckbox.checked) {
+    for (let i = state.filteredCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [state.filteredCards[i], state.filteredCards[j]] = [
+        state.filteredCards[j],
+        state.filteredCards[i]
+      ];
+    }
+  }
+
+  state.currentIndex = 0;
+  renderCard(true);
+
+  // Header label summarizing selected topics
+  const topics = Array.from(selected);
+  if (topics.length === 0) {
+    topicButton.textContent = "No topic";
+  } else if (topics.length === 1) {
+    topicButton.textContent = topics[0];
+  } else {
+    topicButton.textContent = `${topics[0]} + ${topics.length - 1}`;
+  }
+}
+
+// ---------- Navigation ----------
 function goTo(index) {
   const total = state.filteredCards.length;
   if (total === 0) return;
@@ -145,26 +194,7 @@ function prevCard() {
   goTo(prev);
 }
 
-// Topics
-function applyTopicFilter(topic) {
-  state.currentTopic = topic;
-  state.filteredCards = state.cards.filter(c => c.topic === topic);
-
-  if (shuffleCheckbox.checked) {
-    for (let i = state.filteredCards.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [state.filteredCards[i], state.filteredCards[j]] = [
-        state.filteredCards[j],
-        state.filteredCards[i]
-      ];
-    }
-  }
-
-  state.currentIndex = 0;
-  renderCard(true);
-}
-
-// Preferences
+// ---------- Preferences ----------
 function loadPreferences() {
   try {
     const savedPromptLang = localStorage.getItem("promptLanguage");
@@ -193,14 +223,20 @@ async function loadDeck() {
     const res = await fetch("deck.json");
     const data = await res.json();
     state.cards = data;
-    applyTopicFilter(state.currentTopic);
+
+    buildTopicButtonsFromDeck();
+    // Default: select all topics
+    state.selectedTopics = new Set(state.cards.map(c => c.topic));
+    applyTopicFilter();
   } catch (err) {
     console.error("Error loading deck:", err);
     promptEl.textContent = "Error loading deck.json";
   }
 }
 
-// Events: reveal
+// ---------- Event wiring ----------
+
+// Reveal
 showTranslationBtn.addEventListener("click", () => {
   if (!currentCard()) return;
   state.translationShown = true;
@@ -213,34 +249,51 @@ showPhoneticsBtn.addEventListener("click", () => {
   renderCard(false);
 });
 
-// Events: navigation
+// Navigation
 nextBtn.addEventListener("click", nextCard);
 prevBtn.addEventListener("click", prevCard);
 
-// Topic modal
+// Topic modal open/close
 topicButton.addEventListener("click", () => {
   topicModalBackdrop.classList.add("active");
   topicModalBackdrop.setAttribute("aria-hidden", "false");
 });
 
-topicClose.addEventListener("click", () => {
-  topicModalBackdrop.classList.remove("active");
-  topicModalBackdrop.setAttribute("aria-hidden", "true");
-});
+topicClose.addEventListener("click", closeTopicModal);
 
 topicModalBackdrop.addEventListener("click", (e) => {
   if (e.target === topicModalBackdrop) {
-    topicModalBackdrop.classList.remove("active");
-    topicModalBackdrop.setAttribute("aria-hidden", "true");
+    closeTopicModal();
     return;
   }
-  const btn = e.target.closest("button[data-topic]");
+  const btn = e.target.closest(".topic-choice");
   if (!btn) return;
-  const topic = btn.getAttribute("data-topic");
-  applyTopicFilter(topic);
+
+  const topic = btn.dataset.topic;
+  if (state.selectedTopics.has(topic)) {
+    state.selectedTopics.delete(topic);
+    btn.setAttribute("aria-pressed", "false");
+    btn.classList.remove("is-selected");
+  } else {
+    state.selectedTopics.add(topic);
+    btn.setAttribute("aria-pressed", "true");
+    btn.classList.add("is-selected");
+  }
+
+  // Ensure at least one topic is always selected
+  if (state.selectedTopics.size === 0) {
+    state.selectedTopics.add(topic);
+    btn.setAttribute("aria-pressed", "true");
+    btn.classList.add("is-selected");
+  }
+
+  applyTopicFilter();
+});
+
+function closeTopicModal() {
   topicModalBackdrop.classList.remove("active");
   topicModalBackdrop.setAttribute("aria-hidden", "true");
-});
+}
 
 // Settings modal
 settingsButton.addEventListener("click", () => {
@@ -273,7 +326,7 @@ shuffleCheckbox.addEventListener("change", () => {
   try {
     localStorage.setItem("shuffle", shuffleCheckbox.checked ? "1" : "0");
   } catch (e) {}
-  applyTopicFilter(state.currentTopic);
+  applyTopicFilter();
 });
 
 themeSelect.addEventListener("change", () => {
@@ -284,5 +337,5 @@ themeSelect.addEventListener("change", () => {
   } catch (e) {}
 });
 
-// Init
+// ---------- Init ----------
 loadDeck();
