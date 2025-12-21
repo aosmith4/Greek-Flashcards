@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "άλφα /a/",
@@ -10,7 +10,7 @@
     "notes": "Vowel; roughly like a in 'father'."
   },
   {
-    "id": 2,
+    "id": "2",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "βήτα /v/",
@@ -20,7 +20,7 @@
     "notes": "Vowel-like consonant; pronounced v, not b."
   },
   {
-    "id": 3,
+    "id": "3",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "γάμα /g/",
@@ -30,7 +30,7 @@
     "notes": "Consonant; voiced fricative, somewhere between g and y depending on vowel."
   },
   {
-    "id": 4,
+    "id": "4",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "δέλτα /d/",
@@ -40,7 +40,7 @@
     "notes": "Consonant; like th in 'this'."
   },
   {
-    "id": 5,
+    "id": "5",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "έψιλον /e/",
@@ -50,7 +50,7 @@
     "notes": "Vowel; like e in 'set'."
   },
   {
-    "id": 6,
+    "id": "6",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ζήτα /z/",
@@ -60,7 +60,7 @@
     "notes": "Consonant; similar to z in 'zoo'."
   },
   {
-    "id": 7,
+    "id": "7",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ήτα /i/",
@@ -70,7 +70,7 @@
     "notes": "Vowel; long i sound, like ee in 'see'."
   },
   {
-    "id": 8,
+    "id": "8",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "θήτα /th/",
@@ -80,7 +80,7 @@
     "notes": "Consonant; like th in 'thin'."
   },
   {
-    "id": 9,
+    "id": "9",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "γιώτα /i/",
@@ -90,7 +90,7 @@
     "notes": "Vowel; i/ee sound, like ee in 'see'."
   },
   {
-    "id": 10,
+    "id": "10",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "κάππα /k/",
@@ -100,7 +100,7 @@
     "notes": "Consonant; like k in 'skill'."
   },
   {
-    "id": 11,
+    "id": "11",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "λάμδα /l/",
@@ -110,7 +110,7 @@
     "notes": "Consonant; like l in 'lamp'."
   },
   {
-    "id": 12,
+    "id": "12",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "μι /m/",
@@ -120,7 +120,7 @@
     "notes": "Consonant; like m in 'man'."
   },
   {
-    "id": 13,
+    "id": "13",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "νι /n/",
@@ -130,7 +130,7 @@
     "notes": "Consonant; like n in 'no'."
   },
   {
-    "id": 14,
+    "id": "14",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ξι /ks/",
@@ -140,7 +140,7 @@
     "notes": "Consonant; like x in 'fox' (ks sound)."
   },
   {
-    "id": 15,
+    "id": "15",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "όμικρον /o/",
@@ -150,7 +150,7 @@
     "notes": "Vowel; like o in 'not'."
   },
   {
-    "id": 16,
+    "id": "16",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "πι /p/",
@@ -160,7 +160,7 @@
     "notes": "Consonant; like p in 'spin' (unaspirated)."
   },
   {
-    "id": 17,
+    "id": "17",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ρο /r/",
@@ -170,7 +170,7 @@
     "notes": "Consonant; r sound, often tapped or slightly rolled."
   },
   {
-    "id": 18,
+    "id": "18",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "σίγμα /s/",
@@ -180,7 +180,7 @@
     "notes": "Consonant; like s in 'see'. (Note: final form ς at word end.)"
   },
   {
-    "id": 19,
+    "id": "19",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ταυ /t/",
@@ -190,7 +190,7 @@
     "notes": "Consonant; like t in 'stop' (unaspirated)."
   },
   {
-    "id": 20,
+    "id": "20",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ύψιλον /i/",
@@ -200,7 +200,7 @@
     "notes": "Vowel; in modern Greek usually sounds like i (ee)."
   },
   {
-    "id": 21,
+    "id": "21",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "φι /f/",
@@ -210,7 +210,7 @@
     "notes": "Consonant; like f in 'fun'."
   },
   {
-    "id": 22,
+    "id": "22",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "χι /h/",
@@ -220,7 +220,7 @@
     "notes": "Consonant; rough h, like German 'Bach'."
   },
   {
-    "id": 23,
+    "id": "23",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ψι /ps/",
@@ -230,7 +230,7 @@
     "notes": "Consonant; ps sound, like in 'lapse'."
   },
   {
-    "id": 24,
+    "id": "24",
     "topic": "Alphabet",
     "category": "Letters",
     "en": "ωμέγα /o/",
@@ -239,9 +239,8 @@
     "rom": "oméɣa",
     "notes": "Vowel; like o in 'more', a long open o."
   },
-
   {
-    "id": 25,
+    "id": "25",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "Digraph /e/",
@@ -251,7 +250,7 @@
     "notes": "Pronounced like e in 'set'."
   },
   {
-    "id": 26,
+    "id": "26",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "Digraph /i/",
@@ -261,7 +260,7 @@
     "notes": "Pronounced like ee in 'see'."
   },
   {
-    "id": 27,
+    "id": "27",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "Digraph /i/",
@@ -271,7 +270,7 @@
     "notes": "Pronounced like ee in 'see'."
   },
   {
-    "id": 28,
+    "id": "28",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "Digraph /u/",
@@ -281,7 +280,7 @@
     "notes": "Pronounced like oo in 'food'."
   },
   {
-    "id": 29,
+    "id": "29",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "av or af",
@@ -291,7 +290,7 @@
     "notes": "Sounds av or af depending on following consonant."
   },
   {
-    "id": 30,
+    "id": "30",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "ev or ef",
@@ -300,9 +299,8 @@
     "rom": "ev / ef",
     "notes": "Sounds ev or ef depending on following consonant."
   },
-
   {
-    "id": 31,
+    "id": "31",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/b/",
@@ -312,7 +310,7 @@
     "notes": "Usually pronounced like b (word-initial) or mb (inside words)."
   },
   {
-    "id": 32,
+    "id": "32",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/d/",
@@ -322,7 +320,7 @@
     "notes": "Usually pronounced like d (word-initial) or nd (inside words)."
   },
   {
-    "id": 33,
+    "id": "33",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/g/",
@@ -332,7 +330,7 @@
     "notes": "Often pronounced like hard g or like ng."
   },
   {
-    "id": 34,
+    "id": "34",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/g/ or /ng/",
@@ -342,7 +340,7 @@
     "notes": "Pronounced like ng in 'singer'."
   },
   {
-    "id": 35,
+    "id": "35",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/ts/",
@@ -352,7 +350,7 @@
     "notes": "Like ts in 'cats'."
   },
   {
-    "id": 36,
+    "id": "36",
     "topic": "Alphabet",
     "category": "Digraph",
     "en": "/dz/",
@@ -361,11 +359,10 @@
     "rom": "dz",
     "notes": "Like j in 'jam' or dz in 'adze'."
   },
-
   {
-    "id": 101,
+    "id": "101",
     "topic": "Articles and Genders",
-    "category": "",
+    "category": "Nominative Singular",
     "en": "the (masculine)",
     "el_lower": "ο",
     "el_upper": "Ο",
@@ -373,9 +370,9 @@
     "notes": "Definite article for masculine nouns (nominative singular)."
   },
   {
-    "id": 102,
+    "id": "102",
     "topic": "Articles and Genders",
-    "category": "",
+    "category": "Nominative Singular",
     "en": "the (feminine)",
     "el_lower": "η",
     "el_upper": "Η",
@@ -383,9 +380,9 @@
     "notes": "Definite article for feminine nouns (nominative singular)."
   },
   {
-    "id": 103,
+    "id": "103",
     "topic": "Articles and Genders",
-    "category": "",
+    "category": "Nominative Singular",
     "en": "the (neutral)",
     "el_lower": "το",
     "el_upper": "ΤΟ",
@@ -393,98 +390,218 @@
     "notes": "Definite article for neuter nouns (nominative singular)."
   },
   {
-    "id": 201,
+    "id": "104",
+    "topic": "Articles and Genders",
+    "category": "Nouns",
+    "en": "noun ends with (masculine)",
+    "el_lower": "-ας, -ος, -ης",
+    "el_upper": "-ΑΣ, -ΟΣ, ΗΣ",
+    "rom": "-as, -os, -is",
+    "notes": ""
+  },
+  {
+    "id": "105",
+    "topic": "Articles and Genders",
+    "category": "Nouns",
+    "en": "noun ends with (feminine)",
+    "el_lower": "-α, -η",
+    "el_upper": "-Α, -Η",
+    "rom": "-a, -i",
+    "notes": ""
+  },
+  {
+    "id": "106",
+    "topic": "Articles and Genders",
+    "category": "Nouns",
+    "en": "noun ends with (neutral)",
+    "el_lower": "-ι, -ο, -μα",
+    "el_upper": "-Ι, -Ο, -ΜΑ",
+    "rom": "-i, -o, -ma",
+    "notes": ""
+  },
+  {
+    "id": "120",
+    "topic": "Possessives",
+    "category": "Pronouns",
+    "en": "my",
+    "el_lower": "μου",
+    "el_upper": "ΜΟΥ",
+    "rom": "mou",
+    "notes": "Weak possessive pronoun; used after the noun (e.g., το βιβλίο μου = my book).​"
+  },
+  {
+    "id": "121",
+    "topic": "Possessives",
+    "category": "Pronouns",
+    "en": "your (singular)",
+    "el_lower": "σου",
+    "el_upper": "ΣΟΥ",
+    "rom": "sou",
+    "notes": "Informal singular possessive; follows the noun (e.g., το σπίτι σου = your house).​"
+  },
+  {
+    "id": "122",
+    "topic": "Possessives",
+    "category": "Pronouns",
+    "en": "his",
+    "el_lower": "του",
+    "el_upper": "ΤΟΥ",
+    "rom": "tou",
+    "notes": "Third-person weak possessive; “his” or “its” depending on context.​"
+  },
+  {
+    "id": "123",
+    "topic": "Possessives",
+    "category": "Pronouns",
+    "en": "her",
+    "el_lower": "της",
+    "el_upper": "ΤΗΣ",
+    "rom": "tis",
+    "notes": "Third-person weak possessive; “her” or “its” depending on context.​"
+  },
+  {
+    "id": "124",
+    "topic": "Possessives",
+    "category": "Pronouns",
+    "en": "its (neutral)",
+    "el_lower": "του",
+    "el_upper": "ΤΟΥ",
+    "rom": "tou",
+    "notes": "Same form as “his”; context shows if it means his or its.​"
+  },
+  {
+    "id": "130",
+    "topic": "Questions",
+    "category": "Pronouns",
+    "en": "who (masculine)",
+    "el_lower": "ποιος",
+    "el_upper": "ΠΟΙΟΣ",
+    "rom": "pios",
+    "notes": ""
+  },
+  {
+    "id": "131",
+    "topic": "Questions",
+    "category": "Pronouns",
+    "en": "who (feminine)",
+    "el_lower": "ποια",
+    "el_upper": "ΠΟΙΑ",
+    "rom": "pia",
+    "notes": ""
+  },
+  {
+    "id": "132",
+    "topic": "Questions",
+    "category": "Pronouns",
+    "en": "who (neutral)",
+    "el_lower": "ποιο",
+    "el_upper": "ΠΟΙΟ",
+    "rom": "pio",
+    "notes": ""
+  },
+  {
+    "id": "201",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΕΓΩ ΕΙΜΑΙ",
-    "el_lower": "εγώ είμαι",
     "en": "I am",
-    "rom": "egó íme"
+    "el_lower": "εγώ είμαι",
+    "el_upper": "ΕΓΩ ΕΙΜΑΙ",
+    "rom": "egó íme",
+    "notes": ""
   },
   {
-    "id": 202,
+    "id": "202",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΕΣΥ ΕΙΣΑΙ",
-    "el_lower": "εσύ είσαι",
     "en": "you are (singular)",
-    "rom": "esí íse"
+    "el_lower": "εσύ είσαι",
+    "el_upper": "ΕΣΥ ΕΙΣΑΙ",
+    "rom": "esí íse",
+    "notes": ""
   },
   {
-    "id": 203,
+    "id": "203",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΟΣ ΕΙΝΑΙ",
-    "el_lower": "αυτός είναι",
     "en": "he is",
-    "rom": "aftós íne"
+    "el_lower": "αυτός είναι",
+    "el_upper": "ΑΥΤΟΣ ΕΙΝΑΙ",
+    "rom": "aftós íne",
+    "notes": ""
   },
   {
-    "id": 204,
+    "id": "204",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΗ ΕΙΝΑΙ",
-    "el_lower": "αυτή είναι",
     "en": "she is",
-    "rom": "aftí íne"
+    "el_lower": "αυτή είναι",
+    "el_upper": "ΑΥΤΗ ΕΙΝΑΙ",
+    "rom": "aftí íne",
+    "notes": ""
   },
   {
-    "id": 205,
+    "id": "205",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΟ ΕΙΝΑΙ",
-    "el_lower": "αυτό είναι",
     "en": "it is",
-    "rom": "aftó íne"
+    "el_lower": "αυτό είναι",
+    "el_upper": "ΑΥΤΟ ΕΙΝΑΙ",
+    "rom": "aftó íne",
+    "notes": ""
   },
   {
-    "id": 206,
+    "id": "206",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΕΜΕΙΣ ΕΙΜΑΣΤΕ",
-    "el_lower": "εμείς είμαστε",
     "en": "we are",
-    "rom": "emís ímaste"
+    "el_lower": "εμείς είμαστε",
+    "el_upper": "ΕΜΕΙΣ ΕΙΜΑΣΤΕ",
+    "rom": "emís ímaste",
+    "notes": ""
   },
   {
-    "id": 207,
+    "id": "207",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΕΣΕΙΣ ΕΙΣΑΣΤΕ",
-    "el_lower": "εσείς είσαστε",
     "en": "you are (plural)",
-    "rom": "esís ísaste"
+    "el_lower": "εσείς είσαστε",
+    "el_upper": "ΕΣΕΙΣ ΕΙΣΑΣΤΕ",
+    "rom": "esís ísaste",
+    "notes": ""
   },
   {
-    "id": 208,
+    "id": "208",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΟΙ ΕΙΝΑΙ",
-    "el_lower": "αυτοί είναι",
     "en": "they are (masculine)",
-    "rom": "aftí íne"
+    "el_lower": "αυτοί είναι",
+    "el_upper": "ΑΥΤΟΙ ΕΙΝΑΙ",
+    "rom": "aftí íne",
+    "notes": ""
   },
   {
-    "id": 209,
+    "id": "209",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΕΣ ΕΙΝΑΙ",
-    "el_lower": "αυτές είναι",
     "en": "they are (feminine)",
-    "rom": "aftés íne"
+    "el_lower": "αυτές είναι",
+    "el_upper": "ΑΥΤΕΣ ΕΙΝΑΙ",
+    "rom": "aftés íne",
+    "notes": ""
   },
   {
-    "id": 210,
+    "id": "210",
     "topic": "Verb είμαι",
     "category": "Verbs",
-    "el_upper": "ΑΥΤΑ ΕΙΝΑΙ",
+    "en": "they are (neutral)",
     "el_lower": "αυτά είναι",
-    "en": "they are (neuter)",
-    "rom": "aftá íne"
+    "el_upper": "ΑΥΤΑ ΕΙΝΑΙ",
+    "rom": "aftá íne",
+    "notes": ""
   },
   {
-    "id": 301,
-    "topic": "Numbers 0-10",
+    "id": "301",
+    "topic": "Numbers",
     "category": "",
     "en": "zero",
     "el_lower": "μηδέν",
@@ -493,8 +610,8 @@
     "notes": ""
   },
   {
-    "id": 302,
-    "topic": "Numbers 0-10",
+    "id": "302",
+    "topic": "Numbers",
     "category": "",
     "en": "one",
     "el_lower": "ένα",
@@ -503,8 +620,8 @@
     "notes": ""
   },
   {
-    "id": 303,
-    "topic": "Numbers 0-10",
+    "id": "303",
+    "topic": "Numbers",
     "category": "",
     "en": "two",
     "el_lower": "δύο",
@@ -513,8 +630,8 @@
     "notes": ""
   },
   {
-    "id": 304,
-    "topic": "Numbers 0-10",
+    "id": "304",
+    "topic": "Numbers",
     "category": "",
     "en": "three",
     "el_lower": "τρία",
@@ -523,8 +640,8 @@
     "notes": ""
   },
   {
-    "id": 305,
-    "topic": "Numbers 0-10",
+    "id": "305",
+    "topic": "Numbers",
     "category": "",
     "en": "four",
     "el_lower": "τέσσερα",
@@ -533,8 +650,8 @@
     "notes": ""
   },
   {
-    "id": 306,
-    "topic": "Numbers 0-10",
+    "id": "306",
+    "topic": "Numbers",
     "category": "",
     "en": "five",
     "el_lower": "πέντε",
@@ -543,8 +660,8 @@
     "notes": ""
   },
   {
-    "id": 307,
-    "topic": "Numbers 0-10",
+    "id": "307",
+    "topic": "Numbers",
     "category": "",
     "en": "six",
     "el_lower": "έξι",
@@ -553,8 +670,8 @@
     "notes": ""
   },
   {
-    "id": 308,
-    "topic": "Numbers 0-10",
+    "id": "308",
+    "topic": "Numbers",
     "category": "",
     "en": "seven",
     "el_lower": "επτά",
@@ -563,8 +680,8 @@
     "notes": ""
   },
   {
-    "id": 309,
-    "topic": "Numbers 0-10",
+    "id": "309",
+    "topic": "Numbers",
     "category": "",
     "en": "eight",
     "el_lower": "οκτώ",
@@ -573,8 +690,8 @@
     "notes": ""
   },
   {
-    "id": 310,
-    "topic": "Numbers 0-10",
+    "id": "310",
+    "topic": "Numbers",
     "category": "",
     "en": "nine",
     "el_lower": "εννέα",
@@ -583,13 +700,563 @@
     "notes": ""
   },
   {
-    "id": 311,
-    "topic": "Numbers 0-10",
+    "id": "311",
+    "topic": "Numbers",
     "category": "",
     "en": "ten",
     "el_lower": "δέκα",
     "el_upper": "ΔΕΚΑ",
     "rom": "déka",
+    "notes": ""
+  },
+  {
+    "id": "312",
+    "topic": "Numbers",
+    "category": "",
+    "en": "eleven",
+    "el_lower": "έντεκα",
+    "el_upper": "ΕΝΤΕΚΑ",
+    "rom": "éndeka",
+    "notes": ""
+  },
+  {
+    "id": "313",
+    "topic": "Numbers",
+    "category": "",
+    "en": "twelve",
+    "el_lower": "δώδεκα",
+    "el_upper": "ΔΩΔΕΚΑ",
+    "rom": "dódeka",
+    "notes": ""
+  },
+  {
+    "id": "314",
+    "topic": "Numbers",
+    "category": "",
+    "en": "thirteen",
+    "el_lower": "δεκατρία",
+    "el_upper": "ΔΕΚΑΤΡΙΑ",
+    "rom": "dekatría",
+    "notes": ""
+  },
+  {
+    "id": "315",
+    "topic": "Numbers",
+    "category": "",
+    "en": "fourteen",
+    "el_lower": "δεκατέσσερα",
+    "el_upper": "ΔΕΚΑΤΕΣΣΕΡΑ",
+    "rom": "dekatéssera",
+    "notes": ""
+  },
+  {
+    "id": "316",
+    "topic": "Numbers",
+    "category": "",
+    "en": "fifteen",
+    "el_lower": "δεκαπέντε",
+    "el_upper": "ΔΕΚΑΠΕΝΤΕ",
+    "rom": "dekapénde",
+    "notes": ""
+  },
+  {
+    "id": "317",
+    "topic": "Numbers",
+    "category": "",
+    "en": "sixteen",
+    "el_lower": "δεκαέξι",
+    "el_upper": "ΔΕΚΑΕΞΙ",
+    "rom": "dekaéxi",
+    "notes": ""
+  },
+  {
+    "id": "318",
+    "topic": "Numbers",
+    "category": "",
+    "en": "seventeen",
+    "el_lower": "δεκαεπτά",
+    "el_upper": "ΔΕΚΑΕΠΤΑ",
+    "rom": "dekaeptá",
+    "notes": ""
+  },
+  {
+    "id": "319",
+    "topic": "Numbers",
+    "category": "",
+    "en": "eighteen",
+    "el_lower": "δεκαοκτώ",
+    "el_upper": "ΔΕΚΑΟΚΤΩ",
+    "rom": "dekaoktó",
+    "notes": ""
+  },
+  {
+    "id": "320",
+    "topic": "Numbers",
+    "category": "",
+    "en": "nineteen",
+    "el_lower": "δεκαεννέα",
+    "el_upper": "ΔΕΚΑΕΝΝΕΑ",
+    "rom": "dekaennéa",
+    "notes": ""
+  },
+  {
+    "id": "321",
+    "topic": "Numbers",
+    "category": "",
+    "en": "twenty",
+    "el_lower": "είκοσι",
+    "el_upper": "ΕΙΚΟΣΙ",
+    "rom": "íkosi",
+    "notes": ""
+  },
+  {
+    "id": "400",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "England",
+    "el_lower": "η Αγγλία",
+    "el_upper": "Η ΑΓΓΛΙΑ",
+    "rom": "i Anglía",
+    "notes": ""
+  },
+  {
+    "id": "401",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Englishman",
+    "el_lower": "ο Άγγλος",
+    "el_upper": "Ο ΑΓΓΛΟΣ",
+    "rom": "o Ánglos",
+    "notes": ""
+  },
+  {
+    "id": "402",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Englishwoman",
+    "el_lower": "η Αγγλίδα",
+    "el_upper": "Η ΑΓΓΛΙΔΑ",
+    "rom": "i Anglída",
+    "notes": ""
+  },
+  {
+    "id": "403",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Albania",
+    "el_lower": "η Αλβανία",
+    "el_upper": "Η ΑΛΒΑΝΙΑ",
+    "rom": "i Alvanía",
+    "notes": ""
+  },
+  {
+    "id": "404",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Albanian (man)",
+    "el_lower": "ο Αλβανός",
+    "el_upper": "Ο ΑΛΒΑΝΟΣ",
+    "rom": "o Alvanós",
+    "notes": ""
+  },
+  {
+    "id": "405",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Albanian (woman)",
+    "el_lower": "η Αλβανή",
+    "el_upper": "Η ΑΛΒΑΝΗ",
+    "rom": "i Alvaní",
+    "notes": ""
+  },
+  {
+    "id": "406",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "United States",
+    "el_lower": "η Αμερική",
+    "el_upper": "Η ΑΜΕΡΙΚΗ",
+    "rom": "i Amerikí",
+    "notes": ""
+  },
+  {
+    "id": "407",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "American (man)",
+    "el_lower": "ο Αμερικανός",
+    "el_upper": "Ο ΑΜΕΡΙΚΑΝΟΣ",
+    "rom": "o Amerikanós",
+    "notes": ""
+  },
+  {
+    "id": "408",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "American (woman)",
+    "el_lower": "η Αμερικανίδα",
+    "el_upper": "Η ΑΜΕΡΙΚΑΝΙΔΑ",
+    "rom": "i Amerikanída",
+    "notes": ""
+  },
+  {
+    "id": "409",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "France",
+    "el_lower": "η Γαλλία",
+    "el_upper": "Η ΓΑΛΛΙΑ",
+    "rom": "i Gallía",
+    "notes": ""
+  },
+  {
+    "id": "410",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Frenchman",
+    "el_lower": "ο Γάλλος",
+    "el_upper": "Ο ΓΑΛΛΟΣ",
+    "rom": "o Gállos",
+    "notes": ""
+  },
+  {
+    "id": "411",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Frenchwoman",
+    "el_lower": "η Γαλλίδα",
+    "el_upper": "Η ΓΑΛΛΙΔΑ",
+    "rom": "i Gallída",
+    "notes": ""
+  },
+  {
+    "id": "412",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Germany",
+    "el_lower": "η Γερμανία",
+    "el_upper": "Η ΓΕΡΜΑΝΙΑ",
+    "rom": "i Yermanía",
+    "notes": ""
+  },
+  {
+    "id": "413",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "German (man)",
+    "el_lower": "ο Γερμανός",
+    "el_upper": "Ο ΓΕΡΜΑΝΟΣ",
+    "rom": "o Yermanós",
+    "notes": ""
+  },
+  {
+    "id": "414",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "German (woman)",
+    "el_lower": "η Γερμανίδα",
+    "el_upper": "Η ΓΕΡΜΑΝΙΔΑ",
+    "rom": "i Yermanída",
+    "notes": ""
+  },
+  {
+    "id": "415",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Denmark",
+    "el_lower": "η Δανία",
+    "el_upper": "Η ΔΑΝΙΑ",
+    "rom": "i Danía",
+    "notes": ""
+  },
+  {
+    "id": "416",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Dane (man)",
+    "el_lower": "ο Δανός",
+    "el_upper": "Ο ΔΑΝΟΣ",
+    "rom": "o Danós",
+    "notes": ""
+  },
+  {
+    "id": "417",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Dane (woman)",
+    "el_lower": "η Δανή",
+    "el_upper": "Η ΔΑΝΗ",
+    "rom": "i Daní",
+    "notes": ""
+  },
+  {
+    "id": "418",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Greece",
+    "el_lower": "η Ελλάδα",
+    "el_upper": "Η ΕΛΛΑΔΑ",
+    "rom": "i Elláda",
+    "notes": ""
+  },
+  {
+    "id": "419",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Greek (man)",
+    "el_lower": "ο Έλληνας",
+    "el_upper": "Ο ΕΛΛΗΝΑΣ",
+    "rom": "o Éllinas",
+    "notes": ""
+  },
+  {
+    "id": "420",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Greek (woman)",
+    "el_lower": "η Ελληνίδα",
+    "el_upper": "Η ΕΛΛΗΝΙΔΑ",
+    "rom": "i Ellinída",
+    "notes": ""
+  },
+  {
+    "id": "421",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Japan",
+    "el_lower": "η Ιαπωνία",
+    "el_upper": "Η ΙΑΠΩΝΙΑ",
+    "rom": "i Iaponía",
+    "notes": ""
+  },
+  {
+    "id": "422",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Japanese (man)",
+    "el_lower": "ο Ιάπωνας",
+    "el_upper": "Ο ΙΑΠΩΝΑΣ",
+    "rom": "o Iáponas",
+    "notes": ""
+  },
+  {
+    "id": "423",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Japanese (woman)",
+    "el_lower": "η Ιαπωνέζα",
+    "el_upper": "Η ΙΑΠΩΝΕΖΑ",
+    "rom": "i Iaponéza",
+    "notes": ""
+  },
+  {
+    "id": "424",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Italy",
+    "el_lower": "η Ιταλία",
+    "el_upper": "Η ΙΤΑΛΙΑ",
+    "rom": "i Italía",
+    "notes": ""
+  },
+  {
+    "id": "425",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Italian (man)",
+    "el_lower": "ο Ιταλός",
+    "el_upper": "Ο ΙΤΑΛΟΣ",
+    "rom": "o Italós",
+    "notes": ""
+  },
+  {
+    "id": "426",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Italian (woman)",
+    "el_lower": "η Ιταλίδα",
+    "el_upper": "Η ΙΤΑΛΙΔΑ",
+    "rom": "i Italída",
+    "notes": ""
+  },
+  {
+    "id": "427",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Spain",
+    "el_lower": "η Ισπανία",
+    "el_upper": "Η ΙΣΠΑΝΙΑ",
+    "rom": "i Ispanía",
+    "notes": ""
+  },
+  {
+    "id": "428",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Spaniard (man)",
+    "el_lower": "ο Ισπανός",
+    "el_upper": "Ο ΙΣΠΑΝΟΣ",
+    "rom": "o Ispanós",
+    "notes": ""
+  },
+  {
+    "id": "429",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Spaniard (woman)",
+    "el_lower": "η Ισπανίδα",
+    "el_upper": "Η ΙΣΠΑΝΙΔΑ",
+    "rom": "i Ispanída",
+    "notes": ""
+  },
+  {
+    "id": "430",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Canada",
+    "el_lower": "ο Καναδάς",
+    "el_upper": "Ο ΚΑΝΑΔΑΣ",
+    "rom": "o Kanadás",
+    "notes": ""
+  },
+  {
+    "id": "431",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Canadian (man)",
+    "el_lower": "ο Καναδός",
+    "el_upper": "Ο ΚΑΝΑΔΟΣ",
+    "rom": "o Kanadós",
+    "notes": ""
+  },
+  {
+    "id": "432",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Canadian (woman)",
+    "el_lower": "η Καναδή",
+    "el_upper": "Η ΚΑΝΑΔΗ",
+    "rom": "i Kanadí",
+    "notes": ""
+  },
+  {
+    "id": "433",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "China",
+    "el_lower": "η Κίνα",
+    "el_upper": "Η ΚΙΝΑ",
+    "rom": "i Kína",
+    "notes": ""
+  },
+  {
+    "id": "434",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Chinese (man)",
+    "el_lower": "ο Κινέζος",
+    "el_upper": "Ο ΚΙΝΕΖΟΣ",
+    "rom": "o Kinézos",
+    "notes": ""
+  },
+  {
+    "id": "435",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Chinese (woman)",
+    "el_lower": "η Κινέζα",
+    "el_upper": "Η ΚΙΝΕΖΑ",
+    "rom": "i Kinéza",
+    "notes": ""
+  },
+  {
+    "id": "436",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Ukraine",
+    "el_lower": "η Ουκρανία",
+    "el_upper": "Η ΟΥΚΡΑΝΙΑ",
+    "rom": "i Oukranía",
+    "notes": ""
+  },
+  {
+    "id": "437",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Ukrainian (man)",
+    "el_lower": "ο Ουκρανός",
+    "el_upper": "Ο ΟΥΚΡΑΝΟΣ",
+    "rom": "o Oukranós",
+    "notes": ""
+  },
+  {
+    "id": "438",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Ukrainian (woman)",
+    "el_lower": "η Ουκρανή",
+    "el_upper": "Η ΟΥΚΡΑΝΗ",
+    "rom": "i Oukraní",
+    "notes": ""
+  },
+  {
+    "id": "439",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Russia",
+    "el_lower": "η Ρωσία",
+    "el_upper": "Η ΡΩΣΙΑ",
+    "rom": "i Rosía",
+    "notes": ""
+  },
+  {
+    "id": "440",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Russian (man)",
+    "el_lower": "ο Ρώσος",
+    "el_upper": "Ο ΡΩΣΟΣ",
+    "rom": "o Rósos",
+    "notes": ""
+  },
+  {
+    "id": "441",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Russian (woman)",
+    "el_lower": "η Ρωσίδα",
+    "el_upper": "Η ΡΩΣΙΔΑ",
+    "rom": "i Rosída",
+    "notes": ""
+  },
+  {
+    "id": "442",
+    "topic": "Nationalities",
+    "category": "Country",
+    "en": "Turkey",
+    "el_lower": "η Τουρκία",
+    "el_upper": "Η ΤΟΥΡΚΙΑ",
+    "rom": "i Tourkía",
+    "notes": ""
+  },
+  {
+    "id": "443",
+    "topic": "Nationalities",
+    "category": "Nationality M",
+    "en": "Turk (man)",
+    "el_lower": "ο Τούρκος",
+    "el_upper": "Ο ΤΟΥΡΚΟΣ",
+    "rom": "o Túrkos",
+    "notes": ""
+  },
+  {
+    "id": "444",
+    "topic": "Nationalities",
+    "category": "Nationality F",
+    "en": "Turk (woman)",
+    "el_lower": "η Τουρκάλα",
+    "el_upper": "Η ΤΟΥΡΚΑΛΑ",
+    "rom": "i Tourkála",
     "notes": ""
   }
 ]
