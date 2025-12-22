@@ -601,7 +601,7 @@
   },
   {
     "id": "301",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "zero",
     "el_lower": "μηδέν",
@@ -611,7 +611,7 @@
   },
   {
     "id": "302",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "one",
     "el_lower": "ένα",
@@ -621,7 +621,7 @@
   },
   {
     "id": "303",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "two",
     "el_lower": "δύο",
@@ -631,7 +631,7 @@
   },
   {
     "id": "304",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "three",
     "el_lower": "τρία",
@@ -641,7 +641,7 @@
   },
   {
     "id": "305",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "four",
     "el_lower": "τέσσερα",
@@ -651,7 +651,7 @@
   },
   {
     "id": "306",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "five",
     "el_lower": "πέντε",
@@ -661,7 +661,7 @@
   },
   {
     "id": "307",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "six",
     "el_lower": "έξι",
@@ -671,7 +671,7 @@
   },
   {
     "id": "308",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "seven",
     "el_lower": "επτά",
@@ -681,7 +681,7 @@
   },
   {
     "id": "309",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "eight",
     "el_lower": "οκτώ",
@@ -691,7 +691,7 @@
   },
   {
     "id": "310",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "nine",
     "el_lower": "εννέα",
@@ -701,7 +701,7 @@
   },
   {
     "id": "311",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "ten",
     "el_lower": "δέκα",
@@ -711,7 +711,7 @@
   },
   {
     "id": "312",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "eleven",
     "el_lower": "έντεκα",
@@ -721,7 +721,7 @@
   },
   {
     "id": "313",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "twelve",
     "el_lower": "δώδεκα",
@@ -731,7 +731,7 @@
   },
   {
     "id": "314",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "thirteen",
     "el_lower": "δεκατρία",
@@ -741,7 +741,7 @@
   },
   {
     "id": "315",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "fourteen",
     "el_lower": "δεκατέσσερα",
@@ -751,7 +751,7 @@
   },
   {
     "id": "316",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "fifteen",
     "el_lower": "δεκαπέντε",
@@ -761,7 +761,7 @@
   },
   {
     "id": "317",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "sixteen",
     "el_lower": "δεκαέξι",
@@ -771,7 +771,7 @@
   },
   {
     "id": "318",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "seventeen",
     "el_lower": "δεκαεπτά",
@@ -781,7 +781,7 @@
   },
   {
     "id": "319",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "eighteen",
     "el_lower": "δεκαοκτώ",
@@ -791,7 +791,7 @@
   },
   {
     "id": "320",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "nineteen",
     "el_lower": "δεκαεννέα",
@@ -801,7 +801,7 @@
   },
   {
     "id": "321",
-    "topic": "Numbers",
+    "topic": "Numbers 0-20",
     "category": "",
     "en": "twenty",
     "el_lower": "είκοσι",
@@ -810,7 +810,7 @@
     "notes": ""
   },
   {
-    "id": "400",
+    "id": "600",
     "topic": "Nationalities",
     "category": "Country",
     "en": "England",
@@ -820,7 +820,7 @@
     "notes": ""
   },
   {
-    "id": "401",
+    "id": "601",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Englishman",
@@ -830,7 +830,7 @@
     "notes": ""
   },
   {
-    "id": "402",
+    "id": "602",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Englishwoman",
@@ -840,7 +840,7 @@
     "notes": ""
   },
   {
-    "id": "403",
+    "id": "603",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Albania",
@@ -850,7 +850,7 @@
     "notes": ""
   },
   {
-    "id": "404",
+    "id": "604",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Albanian (man)",
@@ -860,7 +860,7 @@
     "notes": ""
   },
   {
-    "id": "405",
+    "id": "605",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Albanian (woman)",
@@ -870,7 +870,7 @@
     "notes": ""
   },
   {
-    "id": "406",
+    "id": "606",
     "topic": "Nationalities",
     "category": "Country",
     "en": "United States",
@@ -880,7 +880,7 @@
     "notes": ""
   },
   {
-    "id": "407",
+    "id": "607",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "American (man)",
@@ -890,7 +890,7 @@
     "notes": ""
   },
   {
-    "id": "408",
+    "id": "608",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "American (woman)",
@@ -900,7 +900,7 @@
     "notes": ""
   },
   {
-    "id": "409",
+    "id": "609",
     "topic": "Nationalities",
     "category": "Country",
     "en": "France",
@@ -910,7 +910,7 @@
     "notes": ""
   },
   {
-    "id": "410",
+    "id": "610",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Frenchman",
@@ -920,7 +920,7 @@
     "notes": ""
   },
   {
-    "id": "411",
+    "id": "611",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Frenchwoman",
@@ -930,7 +930,7 @@
     "notes": ""
   },
   {
-    "id": "412",
+    "id": "612",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Germany",
@@ -940,7 +940,7 @@
     "notes": ""
   },
   {
-    "id": "413",
+    "id": "613",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "German (man)",
@@ -950,7 +950,7 @@
     "notes": ""
   },
   {
-    "id": "414",
+    "id": "614",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "German (woman)",
@@ -960,7 +960,7 @@
     "notes": ""
   },
   {
-    "id": "415",
+    "id": "615",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Denmark",
@@ -970,7 +970,7 @@
     "notes": ""
   },
   {
-    "id": "416",
+    "id": "616",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Dane (man)",
@@ -980,7 +980,7 @@
     "notes": ""
   },
   {
-    "id": "417",
+    "id": "617",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Dane (woman)",
@@ -990,7 +990,7 @@
     "notes": ""
   },
   {
-    "id": "418",
+    "id": "618",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Greece",
@@ -1000,7 +1000,7 @@
     "notes": ""
   },
   {
-    "id": "419",
+    "id": "619",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Greek (man)",
@@ -1010,7 +1010,7 @@
     "notes": ""
   },
   {
-    "id": "420",
+    "id": "620",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Greek (woman)",
@@ -1020,7 +1020,7 @@
     "notes": ""
   },
   {
-    "id": "421",
+    "id": "621",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Japan",
@@ -1030,7 +1030,7 @@
     "notes": ""
   },
   {
-    "id": "422",
+    "id": "622",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Japanese (man)",
@@ -1040,7 +1040,7 @@
     "notes": ""
   },
   {
-    "id": "423",
+    "id": "623",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Japanese (woman)",
@@ -1050,7 +1050,7 @@
     "notes": ""
   },
   {
-    "id": "424",
+    "id": "624",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Italy",
@@ -1060,7 +1060,7 @@
     "notes": ""
   },
   {
-    "id": "425",
+    "id": "625",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Italian (man)",
@@ -1070,7 +1070,7 @@
     "notes": ""
   },
   {
-    "id": "426",
+    "id": "626",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Italian (woman)",
@@ -1080,7 +1080,7 @@
     "notes": ""
   },
   {
-    "id": "427",
+    "id": "627",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Spain",
@@ -1090,7 +1090,7 @@
     "notes": ""
   },
   {
-    "id": "428",
+    "id": "628",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Spaniard (man)",
@@ -1100,7 +1100,7 @@
     "notes": ""
   },
   {
-    "id": "429",
+    "id": "629",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Spaniard (woman)",
@@ -1110,7 +1110,7 @@
     "notes": ""
   },
   {
-    "id": "430",
+    "id": "630",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Canada",
@@ -1120,7 +1120,7 @@
     "notes": ""
   },
   {
-    "id": "431",
+    "id": "631",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Canadian (man)",
@@ -1130,7 +1130,7 @@
     "notes": ""
   },
   {
-    "id": "432",
+    "id": "632",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Canadian (woman)",
@@ -1140,7 +1140,7 @@
     "notes": ""
   },
   {
-    "id": "433",
+    "id": "633",
     "topic": "Nationalities",
     "category": "Country",
     "en": "China",
@@ -1150,7 +1150,7 @@
     "notes": ""
   },
   {
-    "id": "434",
+    "id": "634",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Chinese (man)",
@@ -1160,7 +1160,7 @@
     "notes": ""
   },
   {
-    "id": "435",
+    "id": "635",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Chinese (woman)",
@@ -1170,7 +1170,7 @@
     "notes": ""
   },
   {
-    "id": "436",
+    "id": "636",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Ukraine",
@@ -1180,7 +1180,7 @@
     "notes": ""
   },
   {
-    "id": "437",
+    "id": "637",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Ukrainian (man)",
@@ -1190,7 +1190,7 @@
     "notes": ""
   },
   {
-    "id": "438",
+    "id": "638",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Ukrainian (woman)",
@@ -1200,7 +1200,7 @@
     "notes": ""
   },
   {
-    "id": "439",
+    "id": "639",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Russia",
@@ -1210,7 +1210,7 @@
     "notes": ""
   },
   {
-    "id": "440",
+    "id": "640",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Russian (man)",
@@ -1220,7 +1220,7 @@
     "notes": ""
   },
   {
-    "id": "441",
+    "id": "641",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Russian (woman)",
@@ -1230,7 +1230,7 @@
     "notes": ""
   },
   {
-    "id": "442",
+    "id": "642",
     "topic": "Nationalities",
     "category": "Country",
     "en": "Turkey",
@@ -1240,7 +1240,7 @@
     "notes": ""
   },
   {
-    "id": "443",
+    "id": "643",
     "topic": "Nationalities",
     "category": "Nationality M",
     "en": "Turk (man)",
@@ -1250,13 +1250,2153 @@
     "notes": ""
   },
   {
-    "id": "444",
+    "id": "644",
     "topic": "Nationalities",
     "category": "Nationality F",
     "en": "Turk (woman)",
     "el_lower": "η Τουρκάλα",
     "el_upper": "Η ΤΟΥΡΚΑΛΑ",
     "rom": "i Tourkála",
+    "notes": ""
+  },
+  {
+    "id": "700",
+    "topic": "Vocab 1.1",
+    "category": "Articles",
+    "en": "the",
+    "el_lower": "ο, η, το",
+    "el_upper": "Ο, Η, ΤΟ",
+    "rom": "o, i, to",
+    "notes": "Masculine, Feminine, Neuter singular articles."
+  },
+  {
+    "id": "701",
+    "topic": "Vocab 1.1",
+    "category": "Articles",
+    "en": "at the, in the, on the (neuter)",
+    "el_lower": "στο",
+    "el_upper": "ΣΤΟ",
+    "rom": "sto",
+    "notes": "Combined preposition σ(ε) + το."
+  },
+  {
+    "id": "702",
+    "topic": "Vocab 1.1",
+    "category": "Articles",
+    "en": "at the, in the, on the (feminine)",
+    "el_lower": "στην",
+    "el_upper": "ΣΤΗΝ",
+    "rom": "stin",
+    "notes": "Combined preposition σ(ε) + την."
+  },
+  {
+    "id": "703",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "man",
+    "el_lower": "ο άντρας",
+    "el_upper": "Ο ΑΝΤΡΑΣ",
+    "rom": "o ántras",
+    "notes": ""
+  },
+  {
+    "id": "704",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "your husband",
+    "el_lower": "ο άντρας σου",
+    "el_upper": "Ο ΑΝΤΡΑΣ ΣΟΥ",
+    "rom": "o ántras sou",
+    "notes": ""
+  },
+  {
+    "id": "705",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "Mr, sir",
+    "el_lower": "ο κύριος",
+    "el_upper": "Ο ΚΥΡΙΟΣ",
+    "rom": "o kírios",
+    "notes": ""
+  },
+  {
+    "id": "706",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "Mr, sir (addressing)",
+    "el_lower": "κύριε",
+    "el_upper": "ΚΥΡΙΕ",
+    "rom": "kírie",
+    "notes": "Used when addressing someone directly."
+  },
+  {
+    "id": "707",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "dog",
+    "el_lower": "ο σκύλος",
+    "el_upper": "Ο ΣΚΥΛΟΣ",
+    "rom": "o skílos",
+    "notes": ""
+  },
+  {
+    "id": "708",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "Aegina",
+    "el_lower": "η Αίγινα",
+    "el_upper": "Η ΑΙΓΙΝΑ",
+    "rom": "i Égina",
+    "notes": "Island near Athens."
+  },
+  {
+    "id": "709",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "cat",
+    "el_lower": "η γάτα",
+    "el_upper": "Η ΓΑΤΑ",
+    "rom": "i gáta",
+    "notes": ""
+  },
+  {
+    "id": "710",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "woman, wife",
+    "el_lower": "η γυναίκα",
+    "el_upper": "Η ΓΥΝΑΙΚΑ",
+    "rom": "i yinéka",
+    "notes": ""
+  },
+  {
+    "id": "711",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "my wife",
+    "el_lower": "η γυναίκα μου",
+    "el_upper": "Η ΓΥΝΑΙΚΑ ΜΟΥ",
+    "rom": "i yinéka mou",
+    "notes": ""
+  },
+  {
+    "id": "712",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "Mrs, madam",
+    "el_lower": "η κυρία",
+    "el_upper": "Η ΚΥΡΙΑ",
+    "rom": "i kiría",
+    "notes": ""
+  },
+  {
+    "id": "713",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "Mrs, madam (vocative)",
+    "el_lower": "κυρία",
+    "el_upper": "ΚΥΡΙΑ",
+    "rom": "kiría",
+    "notes": "Addressing a woman directly."
+  },
+  {
+    "id": "714",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "family",
+    "el_lower": "η οικογένεια",
+    "el_upper": "Η ΟΙΚΟΓΕΝΕΙΑ",
+    "rom": "i ikoyénia",
+    "notes": ""
+  },
+  {
+    "id": "715",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "port",
+    "el_lower": "το λιμάνι",
+    "el_upper": "ΤΟ ΛΙΜΑΝΙ",
+    "rom": "to limáni",
+    "notes": ""
+  },
+  {
+    "id": "716",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "hotel",
+    "el_lower": "το ξενοδοχείο",
+    "el_upper": "ΤΟ ΞΕΝΟΔΟΧΕΙΟ",
+    "rom": "to xenodochío",
+    "notes": ""
+  },
+  {
+    "id": "717",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "the child",
+    "el_lower": "το παιδί",
+    "el_upper": "ΤΟ ΠΑΙΔΙ",
+    "rom": "to pedí",
+    "notes": ""
+  },
+  {
+    "id": "718",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "the children",
+    "el_lower": "τα παιδιά",
+    "el_upper": "ΤΑ ΠΑΙΔΙΑ",
+    "rom": "ta pediá",
+    "notes": "Plural."
+  },
+  {
+    "id": "719",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "home, house",
+    "el_lower": "το σπίτι",
+    "el_upper": "ΤΟ ΣΠΙΤΙ",
+    "rom": "to spíti",
+    "notes": ""
+  },
+  {
+    "id": "720",
+    "topic": "Vocab 1.1",
+    "category": "Nouns",
+    "en": "village",
+    "el_lower": "το χωριό",
+    "el_upper": "ΤΟ ΧΩΡΙΟ",
+    "rom": "to chorió",
+    "notes": ""
+  },
+  {
+    "id": "721",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "I",
+    "el_lower": "εγώ",
+    "el_upper": "ΕΓΩ",
+    "rom": "egó",
+    "notes": ""
+  },
+  {
+    "id": "722",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "we",
+    "el_lower": "εμείς",
+    "el_upper": "ΕΜΕΙΣ",
+    "rom": "emís",
+    "notes": ""
+  },
+  {
+    "id": "723",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "you (singular)",
+    "el_lower": "εσύ",
+    "el_upper": "ΕΣΥ",
+    "rom": "esí",
+    "notes": ""
+  },
+  {
+    "id": "724",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "you (plural)",
+    "el_lower": "εσείς",
+    "el_upper": "ΕΣΕΙΣ",
+    "rom": "esís",
+    "notes": ""
+  },
+  {
+    "id": "725",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "my",
+    "el_lower": "μου",
+    "el_upper": "ΜΟΥ",
+    "rom": "mou",
+    "notes": "Weak possessive."
+  },
+  {
+    "id": "726",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "your (singular)",
+    "el_lower": "σου",
+    "el_upper": "ΣΟΥ",
+    "rom": "sou",
+    "notes": "Weak possessive."
+  },
+  {
+    "id": "727",
+    "topic": "Vocab 1.1",
+    "category": "Pronouns",
+    "en": "your (plural)",
+    "el_lower": "σας",
+    "el_upper": "ΣΑΣ",
+    "rom": "sas",
+    "notes": "Weak possessive."
+  },
+  {
+    "id": "728",
+    "topic": "Vocab 1.1",
+    "category": "Verbs",
+    "en": "I am / to be",
+    "el_lower": "είμαι",
+    "el_upper": "ΕΙΜΑΙ",
+    "rom": "íme",
+    "notes": ""
+  },
+  {
+    "id": "729",
+    "topic": "Vocab 1.1",
+    "category": "Adverbs",
+    "en": "don’t / doesn’t",
+    "el_lower": "δεν",
+    "el_upper": "ΔΕΝ",
+    "rom": "den",
+    "notes": "Negation particle."
+  },
+  {
+    "id": "730",
+    "topic": "Vocab 1.1",
+    "category": "Adverbs",
+    "en": "here",
+    "el_lower": "εδώ",
+    "el_upper": "ΕΔΩ",
+    "rom": "edó",
+    "notes": ""
+  },
+  {
+    "id": "731",
+    "topic": "Vocab 1.1",
+    "category": "Adverbs",
+    "en": "yes",
+    "el_lower": "ναι",
+    "el_upper": "ΝΑΙ",
+    "rom": "ne",
+    "notes": ""
+  },
+  {
+    "id": "732",
+    "topic": "Vocab 1.1",
+    "category": "Adverbs",
+    "en": "no",
+    "el_lower": "όχι",
+    "el_upper": "ΟΧΙ",
+    "rom": "óchi",
+    "notes": ""
+  },
+  {
+    "id": "733",
+    "topic": "Vocab 1.1",
+    "category": "Prepositions",
+    "en": "from",
+    "el_lower": "από",
+    "el_upper": "ΑΠΟ",
+    "rom": "apó",
+    "notes": ""
+  },
+  {
+    "id": "734",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "goodbye",
+    "el_lower": "αντίο!",
+    "el_upper": "ΑΝΤΙΟ!",
+    "rom": "antío!",
+    "notes": ""
+  },
+  {
+    "id": "735",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "goodbye (plural of courtesy)",
+    "el_lower": "αντίο σας!",
+    "el_upper": "ΑΝΤΙΟ ΣΑΣ!",
+    "rom": "antío sas!",
+    "notes": "Formal or plural address."
+  },
+  {
+    "id": "736",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "hello, hi",
+    "el_lower": "γεια! / γεια σου!",
+    "el_upper": "ΓΕΙΑ! / ΓΕΙΑ ΣΟΥ!",
+    "rom": "yiá! / yiá sou!",
+    "notes": "Informal."
+  },
+  {
+    "id": "737",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "hello, hi (plural of courtesy)",
+    "el_lower": "γεια σας!",
+    "el_upper": "ΓΕΙΑ ΣΑΣ!",
+    "rom": "yiá sas!",
+    "notes": "Formal or plural."
+  },
+  {
+    "id": "738",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "welcome",
+    "el_lower": "καλώς ήρθες! / ήλθες!",
+    "el_upper": "ΚΑΛΩΣ ΗΡΘΕΣ! / ΗΛΘΕΣ!",
+    "rom": "kalós írthes! / ílthes!",
+    "notes": "Singular address."
+  },
+  {
+    "id": "739",
+    "topic": "Vocab 1.1",
+    "category": "Expressions",
+    "en": "hello, hi (plural of courtesy)",
+    "el_lower": "χαίρετε!",
+    "el_upper": "ΧΑΙΡΕΤΕ!",
+    "rom": "chérete!",
+    "notes": "Formal greeting."
+  },
+  {
+    "id": "740",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "pupil (masc.)",
+    "el_lower": "ο μαθητής",
+    "el_upper": "Ο ΜΑΘΗΤΗΣ",
+    "rom": "o mathitís",
+    "notes": ""
+  },
+  {
+    "id": "741",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "friend (masc.)",
+    "el_lower": "ο φίλος",
+    "el_upper": "Ο ΦΙΛΟΣ",
+    "rom": "o fílos",
+    "notes": ""
+  },
+  {
+    "id": "742",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "secretary",
+    "el_lower": "ο/η γραμματέας",
+    "el_upper": "Ο/Η ΓΡΑΜΜΑΤΕΑΣ",
+    "rom": "o/i grammatéas",
+    "notes": "Same form for both genders."
+  },
+  {
+    "id": "743",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "resident",
+    "el_lower": "ο/η κάτοικος",
+    "el_upper": "Ο/Η ΚΑΤΟΙΚΟΣ",
+    "rom": "o/i kátikos",
+    "notes": "Same form for both genders."
+  },
+  {
+    "id": "744",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "administration office",
+    "el_lower": "η γραμματεία",
+    "el_upper": "Η ΓΡΑΜΜΑΤΕΙΑ",
+    "rom": "i grammateía",
+    "notes": ""
+  },
+  {
+    "id": "745",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "nationality",
+    "el_lower": "η εθνικότητα",
+    "el_upper": "Η ΕΘΝΙΚΟΤΗΤΑ",
+    "rom": "i ethnikótita",
+    "notes": ""
+  },
+  {
+    "id": "746",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "day",
+    "el_lower": "η ημέρα (η μέρα)",
+    "el_upper": "Η ΗΜΕΡΑ (Η ΜΕΡΑ)",
+    "rom": "i iméra (i méra)",
+    "notes": ""
+  },
+  {
+    "id": "747",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "pupil (fem.)",
+    "el_lower": "η μαθήτρια",
+    "el_upper": "Η ΜΑΘΗΤΡΙΑ",
+    "rom": "i mathítria",
+    "notes": ""
+  },
+  {
+    "id": "748",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "night",
+    "el_lower": "η νύχτα",
+    "el_upper": "Η ΝΥΧΤΑ",
+    "rom": "i níchta",
+    "notes": ""
+  },
+  {
+    "id": "749",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "friend (fem.)",
+    "el_lower": "η φίλη",
+    "el_upper": "Η ΦΙΛΗ",
+    "rom": "i fíli",
+    "notes": ""
+  },
+  {
+    "id": "750",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "country",
+    "el_lower": "η χώρα",
+    "el_upper": "Η ΧΩΡΑ",
+    "rom": "i chóra",
+    "notes": ""
+  },
+  {
+    "id": "751",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "boy",
+    "el_lower": "το αγόρι",
+    "el_upper": "ΤΟ ΑΓΟΡΙ",
+    "rom": "to agóri",
+    "notes": ""
+  },
+  {
+    "id": "752",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "afternoon",
+    "el_lower": "το απόγευμα",
+    "el_upper": "ΤΟ ΑΠΟΓΕΥΜΑ",
+    "rom": "to apóyevma",
+    "notes": ""
+  },
+  {
+    "id": "753",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "night (evening)",
+    "el_lower": "το βράδυ",
+    "el_upper": "ΤΟ ΒΡΑΔΥ",
+    "rom": "to vrádi",
+    "notes": "Usually implies evening/night time."
+  },
+  {
+    "id": "754",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "surname",
+    "el_lower": "το επώνυμο",
+    "el_upper": "ΤΟ ΕΠΩΝΥΜΟ",
+    "rom": "to epónimo",
+    "notes": ""
+  },
+  {
+    "id": "755",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "girl",
+    "el_lower": "το κορίτσι",
+    "el_upper": "ΤΟ ΚΟΡΙΤΣΙ",
+    "rom": "to korítsi",
+    "notes": ""
+  },
+  {
+    "id": "756",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "museum",
+    "el_lower": "το μουσείο",
+    "el_upper": "ΤΟ ΜΟΥΣΕΙΟ",
+    "rom": "to mousío",
+    "notes": ""
+  },
+  {
+    "id": "757",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "name",
+    "el_lower": "το όνομα",
+    "el_upper": "ΤΟ ΟΝΟΜΑ",
+    "rom": "to ónoma",
+    "notes": ""
+  },
+  {
+    "id": "758",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "portrait",
+    "el_lower": "το πορτρέτο",
+    "el_upper": "ΤΟ ΠΟΡΤΡΕΤΟ",
+    "rom": "to portréto",
+    "notes": ""
+  },
+  {
+    "id": "759",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "programme",
+    "el_lower": "το πρόγραμμα",
+    "el_upper": "ΤΟ ΠΡΟΓΡΑΜΜΑ",
+    "rom": "to prógramma",
+    "notes": ""
+  },
+  {
+    "id": "760",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "morning",
+    "el_lower": "το πρωί",
+    "el_upper": "ΤΟ ΠΡΩΙ",
+    "rom": "to proí",
+    "notes": ""
+  },
+  {
+    "id": "761",
+    "topic": "Vocab 1.2",
+    "category": "Nouns",
+    "en": "school",
+    "el_lower": "το σχολείο",
+    "el_upper": "ΤΟ ΣΧΟΛΕΙΟ",
+    "rom": "to scholío",
+    "notes": ""
+  },
+  {
+    "id": "762",
+    "topic": "Vocab 1.2",
+    "category": "Pronouns",
+    "en": "this (masc, fem, neut)",
+    "el_lower": "αυτός, αυτή, αυτό",
+    "el_upper": "ΑΥΤΟΣ, ΑΥΤΗ, ΑΥΤΟ",
+    "rom": "aftós, aftí, aftó",
+    "notes": "Demonstrative pronoun."
+  },
+  {
+    "id": "763",
+    "topic": "Vocab 1.2",
+    "category": "Pronouns",
+    "en": "who? (masc, fem, neut)",
+    "el_lower": "ποιος; ποια; ποιο;",
+    "el_upper": "ΠΟΙΟΣ; ΠΟΙΑ; ΠΟΙΟ;",
+    "rom": "pios; pia; pio;",
+    "notes": "Interrogative pronoun."
+  },
+  {
+    "id": "764",
+    "topic": "Vocab 1.2",
+    "category": "Pronouns",
+    "en": "his",
+    "el_lower": "του",
+    "el_upper": "ΤΟΥ",
+    "rom": "tou",
+    "notes": "Weak possessive."
+  },
+  {
+    "id": "765",
+    "topic": "Vocab 1.2",
+    "category": "Pronouns",
+    "en": "her",
+    "el_lower": "της",
+    "el_upper": "ΤΗΣ",
+    "rom": "tis",
+    "notes": "Weak possessive."
+  },
+  {
+    "id": "766",
+    "topic": "Vocab 1.2",
+    "category": "Verbs",
+    "en": "I leave / to leave",
+    "el_lower": "φεύγω",
+    "el_upper": "ΦΕΥΓΩ",
+    "rom": "févgo",
+    "notes": ""
+  },
+  {
+    "id": "767",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "tomorrow",
+    "el_lower": "αύριο",
+    "el_upper": "ΑΥΡΙΟ",
+    "rom": "ávrio",
+    "notes": ""
+  },
+  {
+    "id": "768",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "sure (certainly)",
+    "el_lower": "μάλιστα",
+    "el_upper": "ΜΑΛΙΣΤΑ",
+    "rom": "málista",
+    "notes": ""
+  },
+  {
+    "id": "769",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "again",
+    "el_lower": "πάλι",
+    "el_upper": "ΠΑΛΙ",
+    "rom": "páli",
+    "notes": ""
+  },
+  {
+    "id": "770",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "very",
+    "el_lower": "πολύ",
+    "el_upper": "ΠΟΛΥ",
+    "rom": "polí",
+    "notes": ""
+  },
+  {
+    "id": "771",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "this year",
+    "el_lower": "φέτος",
+    "el_upper": "ΦΕΤΟΣ",
+    "rom": "fétos",
+    "notes": ""
+  },
+  {
+    "id": "772",
+    "topic": "Vocab 1.2",
+    "category": "Adverbs",
+    "en": "well, nice",
+    "el_lower": "ωραία",
+    "el_upper": "ΩΡΑΙΑ",
+    "rom": "oréa",
+    "notes": ""
+  },
+  {
+    "id": "773",
+    "topic": "Vocab 1.2",
+    "category": "Conjunctions",
+    "en": "or",
+    "el_lower": "ή",
+    "el_upper": "Η",
+    "rom": "í",
+    "notes": ""
+  },
+  {
+    "id": "774",
+    "topic": "Vocab 1.2",
+    "category": "Conjunctions",
+    "en": "and",
+    "el_lower": "και (κι)",
+    "el_upper": "ΚΑΙ (ΚΙ)",
+    "rom": "ke (ki)",
+    "notes": ""
+  },
+  {
+    "id": "775",
+    "topic": "Vocab 1.2",
+    "category": "Conjunctions",
+    "en": "so",
+    "el_lower": "λοιπόν",
+    "el_upper": "ΛΟΙΠΟΝ",
+    "rom": "lipón",
+    "notes": ""
+  },
+  {
+    "id": "776",
+    "topic": "Vocab 1.2",
+    "category": "Interjections",
+    "en": "ah!",
+    "el_lower": "α!",
+    "el_upper": "Α!",
+    "rom": "a!",
+    "notes": ""
+  },
+  {
+    "id": "777",
+    "topic": "Vocab 1.2",
+    "category": "Expressions",
+    "en": "good morning!",
+    "el_lower": "καλημέρα!",
+    "el_upper": "ΚΑΛΗΜΕΡΑ!",
+    "rom": "kaliméra!",
+    "notes": ""
+  },
+  {
+    "id": "778",
+    "topic": "Vocab 1.2",
+    "category": "Expressions",
+    "en": "good night!",
+    "el_lower": "καληνύχτα!",
+    "el_upper": "ΚΑΛΗΝΥΧΤΑ!",
+    "rom": "kaliníchta!",
+    "notes": "Used when parting for sleep."
+  },
+  {
+    "id": "779",
+    "topic": "Vocab 1.2",
+    "category": "Expressions",
+    "en": "good evening!",
+    "el_lower": "καλησπέρα!",
+    "el_upper": "ΚΑΛΗΣΠΕΡΑ!",
+    "rom": "kalispéra!",
+    "notes": "Used when arriving in evening."
+  },
+  {
+    "id": "780",
+    "topic": "Vocab 1.2",
+    "category": "Expressions",
+    "en": "here it is / you are",
+    "el_lower": "ορίστε",
+    "el_upper": "ΟΡΙΣΤΕ",
+    "rom": "oríste",
+    "notes": "Used when handing something over."
+  },
+  {
+    "id": "781",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "air, wind",
+    "el_lower": "ο αέρας",
+    "el_upper": "Ο ΑΕΡΑΣ",
+    "rom": "o aéras",
+    "notes": ""
+  },
+  {
+    "id": "782",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "North",
+    "el_lower": "ο Βορράς",
+    "el_upper": "Ο ΒΟΡΡΑΣ",
+    "rom": "o Vorrás",
+    "notes": ""
+  },
+  {
+    "id": "783",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "sun",
+    "el_lower": "ο ήλιος",
+    "el_upper": "Ο ΗΛΙΟΣ",
+    "rom": "o ílios",
+    "notes": ""
+  },
+  {
+    "id": "784",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "South",
+    "el_lower": "ο Νότος",
+    "el_upper": "Ο ΝΟΤΟΣ",
+    "rom": "o Nótos",
+    "notes": ""
+  },
+  {
+    "id": "785",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "sky",
+    "el_lower": "ο ουρανός",
+    "el_upper": "Ο ΟΥΡΑΝΟΣ",
+    "rom": "o ouranós",
+    "notes": ""
+  },
+  {
+    "id": "786",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Piraeus (port)",
+    "el_lower": "ο Πειραιάς",
+    "el_upper": "Ο ΠΕΙΡΑΙΑΣ",
+    "rom": "o Pireás",
+    "notes": ""
+  },
+  {
+    "id": "787",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "river",
+    "el_lower": "ο ποταμός",
+    "el_upper": "Ο ΠΟΤΑΜΟΣ",
+    "rom": "o potamós",
+    "notes": ""
+  },
+  {
+    "id": "788",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "map",
+    "el_lower": "ο χάρτης",
+    "el_upper": "Ο ΧΑΡΤΗΣ",
+    "rom": "o chártis",
+    "notes": ""
+  },
+  {
+    "id": "789",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Athens (city)",
+    "el_lower": "η Αθήνα",
+    "el_upper": "Η ΑΘΗΝΑ",
+    "rom": "i Athína",
+    "notes": ""
+  },
+  {
+    "id": "790",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "East",
+    "el_lower": "η Ανατολή",
+    "el_upper": "Η ΑΝΑΤΟΛΗ",
+    "rom": "i Anatolí",
+    "notes": ""
+  },
+  {
+    "id": "791",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "suitcase",
+    "el_lower": "η βαλίτσα",
+    "el_upper": "Η ΒΑΛΙΤΣΑ",
+    "rom": "i valítsa",
+    "notes": ""
+  },
+  {
+    "id": "792",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "geography",
+    "el_lower": "η γεωγραφία",
+    "el_upper": "Η ΓΕΩΓΡΑΦΙΑ",
+    "rom": "i yeografía",
+    "notes": ""
+  },
+  {
+    "id": "793",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Earth",
+    "el_lower": "η Γη",
+    "el_upper": "Η ΓΗ",
+    "rom": "i Yi",
+    "notes": ""
+  },
+  {
+    "id": "794",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "West",
+    "el_lower": "η Δύση",
+    "el_upper": "Η ΔΥΣΗ",
+    "rom": "i Dísi",
+    "notes": ""
+  },
+  {
+    "id": "795",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Greece",
+    "el_lower": "η Ελλάδα",
+    "el_upper": "Η ΕΛΛΑΔΑ",
+    "rom": "i Elláda",
+    "notes": ""
+  },
+  {
+    "id": "796",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Europe",
+    "el_lower": "η Ευρώπη",
+    "el_upper": "Η ΕΥΡΩΠΗ",
+    "rom": "i Evrópi",
+    "notes": ""
+  },
+  {
+    "id": "797",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "continent",
+    "el_lower": "η ήπειρος",
+    "el_upper": "Η ΗΠΕΙΡΟΣ",
+    "rom": "i ípiros",
+    "notes": ""
+  },
+  {
+    "id": "798",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "sea",
+    "el_lower": "η θάλασσα",
+    "el_upper": "Η ΘΑΛΑΣΣΑ",
+    "rom": "i thálassa",
+    "notes": ""
+  },
+  {
+    "id": "799",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "lake",
+    "el_lower": "η λίμνη",
+    "el_upper": "Η ΛΙΜΝΗ",
+    "rom": "i límni",
+    "notes": ""
+  },
+  {
+    "id": "800",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "Mediterranean Sea",
+    "el_lower": "η Μεσόγειος",
+    "el_upper": "Η ΜΕΣΟΓΕΙΟΣ",
+    "rom": "i Mesóyios",
+    "notes": ""
+  },
+  {
+    "id": "801",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "town, city",
+    "el_lower": "η πόλη",
+    "el_upper": "Η ΠΟΛΗ",
+    "rom": "i póli",
+    "notes": ""
+  },
+  {
+    "id": "802",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "compass",
+    "el_lower": "η πυξίδα",
+    "el_upper": "Η ΠΥΞΙΔΑ",
+    "rom": "i pixída",
+    "notes": ""
+  },
+  {
+    "id": "803",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "star",
+    "el_lower": "το αστέρι",
+    "el_upper": "ΤΟ ΑΣΤΕΡΙ",
+    "rom": "to astéri",
+    "notes": ""
+  },
+  {
+    "id": "804",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "mountain",
+    "el_lower": "το βουνό",
+    "el_upper": "ΤΟ ΒΟΥΝΟ",
+    "rom": "to vounó",
+    "notes": ""
+  },
+  {
+    "id": "805",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "forest",
+    "el_lower": "το δάσος",
+    "el_upper": "ΤΟ ΔΑΣΟΣ",
+    "rom": "to dásos",
+    "notes": ""
+  },
+  {
+    "id": "806",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "passport",
+    "el_lower": "το διαβατήριο",
+    "el_upper": "ΤΟ ΔΙΑΒΑΤΗΡΙΟ",
+    "rom": "to diavatírio",
+    "notes": ""
+  },
+  {
+    "id": "807",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "ticket",
+    "el_lower": "το εισιτήριο",
+    "el_upper": "ΤΟ ΕΙΣΙΤΗΡΙΟ",
+    "rom": "to isitírio",
+    "notes": ""
+  },
+  {
+    "id": "808",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "island",
+    "el_lower": "το νησί",
+    "el_upper": "ΤΟ ΝΗΣΙ",
+    "rom": "to nisí",
+    "notes": ""
+  },
+  {
+    "id": "809",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "cloud",
+    "el_lower": "το σύννεφο",
+    "el_upper": "ΤΟ ΣΥΝΝΕΦΟ",
+    "rom": "to sínnefo",
+    "notes": ""
+  },
+  {
+    "id": "810",
+    "topic": "Vocab 1.3",
+    "category": "Nouns",
+    "en": "moon",
+    "el_lower": "το φεγγάρι",
+    "el_upper": "ΤΟ ΦΕΓΓΑΡΙ",
+    "rom": "to fengári",
+    "notes": ""
+  },
+  {
+    "id": "811",
+    "topic": "Vocab 1.3",
+    "category": "Adjectives",
+    "en": "a little, a bit of, few",
+    "el_lower": "λίγος-η-ο",
+    "el_upper": "ΛΙΓΟΣ-Η-Ο",
+    "rom": "lígos-i-o",
+    "notes": ""
+  },
+  {
+    "id": "812",
+    "topic": "Vocab 1.3",
+    "category": "Pronouns",
+    "en": "what?",
+    "el_lower": "τι;",
+    "el_upper": "ΤΙ;",
+    "rom": "ti;",
+    "notes": "Interrogative."
+  },
+  {
+    "id": "10000",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "zero",
+    "el_lower": "μηδέν",
+    "el_upper": "ΜΗΔΕΝ",
+    "rom": "midén",
+    "notes": ""
+  },
+  {
+    "id": "10001",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "one",
+    "el_lower": "ένα",
+    "el_upper": "ΕΝΑ",
+    "rom": "éna",
+    "notes": ""
+  },
+  {
+    "id": "10002",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "two",
+    "el_lower": "δύο",
+    "el_upper": "ΔΥΟ",
+    "rom": "dío",
+    "notes": ""
+  },
+  {
+    "id": "10003",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "three",
+    "el_lower": "τρία",
+    "el_upper": "ΤΡΙΑ",
+    "rom": "tría",
+    "notes": ""
+  },
+  {
+    "id": "10004",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "four",
+    "el_lower": "τέσσερα",
+    "el_upper": "ΤΕΣΣΕΡΑ",
+    "rom": "téssera",
+    "notes": ""
+  },
+  {
+    "id": "10005",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "five",
+    "el_lower": "πέντε",
+    "el_upper": "ΠΕΝΤΕ",
+    "rom": "pénde",
+    "notes": ""
+  },
+  {
+    "id": "10006",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "six",
+    "el_lower": "έξι",
+    "el_upper": "ΕΞΙ",
+    "rom": "éxi",
+    "notes": ""
+  },
+  {
+    "id": "10007",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seven",
+    "el_lower": "επτά",
+    "el_upper": "ΕΠΤΑ",
+    "rom": "eptá, eftá",
+    "notes": "Both forms common."
+  },
+  {
+    "id": "10008",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eight",
+    "el_lower": "οκτώ",
+    "el_upper": "ΟΚΤΩ",
+    "rom": "októ, ochtó",
+    "notes": "Both forms common."
+  },
+  {
+    "id": "10009",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "nine",
+    "el_lower": "εννέα",
+    "el_upper": "ΕΝΝΕΑ",
+    "rom": "ennéa, enniá",
+    "notes": "Both forms common."
+  },
+  {
+    "id": "10010",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ten",
+    "el_lower": "δέκα",
+    "el_upper": "ΔΕΚΑ",
+    "rom": "déka",
+    "notes": ""
+  },
+  {
+    "id": "10011",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eleven",
+    "el_lower": "έντεκα",
+    "el_upper": "ΕΝΤΕΚΑ",
+    "rom": "éndeka",
+    "notes": ""
+  },
+  {
+    "id": "10012",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twelve",
+    "el_lower": "δώδεκα",
+    "el_upper": "ΔΩΔΕΚΑ",
+    "rom": "dódeka",
+    "notes": ""
+  },
+  {
+    "id": "10013",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirteen",
+    "el_lower": "δεκατρία",
+    "el_upper": "ΔΕΚΑΤΡΙΑ",
+    "rom": "dekatría",
+    "notes": ""
+  },
+  {
+    "id": "10014",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fourteen",
+    "el_lower": "δεκατέσσερα",
+    "el_upper": "ΔΕΚΑΤΕΣΣΕΡΑ",
+    "rom": "dekatéssera",
+    "notes": ""
+  },
+  {
+    "id": "10015",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifteen",
+    "el_lower": "δεκαπέντε",
+    "el_upper": "ΔΕΚΑΠΕΝΤΕ",
+    "rom": "dekapénde",
+    "notes": ""
+  },
+  {
+    "id": "10016",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixteen",
+    "el_lower": "δεκαέξι",
+    "el_upper": "ΔΕΚΑΕΞΙ",
+    "rom": "dekaéxi",
+    "notes": ""
+  },
+  {
+    "id": "10017",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventeen",
+    "el_lower": "δεκαεπτά, δεκαεφτά",
+    "el_upper": "ΔΕΚΑΕΠΤΑ, ΔΕΚΑΕΦΤΑ",
+    "rom": "dekaeptá, dekaeftá",
+    "notes": ""
+  },
+  {
+    "id": "10018",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighteen",
+    "el_lower": "δεκαοκτώ, δεκαοχτώ",
+    "el_upper": "ΔΕΚΑΟΚΤΩ, ΔΕΚΑΟΧΤΩ",
+    "rom": "dekaoktó, dekaochtó",
+    "notes": ""
+  },
+  {
+    "id": "10019",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "nineteen",
+    "el_lower": "δεκαεννέα, δεκαεννιά",
+    "el_upper": "ΔΕΚΑΕΝΝΕΑ, ΔΕΚΑΕΝΝΙΑ",
+    "rom": "dekaennéa, dekaenniá",
+    "notes": ""
+  },
+  {
+    "id": "10020",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty",
+    "el_lower": "είκοσι",
+    "el_upper": "ΕΙΚΟΣΙ",
+    "rom": "íkosi",
+    "notes": ""
+  },
+  {
+    "id": "10021",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-one",
+    "el_lower": "είκοσι ένα",
+    "el_upper": "ΕΙΚΟΣΙ ΕΝΑ",
+    "rom": "íkosi éna",
+    "notes": ""
+  },
+  {
+    "id": "10022",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-two",
+    "el_lower": "είκοσι δύο",
+    "el_upper": "ΕΙΚΟΣΙ ΔΥΟ",
+    "rom": "íkosi dío",
+    "notes": ""
+  },
+  {
+    "id": "10023",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-three",
+    "el_lower": "είκοσι τρία",
+    "el_upper": "ΕΙΚΟΣΙ ΤΡΙΑ",
+    "rom": "íkosi tría",
+    "notes": ""
+  },
+  {
+    "id": "10024",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-four",
+    "el_lower": "είκοσι τέσσερα",
+    "el_upper": "ΕΙΚΟΣΙ ΤΕΣΣΕΡΑ",
+    "rom": "íkosi téssera",
+    "notes": ""
+  },
+  {
+    "id": "10025",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-five",
+    "el_lower": "είκοσι πέντε",
+    "el_upper": "ΕΙΚΟΣΙ ΠΕΝΤΕ",
+    "rom": "íkosi pénde",
+    "notes": ""
+  },
+  {
+    "id": "10026",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-six",
+    "el_lower": "είκοσι έξι",
+    "el_upper": "ΕΙΚΟΣΙ ΕΞΙ",
+    "rom": "íkosi éxi",
+    "notes": ""
+  },
+  {
+    "id": "10027",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-seven",
+    "el_lower": "είκοσι επτά, είκοσι εφτά",
+    "el_upper": "ΕΙΚΟΣΙ ΕΠΤΑ, ΕΙΚΟΣΙ ΕΦΤΑ",
+    "rom": "íkosi eptá, íkosi eftá",
+    "notes": ""
+  },
+  {
+    "id": "10028",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-eight",
+    "el_lower": "είκοσι οκτώ, είκοσι οχτώ",
+    "el_upper": "ΕΙΚΟΣΙ ΟΚΤΩ, ΕΙΚΟΣΙ ΟΧΤΩ",
+    "rom": "íkosi októ, íkosi ochtó",
+    "notes": ""
+  },
+  {
+    "id": "10029",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "twenty-nine",
+    "el_lower": "είκοσι εννέα, είκοσι εννιά",
+    "el_upper": "ΕΙΚΟΣΙ ΕΝΝΕΑ, ΕΙΚΟΣΙ ΕΝΝΙΑ",
+    "rom": "íkosi ennéa, íkosi enniá",
+    "notes": ""
+  },
+  {
+    "id": "10030",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty",
+    "el_lower": "τριάντα",
+    "el_upper": "ΤΡΙΑΝΤΑ",
+    "rom": "triánda",
+    "notes": ""
+  },
+  {
+    "id": "10031",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-one",
+    "el_lower": "τριάντα ένα",
+    "el_upper": "ΤΡΙΑΝΤΑ ΕΝΑ",
+    "rom": "triánda éna",
+    "notes": ""
+  },
+  {
+    "id": "10032",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-two",
+    "el_lower": "τριάντα δύο",
+    "el_upper": "ΤΡΙΑΝΤΑ ΔΥΟ",
+    "rom": "triánda dío",
+    "notes": ""
+  },
+  {
+    "id": "10033",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-three",
+    "el_lower": "τριάντα τρία",
+    "el_upper": "ΤΡΙΑΝΤΑ ΤΡΙΑ",
+    "rom": "triánda tría",
+    "notes": ""
+  },
+  {
+    "id": "10034",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-four",
+    "el_lower": "τριάντα τέσσερα",
+    "el_upper": "ΤΡΙΑΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "triánda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10035",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-five",
+    "el_lower": "τριάντα πέντε",
+    "el_upper": "ΤΡΙΑΝΤΑ ΠΕΝΤΕ",
+    "rom": "triánda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10036",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-six",
+    "el_lower": "τριάντα έξι",
+    "el_upper": "ΤΡΙΑΝΤΑ ΕΞΙ",
+    "rom": "triánda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10037",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-seven",
+    "el_lower": "τριάντα επτά",
+    "el_upper": "ΤΡΙΑΝΤΑ ΕΠΤΑ",
+    "rom": "triánda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10038",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-eight",
+    "el_lower": "τριάντα οκτώ",
+    "el_upper": "ΤΡΙΑΝΤΑ ΟΚΤΩ",
+    "rom": "triánda októ",
+    "notes": ""
+  },
+  {
+    "id": "10039",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "thirty-nine",
+    "el_lower": "τριάντα εννέα",
+    "el_upper": "ΤΡΙΑΝΤΑ ΕΝΝΕΑ",
+    "rom": "triánda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10040",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty",
+    "el_lower": "σαράντα",
+    "el_upper": "ΣΑΡΑΝΤΑ",
+    "rom": "saránda",
+    "notes": ""
+  },
+  {
+    "id": "10041",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-one",
+    "el_lower": "σαράντα ένα",
+    "el_upper": "ΣΑΡΑΝΤΑ ΕΝΑ",
+    "rom": "saránda éna",
+    "notes": ""
+  },
+  {
+    "id": "10042",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-two",
+    "el_lower": "σαράντα δύο",
+    "el_upper": "ΣΑΡΑΝΤΑ ΔΥΟ",
+    "rom": "saránda dío",
+    "notes": ""
+  },
+  {
+    "id": "10043",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-three",
+    "el_lower": "σαράντα τρία",
+    "el_upper": "ΣΑΡΑΝΤΑ ΤΡΙΑ",
+    "rom": "saránda tría",
+    "notes": ""
+  },
+  {
+    "id": "10044",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-four",
+    "el_lower": "σαράντα τέσσερα",
+    "el_upper": "ΣΑΡΑΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "saránda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10045",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-five",
+    "el_lower": "σαράντα πέντε",
+    "el_upper": "ΣΑΡΑΝΤΑ ΠΕΝΤΕ",
+    "rom": "saránda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10046",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-six",
+    "el_lower": "σαράντα έξι",
+    "el_upper": "ΣΑΡΑΝΤΑ ΕΞΙ",
+    "rom": "saránda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10047",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-seven",
+    "el_lower": "σαράντα επτά",
+    "el_upper": "ΣΑΡΑΝΤΑ ΕΠΤΑ",
+    "rom": "saránda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10048",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-eight",
+    "el_lower": "σαράντα οκτώ",
+    "el_upper": "ΣΑΡΑΝΤΑ ΟΚΤΩ",
+    "rom": "saránda októ",
+    "notes": ""
+  },
+  {
+    "id": "10049",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "forty-nine",
+    "el_lower": "σαράντα εννέα",
+    "el_upper": "ΣΑΡΑΝΤΑ ΕΝΝΕΑ",
+    "rom": "saránda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10050",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty",
+    "el_lower": "πενήντα",
+    "el_upper": "ΠΕΝΗΝΤΑ",
+    "rom": "penínda",
+    "notes": ""
+  },
+  {
+    "id": "10051",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-one",
+    "el_lower": "πενήντα ένα",
+    "el_upper": "ΠΕΝΗΝΤΑ ΕΝΑ",
+    "rom": "penínda éna",
+    "notes": ""
+  },
+  {
+    "id": "10052",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-two",
+    "el_lower": "πενήντα δύο",
+    "el_upper": "ΠΕΝΗΝΤΑ ΔΥΟ",
+    "rom": "penínda dío",
+    "notes": ""
+  },
+  {
+    "id": "10053",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-three",
+    "el_lower": "πενήντα τρία",
+    "el_upper": "ΠΕΝΗΝΤΑ ΤΡΙΑ",
+    "rom": "penínda tría",
+    "notes": ""
+  },
+  {
+    "id": "10054",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-four",
+    "el_lower": "πενήντα τέσσερα",
+    "el_upper": "ΠΕΝΗΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "penínda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10055",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-five",
+    "el_lower": "πενήντα πέντε",
+    "el_upper": "ΠΕΝΗΝΤΑ ΠΕΝΤΕ",
+    "rom": "penínda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10056",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-six",
+    "el_lower": "πενήντα έξι",
+    "el_upper": "ΠΕΝΗΝΤΑ ΕΞΙ",
+    "rom": "penínda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10057",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-seven",
+    "el_lower": "πενήντα επτά",
+    "el_upper": "ΠΕΝΗΝΤΑ ΕΠΤΑ",
+    "rom": "penínda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10058",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-eight",
+    "el_lower": "πενήντα οκτώ",
+    "el_upper": "ΠΕΝΗΝΤΑ ΟΚΤΩ",
+    "rom": "penínda októ",
+    "notes": ""
+  },
+  {
+    "id": "10059",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "fifty-nine",
+    "el_lower": "πενήντα εννέα",
+    "el_upper": "ΠΕΝΗΝΤΑ ΕΝΝΕΑ",
+    "rom": "penínda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10060",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty",
+    "el_lower": "εξήντα",
+    "el_upper": "ΕΞΗΝΤΑ",
+    "rom": "exínda",
+    "notes": ""
+  },
+  {
+    "id": "10061",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-one",
+    "el_lower": "εξήντα ένα",
+    "el_upper": "ΕΞΗΝΤΑ ΕΝΑ",
+    "rom": "exínda éna",
+    "notes": ""
+  },
+  {
+    "id": "10062",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-two",
+    "el_lower": "εξήντα δύο",
+    "el_upper": "ΕΞΗΝΤΑ ΔΥΟ",
+    "rom": "exínda dío",
+    "notes": ""
+  },
+  {
+    "id": "10063",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-three",
+    "el_lower": "εξήντα τρία",
+    "el_upper": "ΕΞΗΝΤΑ ΤΡΙΑ",
+    "rom": "exínda tría",
+    "notes": ""
+  },
+  {
+    "id": "10064",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-four",
+    "el_lower": "εξήντα τέσσερα",
+    "el_upper": "ΕΞΗΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "exínda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10065",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-five",
+    "el_lower": "εξήντα πέντε",
+    "el_upper": "ΕΞΗΝΤΑ ΠΕΝΤΕ",
+    "rom": "exínda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10066",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-six",
+    "el_lower": "εξήντα έξι",
+    "el_upper": "ΕΞΗΝΤΑ ΕΞΙ",
+    "rom": "exínda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10067",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-seven",
+    "el_lower": "εξήντα επτά",
+    "el_upper": "ΕΞΗΝΤΑ ΕΠΤΑ",
+    "rom": "exínda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10068",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-eight",
+    "el_lower": "εξήντα οκτώ",
+    "el_upper": "ΕΞΗΝΤΑ ΟΚΤΩ",
+    "rom": "exínda októ",
+    "notes": ""
+  },
+  {
+    "id": "10069",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "sixty-nine",
+    "el_lower": "εξήντα εννέα",
+    "el_upper": "ΕΞΗΝΤΑ ΕΝΝΕΑ",
+    "rom": "exínda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10070",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy",
+    "el_lower": "εβδομήντα",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ",
+    "rom": "evdomínda",
+    "notes": ""
+  },
+  {
+    "id": "10071",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-one",
+    "el_lower": "εβδομήντα ένα",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΕΝΑ",
+    "rom": "evdomínda éna",
+    "notes": ""
+  },
+  {
+    "id": "10072",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-two",
+    "el_lower": "εβδομήντα δύο",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΔΥΟ",
+    "rom": "evdomínda dío",
+    "notes": ""
+  },
+  {
+    "id": "10073",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-three",
+    "el_lower": "εβδομήντα τρία",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΤΡΙΑ",
+    "rom": "evdomínda tría",
+    "notes": ""
+  },
+  {
+    "id": "10074",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-four",
+    "el_lower": "εβδομήντα τέσσερα",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "evdomínda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10075",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-five",
+    "el_lower": "εβδομήντα πέντε",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΠΕΝΤΕ",
+    "rom": "evdomínda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10076",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-six",
+    "el_lower": "εβδομήντα έξι",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΕΞΙ",
+    "rom": "evdomínda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10077",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-seven",
+    "el_lower": "εβδομήντα επτά",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΕΠΤΑ",
+    "rom": "evdomínda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10078",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-eight",
+    "el_lower": "εβδομήντα οκτώ",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΟΚΤΩ",
+    "rom": "evdomínda októ",
+    "notes": ""
+  },
+  {
+    "id": "10079",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "seventy-nine",
+    "el_lower": "εβδομήντα εννέα",
+    "el_upper": "ΕΒΔΟΜΗΝΤΑ ΕΝΝΕΑ",
+    "rom": "evdomínda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10080",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty",
+    "el_lower": "ογδόντα",
+    "el_upper": "ΟΓΔΟΝΤΑ",
+    "rom": "ogdónda",
+    "notes": ""
+  },
+  {
+    "id": "10081",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-one",
+    "el_lower": "ογδόντα ένα",
+    "el_upper": "ΟΓΔΟΝΤΑ ΕΝΑ",
+    "rom": "ogdónda éna",
+    "notes": ""
+  },
+  {
+    "id": "10082",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-two",
+    "el_lower": "ογδόντα δύο",
+    "el_upper": "ΟΓΔΟΝΤΑ ΔΥΟ",
+    "rom": "ogdónda dío",
+    "notes": ""
+  },
+  {
+    "id": "10083",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-three",
+    "el_lower": "ογδόντα τρία",
+    "el_upper": "ΟΓΔΟΝΤΑ ΤΡΙΑ",
+    "rom": "ogdónda tría",
+    "notes": ""
+  },
+  {
+    "id": "10084",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-four",
+    "el_lower": "ογδόντα τέσσερα",
+    "el_upper": "ΟΓΔΟΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "ogdónda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10085",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-five",
+    "el_lower": "ογδόντα πέντε",
+    "el_upper": "ΟΓΔΟΝΤΑ ΠΕΝΤΕ",
+    "rom": "ogdónda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10086",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-six",
+    "el_lower": "ογδόντα έξι",
+    "el_upper": "ΟΓΔΟΝΤΑ ΕΞΙ",
+    "rom": "ogdónda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10087",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-seven",
+    "el_lower": "ογδόντα επτά",
+    "el_upper": "ΟΓΔΟΝΤΑ ΕΠΤΑ",
+    "rom": "ogdónda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10088",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-eight",
+    "el_lower": "ογδόντα οκτώ",
+    "el_upper": "ΟΓΔΟΝΤΑ ΟΚΤΩ",
+    "rom": "ogdónda októ",
+    "notes": ""
+  },
+  {
+    "id": "10089",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "eighty-nine",
+    "el_lower": "ογδόντα εννέα",
+    "el_upper": "ΟΓΔΟΝΤΑ ΕΝΝΕΑ",
+    "rom": "ogdónda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10090",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety",
+    "el_lower": "ενενήντα",
+    "el_upper": "ΕΝΕΝΗΝΤΑ",
+    "rom": "enenínda",
+    "notes": ""
+  },
+  {
+    "id": "10091",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-one",
+    "el_lower": "ενενήντα ένα",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΕΝΑ",
+    "rom": "enenínda éna",
+    "notes": ""
+  },
+  {
+    "id": "10092",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-two",
+    "el_lower": "ενενήντα δύο",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΔΥΟ",
+    "rom": "enenínda dío",
+    "notes": ""
+  },
+  {
+    "id": "10093",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-three",
+    "el_lower": "ενενήντα τρία",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΤΡΙΑ",
+    "rom": "enenínda tría",
+    "notes": ""
+  },
+  {
+    "id": "10094",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-four",
+    "el_lower": "ενενήντα τέσσερα",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΤΕΣΣΕΡΑ",
+    "rom": "enenínda téssera",
+    "notes": ""
+  },
+  {
+    "id": "10095",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-five",
+    "el_lower": "ενενήντα πέντε",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΠΕΝΤΕ",
+    "rom": "enenínda pénde",
+    "notes": ""
+  },
+  {
+    "id": "10096",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-six",
+    "el_lower": "ενενήντα έξι",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΕΞΙ",
+    "rom": "enenínda éxi",
+    "notes": ""
+  },
+  {
+    "id": "10097",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-seven",
+    "el_lower": "ενενήντα επτά",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΕΠΤΑ",
+    "rom": "enenínda eptá",
+    "notes": ""
+  },
+  {
+    "id": "10098",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-eight",
+    "el_lower": "ενενήντα οκτώ",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΟΚΤΩ",
+    "rom": "enenínda októ",
+    "notes": ""
+  },
+  {
+    "id": "10099",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "ninety-nine",
+    "el_lower": "ενενήντα εννέα",
+    "el_upper": "ΕΝΕΝΗΝΤΑ ΕΝΝΕΑ",
+    "rom": "enenínda ennéa",
+    "notes": ""
+  },
+  {
+    "id": "10100",
+    "topic": "Numbers 0-100",
+    "category": "Numbers",
+    "en": "one hundred",
+    "el_lower": "εκατό",
+    "el_upper": "ΕΚΑΤΟ",
+    "rom": "ekató",
     "notes": ""
   }
 ]
