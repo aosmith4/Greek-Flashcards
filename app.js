@@ -54,7 +54,7 @@ function setVisible(el, on) {
 }
 
 function getUniqueTopics() {
-  const topics = Array.from(new Set(state.cards.map(c => c.topic)));
+  const topics = Array.from(new Set(state.cards.map(c => c.topic))).filter(Boolean);
   topics.sort();
   return topics;
 }
@@ -65,7 +65,7 @@ function buildTopicButtonsFromDeck() {
 
   topics.forEach(topic => {
     const btn = document.createElement("button");
-    btn.className = "topic-choice"; // selection class applied later
+    btn.className = "topic-choice";
     btn.textContent = topic;
     btn.dataset.topic = topic;
     btn.setAttribute("aria-pressed", "false");
@@ -76,10 +76,8 @@ function buildTopicButtonsFromDeck() {
 function saveSelectedTopics() {
   try {
     const arr = Array.from(state.selectedTopics);
-    localStorage.setItem("selectedTopics", JSON.stringify(arr)); [web:351][web:363]
-  } catch (e) {
-    // ignore storage errors
-  }
+    localStorage.setItem("selectedTopics", JSON.stringify(arr));
+  } catch (e) {}
 }
 
 function loadSelectedTopicsFromStorage(allTopics) {
@@ -88,21 +86,29 @@ function loadSelectedTopicsFromStorage(allTopics) {
     if (!raw) return null;
     const arr = JSON.parse(raw);
     if (!Array.isArray(arr) || arr.length === 0) return null;
-
-    // Only keep topics that still exist in the deck
     const valid = arr.filter(t => allTopics.includes(t));
     if (valid.length === 0) return null;
     return new Set(valid);
-  } catch (e) {
+  } catch {
     return null;
   }
+}
+
+function syncTopicPillsSelection() {
+  const buttons = topicListContainer.querySelectorAll(".topic-choice");
+  buttons.forEach(btn => {
+    const topic = btn.dataset.topic;
+    const selected = state.selectedTopics.has(topic);
+    btn.classList.toggle("is-selected", selected);
+    btn.setAttribute("aria-pressed", selected ? "true" : "false");
+  });
 }
 
 // ---------- Render ----------
 function renderCard(resetReveal = true) {
   const card = currentCard();
   if (!card) {
-    promptEl.textContent = "No cards for these topics.";
+    promptEl.textContent = "Loading…";
     promptPhonEl.textContent = "";
     translationTextEl.textContent = "";
     translationPhonEl.textContent = "";
@@ -170,6 +176,13 @@ function renderCard(resetReveal = true) {
 // ---------- Topic filtering ----------
 function applyTopicFilter() {
   const selected = state.selectedTopics;
+  if (selected.size === 0) {
+    state.filteredCards = [];
+    renderCard(true);
+    topicButton.textContent = "No topic";
+    return;
+  }
+
   state.filteredCards = state.cards.filter(c => selected.has(c.topic));
 
   if (shuffleCheckbox.checked) {
@@ -183,31 +196,18 @@ function applyTopicFilter() {
   }
 
   state.currentIndex = 0;
-  renderCard(true);
 
   // Header label summarizing selected topics
   const topics = Array.from(selected);
-  if (topics.length === 0) {
-    topicButton.textContent = "No topic";
-  } else if (topics.length === 1) {
+  if (topics.length === 1) {
     topicButton.textContent = topics[0];
   } else {
     topicButton.textContent = `${topics[0]} + ${topics.length - 1}`;
   }
 
-  // Sync pill selection states and persist
   syncTopicPillsSelection();
   saveSelectedTopics();
-}
-
-function syncTopicPillsSelection() {
-  const buttons = topicListContainer.querySelectorAll(".topic-choice");
-  buttons.forEach(btn => {
-    const topic = btn.dataset.topic;
-    const selected = state.selectedTopics.has(topic);
-    btn.classList.toggle("is-selected", selected);
-    btn.setAttribute("aria-pressed", selected ? "true" : "false");
-  });
+  renderCard(true);
 }
 
 // ---------- Navigation ----------
@@ -247,7 +247,7 @@ function loadPreferences() {
     if (savedTheme === "dark") {
       themeSelect.value = "dark";
       document.body.classList.add("dark");
-    } else {
+    } else if (savedTheme === "light") {
       themeSelect.value = "light";
       document.body.classList.remove("dark");
     }
@@ -256,21 +256,26 @@ function loadPreferences() {
   promptLanguageSelect.value = state.promptLanguage;
 }
 
+// ---------- Deck loading ----------
 async function loadDeck() {
   loadPreferences();
   try {
     const res = await fetch("deck.json");
     const data = await res.json();
-    state.cards = data;
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error("deck.json is empty or not an array");
+    }
 
+    state.cards = data;
     buildTopicButtonsFromDeck();
+
     const allTopics = getUniqueTopics();
 
-    // Load previous selection or default
+    // Try restoring previous selection
     let restored = loadSelectedTopicsFromStorage(allTopics);
 
     if (!restored) {
-      // Default: Alphabet only if present, otherwise all topics
+      // Default: Alphabet only if present, else all topics
       if (allTopics.includes("Alphabet")) {
         restored = new Set(["Alphabet"]);
       } else {
@@ -283,6 +288,7 @@ async function loadDeck() {
   } catch (err) {
     console.error("Error loading deck:", err);
     promptEl.textContent = "Error loading deck.json";
+    progressEl.textContent = "0/0";
   }
 }
 
