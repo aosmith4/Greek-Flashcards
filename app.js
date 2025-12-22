@@ -65,12 +65,37 @@ function buildTopicButtonsFromDeck() {
 
   topics.forEach(topic => {
     const btn = document.createElement("button");
-    btn.className = "topic-choice is-selected";
+    btn.className = "topic-choice"; // selection class applied later
     btn.textContent = topic;
     btn.dataset.topic = topic;
-    btn.setAttribute("aria-pressed", "true");
+    btn.setAttribute("aria-pressed", "false");
     topicListContainer.appendChild(btn);
   });
+}
+
+function saveSelectedTopics() {
+  try {
+    const arr = Array.from(state.selectedTopics);
+    localStorage.setItem("selectedTopics", JSON.stringify(arr)); [web:351][web:363]
+  } catch (e) {
+    // ignore storage errors
+  }
+}
+
+function loadSelectedTopicsFromStorage(allTopics) {
+  try {
+    const raw = localStorage.getItem("selectedTopics");
+    if (!raw) return null;
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr) || arr.length === 0) return null;
+
+    // Only keep topics that still exist in the deck
+    const valid = arr.filter(t => allTopics.includes(t));
+    if (valid.length === 0) return null;
+    return new Set(valid);
+  } catch (e) {
+    return null;
+  }
 }
 
 // ---------- Render ----------
@@ -169,6 +194,20 @@ function applyTopicFilter() {
   } else {
     topicButton.textContent = `${topics[0]} + ${topics.length - 1}`;
   }
+
+  // Sync pill selection states and persist
+  syncTopicPillsSelection();
+  saveSelectedTopics();
+}
+
+function syncTopicPillsSelection() {
+  const buttons = topicListContainer.querySelectorAll(".topic-choice");
+  buttons.forEach(btn => {
+    const topic = btn.dataset.topic;
+    const selected = state.selectedTopics.has(topic);
+    btn.classList.toggle("is-selected", selected);
+    btn.setAttribute("aria-pressed", selected ? "true" : "false");
+  });
 }
 
 // ---------- Navigation ----------
@@ -225,8 +264,21 @@ async function loadDeck() {
     state.cards = data;
 
     buildTopicButtonsFromDeck();
-    // Default: select all topics
-    state.selectedTopics = new Set(state.cards.map(c => c.topic));
+    const allTopics = getUniqueTopics();
+
+    // Load previous selection or default
+    let restored = loadSelectedTopicsFromStorage(allTopics);
+
+    if (!restored) {
+      // Default: Alphabet only if present, otherwise all topics
+      if (allTopics.includes("Alphabet")) {
+        restored = new Set(["Alphabet"]);
+      } else {
+        restored = new Set(allTopics);
+      }
+    }
+
+    state.selectedTopics = restored;
     applyTopicFilter();
   } catch (err) {
     console.error("Error loading deck:", err);
@@ -272,19 +324,13 @@ topicModalBackdrop.addEventListener("click", (e) => {
   const topic = btn.dataset.topic;
   if (state.selectedTopics.has(topic)) {
     state.selectedTopics.delete(topic);
-    btn.setAttribute("aria-pressed", "false");
-    btn.classList.remove("is-selected");
   } else {
     state.selectedTopics.add(topic);
-    btn.setAttribute("aria-pressed", "true");
-    btn.classList.add("is-selected");
   }
 
   // Ensure at least one topic is always selected
   if (state.selectedTopics.size === 0) {
     state.selectedTopics.add(topic);
-    btn.setAttribute("aria-pressed", "true");
-    btn.classList.add("is-selected");
   }
 
   applyTopicFilter();
