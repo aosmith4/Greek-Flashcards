@@ -3398,5 +3398,175 @@
     "el_upper": "ΕΚΑΤΟ",
     "rom": "ekató",
     "notes": ""
+  },
+  {
+    "id": "4000",
+    "topic": "Guess Who",
+    "category": "General",
+    "en": "do you have...?",
+    "el_lower": "έχεις…;",
+    "el_upper": "ΕΧΕΙΣ…;",
+    "rom": "éhis…?",
+    "notes": "Informal singular question.glossonauts​"
+  },
+  {
+    "id": "4001",
+    "topic": "Guess Who",
+    "category": "General",
+    "en": "are you...?",
+    "el_lower": "είσαι…;",
+    "el_upper": "ΕΙΣΑΙ…;",
+    "rom": "íse…?",
+    "notes": "Informal singular “are you…?”.glossonauts+1​"
+  },
+  {
+    "id": "4002",
+    "topic": "Guess Who",
+    "category": "General",
+    "en": "your guess",
+    "el_lower": "η εικασία σου",
+    "el_upper": "Η ΕΙΚΑΣΙΑ ΣΟΥ",
+    "rom": "i ikasía sou",
+    "notes": "Literally “your guess”."
+  },
+  {
+    "id": "4003",
+    "topic": "Guess Who",
+    "category": "General",
+    "en": "congratulations",
+    "el_lower": "συγχαρητήρια",
+    "el_upper": "ΣΥΓΧΑΡΗΤΗΡΙΑ",
+    "rom": "syncharitíria",
+    "notes": ""
+  },
+  {
+    "id": "4004",
+    "topic": "Guess Who",
+    "category": "Gender",
+    "en": "a man",
+    "el_lower": "ένας άντρας",
+    "el_upper": "ΕΝΑΣ ΑΝΤΡΑΣ",
+    "rom": "énas ántras",
+    "notes": ""
+  },
+  {
+    "id": "4005",
+    "topic": "Guess Who",
+    "category": "Gender",
+    "en": "a woman",
+    "el_lower": "μια γυναίκα",
+    "el_upper": "ΜΙΑ ΓΥΝΑΙΚΑ",
+    "rom": "miá yinéka",
+    "notes": ""
+  },
+  {
+    "id": "4006",
+    "topic": "Guess Who",
+    "category": "Hair",
+    "en": "black hair",
+    "el_lower": "μαύρα μαλλιά",
+    "el_upper": "ΜΑΥΡΑ ΜΑΛΛΙΑ",
+    "rom": "mávra maliá",
+    "notes": ""
+  },
+  {
+    "id": "4007",
+    "topic": "Guess Who",
+    "category": "Hair",
+    "en": "brown hair",
+    "el_lower": "καστανά μαλλιά",
+    "el_upper": "ΚΑΣΤΑΝΑ ΜΑΛΛΙΑ",
+    "rom": "kastaná maliá",
+    "notes": ""
+  },
+  {
+    "id": "4008",
+    "topic": "Guess Who",
+    "category": "Hair",
+    "en": "red hair",
+    "el_lower": "κόκκινα μαλλιά",
+    "el_upper": "ΚΟΚΚΙΝΑ ΜΑΛΛΙΑ",
+    "rom": "kókina maliá",
+    "notes": ""
+  },
+  {
+    "id": "4009",
+    "topic": "Guess Who",
+    "category": "Hair",
+    "en": "blonde hair",
+    "el_lower": "ξανθά μαλλιά",
+    "el_upper": "ΞΑΝΘΑ ΜΑΛΛΙΑ",
+    "rom": "xanthá maliá",
+    "notes": ""
+  },
+  {
+    "id": "4010",
+    "topic": "Guess Who",
+    "category": "Hair",
+    "en": "white hair",
+    "el_lower": "άσπρα μαλλιά",
+    "el_upper": "ΑΣΠΡΑ ΜΑΛΛΙΑ",
+    "rom": "ásprá maliá",
+    "notes": ""
+  },
+  {
+    "id": "4011",
+    "topic": "Guess Who",
+    "category": "Eyes",
+    "en": "blue eyes",
+    "el_lower": "μπλε μάτια",
+    "el_upper": "ΜΠΛΕ ΜΑΤΙΑ",
+    "rom": "ble mátia",
+    "notes": ""
+  },
+  {
+    "id": "4012",
+    "topic": "Guess Who",
+    "category": "Eyes",
+    "en": "brown eyes",
+    "el_lower": "καστανά μάτια",
+    "el_upper": "ΚΑΣΤΑΝΑ ΜΑΤΙΑ",
+    "rom": "kastaná mátia",
+    "notes": ""
+  },
+  {
+    "id": "4013",
+    "topic": "Guess Who",
+    "category": "Accessories",
+    "en": "glasses",
+    "el_lower": "γυαλιά",
+    "el_upper": "ΓΥΑΛΙΑ",
+    "rom": "yaliá",
+    "notes": "Usually “eyeglasses”."
+  },
+  {
+    "id": "4014",
+    "topic": "Guess Who",
+    "category": "Accessories",
+    "en": "a hat",
+    "el_lower": "ένα καπέλο",
+    "el_upper": "ΕΝΑ ΚΑΠΕΛΟ",
+    "rom": "éna kapélo",
+    "notes": ""
+  },
+  {
+    "id": "4015",
+    "topic": "Guess Who",
+    "category": "Accessories",
+    "en": "earrings",
+    "el_lower": "σκουλαρίκια",
+    "el_upper": "ΣΚΟΥΛΑΡΙΚΙΑ",
+    "rom": "skoularíkia",
+    "notes": ""
+  },
+  {
+    "id": "4016",
+    "topic": "Guess Who",
+    "category": "Accessories",
+    "en": "facial hair",
+    "el_lower": "μούσι ή/και μουστάκι",
+    "el_upper": "ΜΟΥΣΙ Ή/ΚΑΙ ΜΟΥΣΤΑΚΙ",
+    "rom": "moúsi í/ke moustáki",
+    "notes": "Beard and/or moustache."
   }
 ]
